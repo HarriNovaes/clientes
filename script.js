@@ -781,4 +781,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
+
+  /* ========================================================
+     PORTFÓLIO V3 — TROCA DE TELAS DOS PROJETOS
+  ======================================================== */
+
+  const projectSwitchers =
+    document.querySelectorAll(".project-switcher");
+
+  projectSwitchers.forEach(switcher => {
+
+    const group =
+      switcher.dataset.switcher;
+
+    const buttons =
+      switcher.querySelectorAll(".project-switch");
+
+    buttons.forEach(button => {
+
+      button.addEventListener("click", () => {
+
+        const target =
+          button.dataset.target;
+
+        buttons.forEach(item => {
+
+          item.classList.toggle(
+            "active",
+            item === button
+          );
+
+        });
+
+
+        document
+          .querySelectorAll(
+            `[data-preview-group="${group}"]`
+          )
+          .forEach(preview => {
+
+            preview.classList.toggle(
+              "active",
+              preview.dataset.preview === target
+            );
+
+          });
+
+      });
+
+    });
+
+  });
+
+
 });
