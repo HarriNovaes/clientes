@@ -21,6 +21,23 @@
   >
 
   <link rel="stylesheet" href="style.css">
+  <style>
+
+/* HND 3.0 — MELHORIAS INTEGRADAS, SEM ALTERAR style.css */
+:root {--hnd-glow:rgba(216,167,94,.12)}
+body::after{content:"";position:fixed;top:0;left:0;width:var(--hnd-progress,0%);height:3px;background:linear-gradient(90deg,#b77b36,#f4dca4);z-index:100002;pointer-events:none;box-shadow:0 0 16px #d8a75e99}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #f2ce8a;outline-offset:5px}
+.hero h1{letter-spacing:-.06em;line-height:1.08}.hero-description{max-width:580px}
+.hnd-pricing{position:relative;overflow:hidden}.hnd-pricing::before{content:"";position:absolute;right:-10%;top:5%;height:500px;width:500px;background:radial-gradient(circle,rgba(216,167,94,.11),transparent 68%);pointer-events:none}
+.hnd-price-head{display:flex;justify-content:space-between;align-items:center;gap:25px;border:1px solid rgba(216,167,94,.24);background:linear-gradient(125deg,rgba(216,167,94,.10),rgba(216,167,94,.015));border-radius:22px;padding:26px 32px;margin:32px 0 28px}
+.hnd-price-head>div{display:grid;gap:4px}.hnd-kicker{font-size:11px;letter-spacing:.2em;color:#f2ce8a;font-weight:750}.hnd-price-head strong{font-size:clamp(29px,3.4vw,45px);line-height:1.2;letter-spacing:-.04em}.hnd-price-head small{font-size:13px;color:#aeb0b4}.hnd-text-link{white-space:nowrap;color:#f2ce8a;font-weight:700}.hnd-text-link span{margin-left:10px}
+.hnd-plan-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}.hnd-plan{position:relative;display:flex;flex-direction:column;min-width:0;gap:13px;padding:29px 22px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(150deg,rgba(27,29,32,.93),rgba(10,11,13,.97));border-radius:24px;transition:border-color .3s ease,box-shadow .3s ease,transform .3s ease;overflow:hidden}.hnd-plan:hover{transform:translateY(-8px);border-color:rgba(216,167,94,.55);box-shadow:0 22px 65px #0008,0 0 0 1px #d8a75e1c}.hnd-featured{border-color:rgba(216,167,94,.55);background:linear-gradient(145deg,rgba(59,43,23,.75),#111113 60%)}.hnd-plan-index{font-size:10px;font-weight:800;letter-spacing:.17em;color:#d8a75e}.hnd-plan h3{font-size:24px;line-height:1.16;letter-spacing:-.035em}.hnd-plan>p:not(.hnd-exclusion){font-size:13px;color:#a9acb3;min-height:84px}.hnd-price{display:flex;flex-direction:column;gap:0;border-top:1px solid #ffffff18;border-bottom:1px solid #ffffff18;padding:16px 0}.hnd-price small{color:#b2b2b2;font-size:11px}.hnd-price strong{font-size:36px;letter-spacing:-.06em;color:#f5dfb6;line-height:1.25}.hnd-price span{font-size:11px;color:#999ea5}.hnd-plan ul{list-style:none;display:grid;gap:10px;margin:7px 0 0;padding:0}.hnd-plan li{font-size:12px;line-height:1.5;color:#dedede;display:flex;gap:9px}.hnd-plan li::before{content:"✓";color:#d8a75e;font-weight:900}.hnd-exclusion{color:#999!important;font-size:11px!important;margin-top:auto}.hnd-plan-button{margin-top:auto;display:flex!important;justify-content:space-between;align-items:center;text-align:left!important;padding:14px!important;border-radius:12px!important;background:#d8a75e!important;color:#111!important;font-weight:800!important;transition:filter .2s,transform .2s}.hnd-plan-button:hover{filter:brightness(1.12);transform:translateY(-2px)}.hnd-popular{font-size:9px;line-height:1.4;letter-spacing:.08em;position:absolute;right:10px;top:12px;color:#f9e1ad;max-width:115px;text-align:right}.hnd-custom-mark{position:absolute;right:15px;top:25px;color:#d8a75e;font-size:42px;opacity:.6}.hnd-consult{font-size:23px!important;letter-spacing:-.025em!important}.hnd-legal{color:#a1a4a9;font-size:12px;margin-top:25px;line-height:1.65}
+.hnd-idea{background:radial-gradient(ellipse at 70% 40%,rgba(185,130,54,.12),transparent 60%);padding-block:110px}.hnd-idea-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}.hnd-idea-copy h2{font-size:clamp(36px,4.4vw,64px);line-height:1.1;letter-spacing:-.05em;margin:22px 0}.hnd-idea-copy h2 span{color:#d8a75e}.hnd-idea-copy>p{color:#b1b4ba;max-width:470px}.hnd-idea-steps{display:flex;gap:15px;flex-wrap:wrap;margin-top:33px;font-size:11px;color:#d8a75e;letter-spacing:.06em}.hnd-wizard{padding:clamp(22px,4vw,36px);border:1px solid rgba(216,167,94,.35);background:linear-gradient(145deg,#1b1916,#0a0b0e 75%);border-radius:28px;box-shadow:0 30px 100px #0007}.hnd-wizard-header{display:flex;justify-content:space-between;gap:10px;color:#d5b781;font-size:10px;letter-spacing:.12em;font-weight:800}.hnd-wizard-track{margin:17px 0 28px;background:#ffffff18;height:4px;border-radius:4px;overflow:hidden}.hnd-wizard-track i{display:block;height:100%;width:33.333%;background:#d8a75e;border-radius:4px;transition:width .3s}.hnd-wizard h3{font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;min-height:65px;margin-bottom:18px}.hnd-choice-list{display:grid;gap:10px}.hnd-choice{width:100%;padding:16px 17px;display:flex;justify-content:space-between;text-align:left;align-items:center;gap:10px;border-radius:12px;background:#ffffff08;border:1px solid #ffffff18;color:#eee;transition:.2s}.hnd-choice:hover{border-color:#d8a75e;background:#d8a75e15;transform:translateX(3px)}.hnd-choice span{color:#d8a75e}.hnd-wizard-bottom{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:25px;font-size:11px;color:#888}.hnd-back{background:transparent;border:0;color:#d8a75e}.hnd-back:disabled{color:#777;cursor:default}.hnd-wizard-result p{font-size:14px;color:#bec0c3;margin:0 0 22px}.hnd-send{display:block;background:#d8a75e;color:#15110b;border-radius:12px;text-align:center;padding:16px;font-weight:850}.hnd-again{border:0;background:transparent;color:#d8a75e;margin-top:16px}
+.hnd-faq{padding-block:85px}.hnd-faq-list{max-width:850px;margin:20px auto 0}.hnd-faq-list details{border-bottom:1px solid #ffffff1e;padding:17px 4px}.hnd-faq-list summary{cursor:pointer;font-size:16px;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:15px}.hnd-faq-list summary::-webkit-details-marker{display:none}.hnd-faq-list summary::after{content:"+";font-size:23px;color:#d8a75e}.hnd-faq-list details[open] summary::after{content:"−"}.hnd-faq-list details p{color:#aeb2b8;font-size:14px;padding:15px 25px 5px 0;max-width:700px}
+@media(max-width:1100px){.hnd-plan-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hnd-plan>p:not(.hnd-exclusion){min-height:0}.hnd-featured{order:0}}@media(max-width:720px){.hnd-price-head{align-items:flex-start;flex-direction:column;padding:23px}.hnd-plan-grid{grid-template-columns:1fr}.hnd-plan{padding:25px}.hnd-idea{padding-block:75px}.hnd-idea-layout{grid-template-columns:1fr}.hnd-idea-steps{gap:8px}.hnd-idea-steps span{font-size:10px}.hnd-faq{padding-block:65px}.hnd-popular{max-width:125px}.hnd-price-head strong{font-size:33px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.hnd-plan,.hnd-choice,.hnd-plan-button{transition:none!important}.hnd-plan:hover,.hnd-choice:hover,.hnd-plan-button:hover{transform:none!important}}
+
+  </style>
 </head>
 
 <body>
@@ -188,7 +205,7 @@
               href="#orcamento"
               class="button primary magnetic"
             >
-              <span>Quero tirar minha ideia do papel</span>
+              <span>Quero transformar minha ideia</span>
               <strong>→</strong>
             </a>
 
@@ -196,7 +213,7 @@
               href="#portfolio"
               class="button secondary"
             >
-              Ver o que já criamos
+              Explorar projetos reais
             </a>
 
           </div>
@@ -1498,388 +1515,34 @@
 
 
 
-    <!-- =====================================================
-         PLANOS
-    ====================================================== -->
-
-    <section
-      class="section plans-section section-observer"
-      id="planos"
-    >
-
+    <!-- HND 3.0 — PLANOS COM ENTRADA ACESSÍVEL -->
+    <section class="section plans-section section-observer hnd-pricing" id="planos">
       <div class="container">
-
         <div class="section-heading reveal">
-
-          <span class="section-number">
-            04
-          </span>
-
-          <div>
-
-            <span class="eyebrow">
-              INVESTIMENTO
-            </span>
-
-            <h2>
-              Existe um ponto de partida
-              <span>para cada projeto.</span>
-            </h2>
-
-            <p>
-              Os planos servem como referência inicial.
-              Funcionalidades e necessidades específicas
-              podem alterar o orçamento final.
-            </p>
-
-          </div>
-
+          <span class="section-number">04</span>
+          <div><span class="eyebrow">INVESTIMENTO INTELIGENTE</span>
+          <h2>Comece com o que você precisa. <span>Evolua quando fizer sentido.</span></h2>
+          <p>Não precisa começar com um sistema gigante. Escolha uma solução que cabe no momento do seu negócio e vamos conversar sobre a melhor forma de construir.</p></div>
         </div>
-
-
-        <div class="plans-intro reveal">
-
-          <div>
-            <span>A PARTIR DE</span>
-            <strong>R$ 690</strong>
-          </div>
-
-          <p>
-            Todos os projetos são desenvolvidos pensando
-            na identidade e necessidade do negócio.
-          </p>
-
+        <div class="hnd-price-head reveal"><div><span class="hnd-kicker">SEU PRIMEIRO PASSO</span><strong>A partir de R$ 390</strong><small>Valor de criação para projetos com escopo definido. Sem compromisso para conversar.</small></div><a href="#ideia" class="hnd-text-link">Descobrir a solução ideal <span>↗</span></a></div>
+        <div class="hnd-plan-grid">
+          <article class="hnd-plan reveal"><span class="hnd-plan-index">01 / COMEÇAR</span><h3>Presença Digital</h3><p>Uma página objetiva e bonita para apresentar seu negócio e facilitar o contato.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 390</strong><span>por projeto</span></div><ul><li>Página única responsiva</li><li>Apresentação dos seus serviços</li><li>Botão direto para o WhatsApp</li><li>Informações e localização</li></ul><p class="hnd-exclusion">Domínio, hospedagem e atualizações são combinados à parte.</p><a href="#orcamento" data-plan="Presença Digital" class="plan-button hnd-plan-button">Quero começar <span>↗</span></a></article>
+          <article class="hnd-plan hnd-featured reveal"><span class="hnd-popular">BOA ESCOLHA PARA NEGÓCIOS</span><span class="hnd-plan-index">02 / CRESCER</span><h3>Site Profissional</h3><p>Um espaço digital mais completo para transmitir credibilidade e mostrar seus diferenciais.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 690</strong><span>por projeto</span></div><ul><li>Site com até 4 seções principais</li><li>Design personalizado e responsivo</li><li>Vitrine de serviços ou trabalhos</li><li>Contato e WhatsApp integrados</li></ul><p class="hnd-exclusion">Recursos extras e custos recorrentes são orçados separadamente.</p><a href="#orcamento" data-plan="Site Profissional" class="plan-button hnd-plan-button">Quero este site <span>↗</span></a></article>
+          <article class="hnd-plan reveal"><span class="hnd-plan-index">03 / ORGANIZAR</span><h3>Sistema Essencial</h3><p>Uma primeira ferramenta sob medida para simplificar uma rotina específica do seu negócio.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 1.190</strong><span>por projeto</span></div><ul><li>Um fluxo principal de trabalho</li><li>Painel simples de controle</li><li>Interface adaptada ao celular</li><li>Funcionalidades de escopo limitado</li></ul><p class="hnd-exclusion">Banco de dados, autenticação e integrações dependem da proposta técnica.</p><a href="#orcamento" data-plan="Sistema Essencial" class="plan-button hnd-plan-button">Conversar sobre sistema <span>↗</span></a></article>
+          <article class="hnd-plan hnd-custom reveal"><span class="hnd-plan-index">04 / SOB MEDIDA</span><div class="hnd-custom-mark">✳</div><h3>Projeto Personalizado</h3><p>Agenda, gestão, área do cliente, automação e integrações: construímos um plano para o que sua empresa realmente precisa.</p><div class="hnd-price"><strong class="hnd-consult">Vamos conversar.</strong><span>Orçamento individual</span></div><ul><li>Escopo estudado com você</li><li>Funcionalidades por prioridade</li><li>Possibilidade de desenvolver em etapas</li><li>Proposta transparente</li></ul><a href="#orcamento" data-plan="Projeto Personalizado" class="plan-button hnd-plan-button">Contar minha ideia <span>↗</span></a></article>
         </div>
-
-
-        <div class="plans-grid">
-
-
-          <!-- LITE -->
-
-          <article class="plan-card reveal">
-
-            <div class="plan-top">
-
-              <span class="plan-level">
-                01
-              </span>
-
-              <span class="plan-name">
-                LITE
-              </span>
-
-            </div>
-
-            <h3>
-              Comece sua presença digital
-            </h3>
-
-            <div class="plan-price">
-
-              <small>Projeto</small>
-
-              <strong>
-                R$ 690
-              </strong>
-
-              <span>
-                ou 3x de R$ 250
-              </span>
-
-            </div>
-
-            <ul>
-              <li>Site profissional</li>
-              <li>Design responsivo</li>
-              <li>Contato integrado</li>
-              <li>Domínio por 1 ano</li>
-              <li>Hospedagem</li>
-              <li>SSL / conexão segura</li>
-            </ul>
-
-            <div class="maintenance">
-              Manutenção a partir de
-              <strong>R$ 49/mês</strong>
-            </div>
-
-            <a
-              href="#orcamento"
-              class="plan-button"
-              data-plan="Lite"
-            >
-              Quero este plano
-              <span>→</span>
-            </a>
-
-          </article>
-
-
-          <!-- BÁSICO -->
-
-          <article class="plan-card reveal">
-
-            <div class="plan-top">
-
-              <span class="plan-level">
-                02
-              </span>
-
-              <span class="plan-name">
-                BÁSICO
-              </span>
-
-            </div>
-
-            <h3>
-              Mais recursos para seu negócio
-            </h3>
-
-            <div class="plan-price">
-
-              <small>Projeto</small>
-
-              <strong>
-                R$ 990
-              </strong>
-
-              <span>
-                ou 4x de R$ 275
-              </span>
-
-            </div>
-
-            <ul>
-              <li>Estrutura profissional</li>
-              <li>Painel administrativo</li>
-              <li>Área de gerenciamento</li>
-              <li>Contato e WhatsApp</li>
-              <li>Domínio por 1 ano</li>
-              <li>Hospedagem e segurança</li>
-            </ul>
-
-            <div class="maintenance">
-              Manutenção a partir de
-              <strong>R$ 59/mês</strong>
-            </div>
-
-            <a
-              href="#orcamento"
-              class="plan-button"
-              data-plan="Básico"
-            >
-              Quero este plano
-              <span>→</span>
-            </a>
-
-          </article>
-
-
-          <!-- PLUS -->
-
-          <article class="plan-card plan-highlight reveal">
-
-            <div class="plan-popular">
-              EQUILÍBRIO ENTRE RECURSOS E INVESTIMENTO
-            </div>
-
-            <div class="plan-top">
-
-              <span class="plan-level">
-                03
-              </span>
-
-              <span class="plan-name">
-                PLUS
-              </span>
-
-            </div>
-
-            <h3>
-              Site e sistema trabalhando juntos
-            </h3>
-
-            <div class="plan-price">
-
-              <small>Projeto</small>
-
-              <strong>
-                R$ 1.490
-              </strong>
-
-              <span>
-                ou 5x de R$ 330
-              </span>
-
-            </div>
-
-            <ul>
-              <li>Site profissional</li>
-              <li>Painel administrativo</li>
-              <li>Cadastro de clientes</li>
-              <li>Banco de dados</li>
-              <li>Recursos personalizados</li>
-              <li>Suporte e atualizações</li>
-            </ul>
-
-            <div class="maintenance">
-              Manutenção a partir de
-              <strong>R$ 79/mês</strong>
-            </div>
-
-            <a
-              href="#orcamento"
-              class="plan-button"
-              data-plan="Plus"
-            >
-              Quero este plano
-              <span>→</span>
-            </a>
-
-          </article>
-
-
-          <!-- PREMIUM -->
-
-          <article class="plan-card reveal">
-
-            <div class="plan-top">
-
-              <span class="plan-level">
-                04
-              </span>
-
-              <span class="plan-name">
-                PREMIUM
-              </span>
-
-            </div>
-
-            <h3>
-              Uma solução mais completa
-            </h3>
-
-            <div class="plan-price">
-
-              <small>Projeto</small>
-
-              <strong>
-                R$ 2.190
-              </strong>
-
-              <span>
-                ou 6x de R$ 400
-              </span>
-
-            </div>
-
-            <ul>
-              <li>Projeto personalizado</li>
-              <li>Sistema de gestão</li>
-              <li>Área de clientes</li>
-              <li>Automação de processos</li>
-              <li>Banco de dados</li>
-              <li>Recursos avançados</li>
-            </ul>
-
-            <div class="maintenance">
-              Manutenção a partir de
-              <strong>R$ 99/mês</strong>
-            </div>
-
-            <a
-              href="#orcamento"
-              class="plan-button"
-              data-plan="Premium"
-            >
-              Quero este plano
-              <span>→</span>
-            </a>
-
-          </article>
-
-
-          <!-- GOLD -->
-
-          <article class="plan-card plan-gold reveal">
-
-            <div class="gold-glow"></div>
-
-            <div class="plan-top">
-
-              <span class="plan-level">
-                05
-              </span>
-
-              <span class="plan-name">
-                GOLD
-              </span>
-
-            </div>
-
-            <h3>
-              Projetos de maior complexidade
-            </h3>
-
-            <div class="plan-price">
-
-              <small>Projeto</small>
-
-              <strong>
-                R$ 2.990
-              </strong>
-
-              <span>
-                ou 6x de R$ 550
-              </span>
-
-            </div>
-
-            <ul>
-              <li>Solução digital personalizada</li>
-              <li>Site + sistema completo</li>
-              <li>Painéis administrativos</li>
-              <li>Áreas exclusivas</li>
-              <li>Integrações</li>
-              <li>Evolução do projeto</li>
-            </ul>
-
-            <div class="maintenance">
-              Manutenção a partir de
-              <strong>R$ 149/mês</strong>
-            </div>
-
-            <a
-              href="#orcamento"
-              class="plan-button gold-button"
-              data-plan="Gold"
-            >
-              Conversar sobre o Gold
-              <span>→</span>
-            </a>
-
-          </article>
-
-        </div>
-
-
-        <div class="plans-note reveal">
-
-          <span>ℹ</span>
-
-          <p>
-            A manutenção pode incluir infraestrutura,
-            hospedagem, banco de dados quando utilizado,
-            correções, segurança, backups, suporte e
-            continuidade do projeto, conforme a solução contratada.
-          </p>
-
-        </div>
-
+        <p class="hnd-legal reveal">* Valores iniciais para os escopos descritos. O orçamento final depende das necessidades do projeto. Manutenção, domínio, hospedagem e serviços de terceiros são combinados à parte.</p>
       </div>
-
     </section>
 
+    <section class="section hnd-idea section-observer" id="ideia">
+      <div class="container hnd-idea-layout">
+        <div class="hnd-idea-copy reveal"><span class="eyebrow">UMA EXPERIÊNCIA FEITA PARA VOCÊ</span><h2>Sua ideia merece <span>um primeiro passo.</span></h2><p>Responda três perguntas rápidas. Ao terminar, abrimos uma mensagem pronta para você enviar no WhatsApp. Sem cadastro e sem compromisso.</p><div class="hnd-idea-steps"><span>01. Seu objetivo</span><span>02. Sua prioridade</span><span>03. Seu momento</span></div></div>
+        <div class="hnd-wizard reveal" id="hndWizard"><div class="hnd-wizard-header"><span>DESCUBRA SUA SOLUÇÃO</span><span id="hndStepCount">ETAPA 01 / 03</span></div><div class="hnd-wizard-track"><i id="hndStepFill"></i></div><div id="hndWizardScreen" aria-live="polite"></div><div class="hnd-wizard-bottom"><button type="button" id="hndBack" class="hnd-back" disabled>← Voltar</button><span>Leva menos de um minuto</span></div></div>
+      </div>
+    </section>
+
+    <section class="section hnd-faq"><div class="container"><div class="section-heading reveal"><span class="section-number">05</span><div><span class="eyebrow">SEM SURPRESAS</span><h2>Dúvidas comuns. <span>Respostas claras.</span></h2></div></div><div class="hnd-faq-list reveal"><details><summary>Preciso pagar para pedir um orçamento?</summary><p>Não. A primeira conversa serve para entender sua ideia e avaliar uma proposta, sem compromisso.</p></details><details><summary>O valor anunciado já inclui tudo?</summary><p>Não necessariamente. Cada opção tem um escopo inicial. Custos como domínio, hospedagem, manutenção e integrações são detalhados antes da contratação.</p></details><details><summary>Posso começar pequeno e ampliar depois?</summary><p>Sim. Podemos planejar etapas para priorizar o que traz mais valor ao seu negócio.</p></details><details><summary>Vocês fazem algo diferente dos planos?</summary><p>Sim. Conte sua necessidade: avaliamos a viabilidade e preparamos um orçamento personalizado.</p></details></div></div></section>
 
     <!-- =====================================================
          SOBRE
@@ -1895,7 +1558,7 @@
         <div class="about-heading reveal">
 
           <span class="section-number">
-            05
+            06
           </span>
 
           <span class="eyebrow">
@@ -2166,6 +1829,35 @@
 
 
   <script src="script.js"></script>
+  <script>
+
+/* HND 3.0 — navegação e briefing interativo */
+(() => {
+  const progress = () => {const max=document.documentElement.scrollHeight-window.innerHeight;document.body.style.setProperty('--hnd-progress',max>0?`${Math.min(100,window.scrollY/max*100)}%`:'0%');};
+  document.addEventListener('scroll',progress,{passive:true});window.addEventListener('resize',progress);progress();
+  const screen=document.getElementById('hndWizardScreen');
+  if(!screen)return;
+  const steps=[
+   {q:'O que você gostaria de melhorar agora?',options:['Criar minha presença online','Receber pedidos ou agendamentos','Organizar clientes e processos','Tenho outra ideia']},
+   {q:'O que é mais importante para você?',options:['Começar com investimento menor','Ter algo visualmente impressionante','Automatizar uma tarefa do dia a dia','Criar uma solução para crescer']},
+   {q:'Em que momento está seu projeto?',options:['Quero começar em breve','Estou pesquisando possibilidades','Já tenho algo e quero melhorar','Ainda estou planejando']}
+  ];
+  let step=0;const answers=[];
+  const stepCount=document.getElementById('hndStepCount'),fill=document.getElementById('hndStepFill'),back=document.getElementById('hndBack');
+  function draw(){
+   stepCount.textContent=`ETAPA 0${step+1} / 03`;fill.style.width=`${(step+1)/3*100}%`;back.disabled=step===0;
+   screen.replaceChildren();
+   const heading=document.createElement('h3');heading.textContent=steps[step].q;screen.appendChild(heading);
+   const choices=document.createElement('div');choices.className='hnd-choice-list';
+   steps[step].options.forEach((option)=>{const button=document.createElement('button');button.className='hnd-choice';button.type='button';button.textContent=option;const arrow=document.createElement('span');arrow.textContent='↗';button.appendChild(arrow);button.addEventListener('click',()=>{answers[step]=option;if(step<2){step++;draw();}else{showResult();}});choices.appendChild(button);});screen.appendChild(choices);
+  }
+  function showResult(){stepCount.textContent='PRONTO PARA CONVERSAR';fill.style.width='100%';back.disabled=false;screen.replaceChildren();const wrap=document.createElement('div');wrap.className='hnd-wizard-result';const title=document.createElement('h3');title.textContent='Sua ideia já tem um começo.';const p=document.createElement('p');p.textContent='Preparamos uma mensagem com suas escolhas. Você pode revisá-la no WhatsApp antes de enviar.';const a=document.createElement('a');a.className='hnd-send';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Conversar sobre minha ideia ↗';const msg=`Olá! Conheci a Harri Novaes Digital pelo site e gostaria de um orçamento sem compromisso.\n\nMeu objetivo: ${answers[0]}\nMinha prioridade: ${answers[1]}\nMeu momento: ${answers[2]}\n\nPodemos conversar?`;a.href='https://wa.me/5516988033045?text='+encodeURIComponent(msg);const again=document.createElement('button');again.type='button';again.className='hnd-again';again.textContent='↻ Refazer escolhas';again.addEventListener('click',()=>{step=0;answers.length=0;draw()});wrap.append(title,p,a,again);screen.append(wrap);}
+  back.addEventListener('click',()=>{if(step>0){step--;draw()}});draw();
+  // A intro permanece curta e não bloqueia o conteúdo caso JS externo falhe.
+  setTimeout(()=>{const intro=document.getElementById('introScreen');if(intro){intro.classList.add('hide');document.body.classList.remove('intro-active');}},1500);
+})();
+
+  </script>
 
 </body>
 </html>
