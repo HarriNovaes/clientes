@@ -1,27 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta name="theme-color" content="#070809">
-
-  <title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="#070809" name="theme-color"/>
+<title>
     Harri Novaes Digital | Sites, Sistemas e Soluções Digitais
   </title>
-
-  <meta
-    name="description"
-    content="Sites profissionais, sistemas de gestão, agendamentos e soluções digitais personalizadas para negócios."
-  >
-
-  <link rel="stylesheet" href="style.css">
-  <style>
+<meta content="Sites profissionais, sistemas de gestão, agendamentos e soluções digitais personalizadas para negócios." name="description"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
 
 /* HND 3.0 — MELHORIAS INTEGRADAS, SEM ALTERAR style.css */
 :root {--hnd-glow:rgba(216,167,94,.12)}
@@ -37,1799 +26,1134 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #f2
 @media(max-width:1100px){.hnd-plan-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hnd-plan>p:not(.hnd-exclusion){min-height:0}.hnd-featured{order:0}}@media(max-width:720px){.hnd-price-head{align-items:flex-start;flex-direction:column;padding:23px}.hnd-plan-grid{grid-template-columns:1fr}.hnd-plan{padding:25px}.hnd-idea{padding-block:75px}.hnd-idea-layout{grid-template-columns:1fr}.hnd-idea-steps{gap:8px}.hnd-idea-steps span{font-size:10px}.hnd-faq{padding-block:65px}.hnd-popular{max-width:125px}.hnd-price-head strong{font-size:33px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.hnd-plan,.hnd-choice,.hnd-plan-button{transition:none!important}.hnd-plan:hover,.hnd-choice:hover,.hnd-plan-button:hover{transform:none!important}}
 
-  </style>
+  
+/* HND 3.1 — condições comerciais transparentes */
+.hnd-monthly{display:grid;gap:4px;padding:13px 14px;border:1px solid rgba(216,167,94,.22);border-radius:13px;background:rgba(216,167,94,.055)}
+.hnd-monthly>span{font-size:11px;color:#d8c9aa}.hnd-monthly>strong{color:#f5dfb6;font-size:19px;letter-spacing:-.025em}.hnd-monthly>small{color:#a5a8ad;font-size:10px;line-height:1.4}
+.hnd-price-explainer{margin-top:28px;padding:22px 25px;border:1px solid rgba(216,167,94,.24);border-radius:18px;background:rgba(216,167,94,.045)}
+.hnd-price-explainer>strong{display:block;margin-bottom:9px;color:#f5dfb6;font-size:18px}.hnd-price-explainer p{color:#bfc0c3;font-size:13px;line-height:1.75}.hnd-price-explainer b{color:#fff}
+
+/* HND 5.0 — Interactive Project Studio */
+.hnd-old-case{display:none!important}
+.hnd-lab{margin:48px 0 55px;--lab-accent:#e11d2e;--lab-ink:#fff;position:relative}
+.hnd-lab-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:26px}.hnd-lab-eyebrow{font:800 11px/1.5 inherit;letter-spacing:.2em;color:#eac785}.hnd-lab-intro h3{font-size:clamp(34px,4vw,58px);line-height:1.05;letter-spacing:-.055em;margin:13px 0 16px;max-width:810px}.hnd-lab-intro h3 em{font-style:normal;color:#d6a75f}.hnd-lab-intro p{max-width:680px;color:#9fa3ad;font-size:14px;line-height:1.75}.hnd-lab-pulse{white-space:nowrap;color:#d4bf97;letter-spacing:.12em;font-size:10px;font-weight:800;border:1px solid #6a5335;border-radius:40px;padding:11px 14px}.hnd-lab-pulse i{display:inline-block;width:7px;height:7px;background:#72cc8f;border-radius:50%;margin-right:7px;box-shadow:0 0 12px #72cc8f;animation:hnd-pulse 2s infinite}@keyframes hnd-pulse{50%{opacity:.4;box-shadow:0 0 2px #72cc8f}}
+.hnd-lab-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 13px}.hnd-project-tab{border:1px solid #ffffff19;background:linear-gradient(140deg,#17181b,#101114);border-radius:15px;padding:18px;text-align:left;color:#f5f5f5;font-weight:850;font-size:15px;cursor:pointer;transition:.3s;display:grid;grid-template-columns:36px 1fr;column-gap:10px;align-items:center}.hnd-project-tab span{grid-row:span 2;color:#be9256;font-size:12px}.hnd-project-tab small{grid-column:2;color:#989aa3;font-size:11px;font-weight:500;margin-top:4px}.hnd-project-tab:hover{transform:translateY(-3px);border-color:#b48b54}.hnd-project-tab.is-on{border-color:#d4a55a;background:linear-gradient(125deg,#332718,#161617);box-shadow:0 0 30px #d0a05217}.hnd-lab-stage{--accent:#e11d2e;display:grid;grid-template-columns:.9fr 1.1fr;min-height:585px;border:1px solid #60503b;border-radius:27px;overflow:hidden;background:radial-gradient(circle at 75% 35%,#33251b55,transparent 43%),linear-gradient(130deg,#17191d,#0a0b0e 70%);position:relative;isolation:isolate}.hnd-lab-stage[data-product="pretao"]{--accent:#e8ac42;background:radial-gradient(circle at 76% 30%,#8350213d,transparent 48%),linear-gradient(130deg,#161412,#0a0b0e 75%)}.hnd-lab-stage[data-product="admin"]{--accent:#ba875b;background:radial-gradient(circle at 76% 30%,#c5a37e25,transparent 48%),linear-gradient(130deg,#181510,#0a0b0e 75%)}.hnd-lab-copy{padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;z-index:2}.hnd-lab-index{font-size:10px;letter-spacing:.17em;color:#d8b47c;font-weight:850;margin-bottom:22px}.hnd-lab-copy h3{font-size:clamp(34px,4.2vw,57px);letter-spacing:-.055em;line-height:1.05;margin:0 0 22px}.hnd-lab-copy h3 span{color:#dfba7f}.hnd-lab-copy>p{font-size:14px;line-height:1.85;color:#b0b1b6;max-width:430px}.hnd-feature-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.hnd-feature-pills span{border:1px solid #ffffff24;padding:8px 11px;border-radius:100px;color:#d6d6d7;font-size:11px}.hnd-lab-tip{font-size:12px;color:#bba47c;margin-top:28px;line-height:1.5}.hnd-lab-tip span{font-size:21px;margin-right:6px}.hnd-lab-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.hnd-lab-actions a{padding:13px 17px;border-radius:11px;border:1px solid #876839;color:#ecd19b;font-size:12px;font-weight:800;transition:.2s}.hnd-lab-actions a:hover{background:#d6a75f;color:#15120f;transform:translateY(-2px)}.hnd-lab-actions a:nth-child(2){background:#dbad68;color:#20150a}
+.hnd-device-area{position:relative;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:14px;padding:36px 24px;min-width:0}.hnd-halo{position:absolute;width:390px;height:390px;max-width:100%;background:radial-gradient(circle,var(--accent),transparent 65%);opacity:.09;filter:blur(25px);pointer-events:none}.hnd-device-shell{position:relative;z-index:1;background:#0c0c0e;color:#fff;border:7px solid #383839;box-shadow:0 26px 75px #000b,0 0 0 1px #ffffff26 inset;overflow:hidden;transition:width .45s,border-radius .45s,transform .45s;transform:perspective(1100px) rotateY(-5deg) rotateX(2deg)}.hnd-device-shell:hover{transform:perspective(1100px) rotateY(0) rotateX(0)}.hnd-device-shell.hnd-phone{width:min(295px,100%);height:450px;border-radius:35px}.hnd-device-shell.hnd-browser{width:min(550px,100%);height:395px;border-radius:16px;border-width:5px}.hnd-device-bar{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;gap:10px;border-bottom:1px solid #ffffff1c;font-size:9px;letter-spacing:.11em;background:#111114}.hnd-device-bar span{color:#98989f}.hnd-device-dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 13px var(--accent)}.hnd-device-display{padding:15px;height:calc(100% - 37px);overflow:auto;scrollbar-width:thin;scrollbar-color:#555 transparent}.hnd-device-options{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;z-index:2;max-width:580px}.hnd-device-options button{border:1px solid #ffffff30;border-radius:100px;background:#1d1d21;color:#c9c7c3;padding:9px 12px;font-size:11px;font-weight:700;cursor:pointer;transition:.2s}.hnd-device-options button:hover{border-color:#e8bc7a}.hnd-device-options button.is-on{background:#d5ab6c;border-color:#d5ab6c;color:#1b1208}.hnd-lab-foot{display:flex;gap:16px;justify-content:space-between;color:#777e86;font-size:10px;letter-spacing:.08em;padding:16px 2px}.hnd-lab-foot span:first-child{color:#c9a86f}
+/* Rendered sample applications */
+.hnd-screen{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#fafafa;font-size:12px}.hnd-screen *{box-sizing:border-box}.hnd-screen .ds-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.hnd-screen .ds-head strong{font-size:14px;letter-spacing:.04em}.hnd-screen .ds-head small{font-size:9px;color:#8f939a}.hnd-screen .ds-mark{color:#fbbf24}.hnd-screen .ds-red{color:#ef5160}.hnd-screen .ds-hero{background:linear-gradient(125deg,#3b171c,#19191e);border:1px solid #66333d;border-radius:15px;padding:17px;margin-bottom:12px}.hnd-screen .ds-hero small{font-size:9px;letter-spacing:.12em;color:#ffb7bd}.hnd-screen .ds-hero strong{display:block;font-size:17px;line-height:1.25;margin-top:7px}.hnd-screen .ds-hero p{font-size:10px;color:#b2a6ad;margin-top:8px}.hnd-screen .ds-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.hnd-screen .ds-tile{background:#242428;border:1px solid #37373e;border-radius:12px;padding:13px 10px;min-height:75px}.hnd-screen .ds-tile b{display:block;font-size:20px;margin-bottom:8px}.hnd-screen .ds-tile strong{font-size:11px}.hnd-screen .ds-tile small{display:block;color:#95959c;margin-top:4px;font-size:9px}.hnd-screen .ds-banner{border-radius:12px;padding:14px;margin:12px 0;background:#2b2020;border:1px solid #65462a}.hnd-screen .ds-banner strong{display:block;color:#ffd478;margin-bottom:6px}.hnd-screen .ds-banner p{color:#bfb9b6;font-size:10px}.hnd-screen .ds-row{background:#242428;border:1px solid #39393f;border-radius:11px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px;margin-bottom:9px}.hnd-screen .ds-row strong{display:block;font-size:11px}.hnd-screen .ds-row small{display:block;font-size:9px;color:#a9a7a7;margin-top:4px}.hnd-screen .ds-tag{padding:6px 8px;background:#55242a;border-radius:50px;color:#ffbcc3;font-size:9px;font-weight:800}.hnd-screen .ds-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.hnd-screen .ds-number{text-align:center;background:#262529;border-radius:10px;padding:10px 3px}.hnd-screen .ds-number strong{display:block;font-size:19px;color:#ffb94b}.hnd-screen .ds-number small{font-size:9px;color:#aaa}.hnd-screen .ds-sub{margin:15px 0 10px;font-size:11px;color:#aaa;letter-spacing:.1em}.hnd-screen .ds-button{background:linear-gradient(100deg,#b51c2b,#e63c4b);color:#fff;text-align:center;border-radius:10px;padding:12px;font-weight:800;margin-top:12px}.hnd-screen .ds-days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.hnd-screen .ds-day{text-align:center;padding:8px 3px;border-radius:6px;background:#252529;color:#b9b8bd;font-size:10px}.hnd-screen .ds-day.done{background:#66242d;color:#ffdfe2}.hnd-screen .ds-note{font-size:10px;color:#96949b;margin-top:14px;line-height:1.5}
+.hnd-screen.pret{color:#f9f0e4}.hnd-screen.pret .ds-hero{background:linear-gradient(130deg,#422b17,#18110c);border-color:#795329}.hnd-screen.pret .ds-hero small{color:#ffe0a6}.hnd-screen.pret .ds-tile{background:#241e17;border-color:#56402b}.hnd-screen.pret .ds-row{background:#231c15;border-color:#56402b}.hnd-screen.pret .ds-button{background:linear-gradient(125deg,#ffe09a,#d9942d);color:#20150a}.hnd-screen.pret .ds-tag{background:#4e321b;color:#ffdc9e}.hnd-screen.pret .ds-number{background:#231c15}
+.hnd-screen.admin{color:#342318;background:#f9f4ed;min-height:100%;padding:8px;border-radius:8px}.hnd-screen.admin .ds-head strong{color:#35271e}.hnd-screen.admin .ds-hero{background:#3a251b;border-color:#835d3c}.hnd-screen.admin .ds-hero strong{color:#fff}.hnd-screen.admin .ds-hero small{color:#e3b981}.hnd-screen.admin .ds-hero p{color:#ddd}.hnd-screen.admin .ds-tile{background:#fff;border-color:#e2d2bf;color:#382820}.hnd-screen.admin .ds-tile small{color:#78685b}.hnd-screen.admin .ds-row{background:white;border-color:#e7daca;color:#35261d}.hnd-screen.admin .ds-row small{color:#78685b}.hnd-screen.admin .ds-tag{background:#f2e6d7;color:#714b2d}.hnd-screen.admin .ds-number{background:#efe5d8}.hnd-screen.admin .ds-number strong{color:#65432b}.hnd-screen.admin .ds-number small{color:#78685b}.hnd-screen.admin .ds-sub{color:#655346}.hnd-screen.admin .ds-button{background:#4b3020}.hnd-screen.admin .ds-note{color:#665b51}
+/* Microinteractions */
+.hnd-spark{position:fixed;z-index:100001;pointer-events:none;color:#dfb76d;font-size:20px;animation:hnd-spark .55s forwards}@keyframes hnd-spark{to{opacity:0;transform:translateY(-24px) scale(1.5)}}
+@media(max-width:960px){.hnd-lab-stage{grid-template-columns:1fr}.hnd-lab-copy{padding:32px 30px 6px}.hnd-lab-copy h3{font-size:42px}.hnd-device-area{padding:22px 24px 38px}.hnd-lab-intro{align-items:flex-start;flex-direction:column}.hnd-lab-nav{grid-template-columns:1fr 1fr 1fr}.hnd-project-tab{display:block;font-size:12px}.hnd-project-tab span{display:block;margin-bottom:8px}.hnd-project-tab small{display:block}}
+@media(max-width:620px){.hnd-lab-nav{grid-template-columns:1fr}.hnd-project-tab{display:flex;align-items:center;gap:10px;padding:13px}.hnd-project-tab span,.hnd-project-tab small{margin:0}.hnd-project-tab small{margin-left:auto;font-size:9px}.hnd-lab-stage{border-radius:19px}.hnd-lab-copy{padding:27px 20px 4px}.hnd-lab-copy h3{font-size:37px}.hnd-lab-copy>p{font-size:13px}.hnd-device-area{padding-inline:12px}.hnd-device-shell.hnd-phone{height:430px}.hnd-device-shell.hnd-browser{height:330px}.hnd-lab-foot{display:block;line-height:1.9}.hnd-lab-pulse{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.hnd-device-shell,.hnd-project-tab{transition:none!important;transform:none!important}.hnd-lab-pulse i{animation:none}.hnd-spark{display:none}}
+</style>
 </head>
-
 <body>
-
-  <!-- =====================================================
+<!-- =====================================================
        ABERTURA
   ====================================================== -->
-
-  <div class="intro-screen" id="introScreen">
-    <div class="intro-content">
-
-      <img
-        src="logo.png"
-        alt="Harri Novaes Digital"
-        class="intro-logo"
-      >
-
-      <div class="intro-line"></div>
-
-      <span class="intro-text">
+<div class="intro-screen" id="introScreen">
+<div class="intro-content">
+<img alt="Harri Novaes Digital" class="intro-logo" src="logo.png"/>
+<div class="intro-line"></div>
+<span class="intro-text">
         TRANSFORMANDO IDEIAS EM SOLUÇÕES DIGITAIS
       </span>
-
-    </div>
-  </div>
-
-
-  <!-- =====================================================
+</div>
+</div>
+<!-- =====================================================
        EFEITOS GERAIS
   ====================================================== -->
-
-  <div class="page-effects" aria-hidden="true">
-    <div class="mouse-glow" id="mouseGlow"></div>
-    <div class="background-grid"></div>
-    <div class="background-light light-one"></div>
-    <div class="background-light light-two"></div>
-  </div>
-
-
-  <!-- =====================================================
+<div aria-hidden="true" class="page-effects">
+<div class="mouse-glow" id="mouseGlow"></div>
+<div class="background-grid"></div>
+<div class="background-light light-one"></div>
+<div class="background-light light-two"></div>
+</div>
+<!-- =====================================================
        CABEÇALHO
   ====================================================== -->
-
-  <header class="header" id="header">
-
-    <div class="container header-content">
-
-      <a
-        href="#inicio"
-        class="brand"
-        aria-label="Harri Novaes Digital"
-      >
-        <img
-          src="logo.png"
-          alt="Harri Novaes Digital"
-          class="brand-logo"
-        >
-      </a>
-
-
-      <nav class="nav" id="nav">
-
-        <a href="#inicio" class="nav-link active">
+<header class="header" id="header">
+<div class="container header-content">
+<a aria-label="Harri Novaes Digital" class="brand" href="#inicio">
+<img alt="Harri Novaes Digital" class="brand-logo" src="logo.png"/>
+</a>
+<nav class="nav" id="nav">
+<a class="nav-link active" href="#inicio">
           Início
         </a>
-
-        <a href="#solucoes" class="nav-link">
+<a class="nav-link" href="#solucoes">
           Soluções
         </a>
-
-        <a href="#possivel" class="nav-link">
+<a class="nav-link" href="#possivel">
           É possível?
         </a>
-
-        <a href="#portfolio" class="nav-link">
+<a class="nav-link" href="#portfolio">
           Projetos
         </a>
-
-        <a href="#planos" class="nav-link">
+<a class="nav-link" href="#planos">
           Planos
         </a>
-
-        <a href="#sobre" class="nav-link">
+<a class="nav-link" href="#sobre">
           Sobre
         </a>
-
-      </nav>
-
-
-      <a
-        href="#orcamento"
-        class="header-button magnetic"
-      >
+</nav>
+<a class="header-button magnetic" href="#orcamento">
         Vamos conversar
       </a>
-
-
-      <button
-        class="menu-button"
-        id="menuButton"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-    </div>
-
-  </header>
-
-
-  <main>
-
-    <!-- =====================================================
+<button aria-expanded="false" aria-label="Abrir menu" class="menu-button" id="menuButton">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</header>
+<main>
+<!-- =====================================================
          HERO
     ====================================================== -->
-
-    <section
-      class="hero section-observer"
-      id="inicio"
-    >
-
-      <div class="hero-orb hero-orb-one"></div>
-      <div class="hero-orb hero-orb-two"></div>
-
-
-      <div class="container hero-content">
-
-        <!-- TEXTO -->
-
-        <div
-          class="hero-text reveal"
-          data-reveal="left"
-        >
-
-          <div class="hero-status">
-            <span class="status-dot"></span>
-
-            <span>
+<section class="hero section-observer" id="inicio">
+<div class="hero-orb hero-orb-one"></div>
+<div class="hero-orb hero-orb-two"></div>
+<div class="container hero-content">
+<!-- TEXTO -->
+<div class="hero-text reveal" data-reveal="left">
+<div class="hero-status">
+<span class="status-dot"></span>
+<span>
               DESENVOLVIMENTO DE SOLUÇÕES DIGITAIS
             </span>
-          </div>
-
-
-          <h1>
+</div>
+<h1>
             Sua ideia pode
             <span class="gradient-text">
               se tornar realidade.
             </span>
-          </h1>
-
-
-          <p class="hero-description">
+</h1>
+<p class="hero-description">
             Criamos sites, sistemas e experiências digitais
             personalizadas para transformar ideias em ferramentas
             reais para o seu negócio.
           </p>
-
-
-          <div class="hero-actions">
-
-            <a
-              href="#orcamento"
-              class="button primary magnetic"
-            >
-              <span>Quero transformar minha ideia</span>
-              <strong>→</strong>
-            </a>
-
-            <a
-              href="#portfolio"
-              class="button secondary"
-            >
+<div class="hero-actions">
+<a class="button primary magnetic" href="#orcamento">
+<span>Quero transformar minha ideia</span>
+<strong>→</strong>
+</a>
+<a class="button secondary" href="#portfolio">
               Explorar projetos reais
             </a>
-
-          </div>
-
-
-          <div class="hero-proof">
-
-            <div>
-              <strong>Sites</strong>
-              <span>Presença digital profissional</span>
-            </div>
-
-            <div>
-              <strong>Sistemas</strong>
-              <span>Ferramentas para o negócio</span>
-            </div>
-
-            <div>
-              <strong>Soluções</strong>
-              <span>Projetos personalizados</span>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <!-- EXPERIÊNCIA VISUAL -->
-
-        <div
-          class="hero-experience reveal"
-          data-reveal="right"
-        >
-
-          <div
-            class="experience-card tilt-card"
-            data-tilt
-          >
-
-            <div class="experience-top">
-
-              <span>
+</div>
+<div class="hero-proof">
+<div>
+<strong>Sites</strong>
+<span>Presença digital profissional</span>
+</div>
+<div>
+<strong>Sistemas</strong>
+<span>Ferramentas para o negócio</span>
+</div>
+<div>
+<strong>Soluções</strong>
+<span>Projetos personalizados</span>
+</div>
+</div>
+</div>
+<!-- EXPERIÊNCIA VISUAL -->
+<div class="hero-experience reveal" data-reveal="right">
+<div class="experience-card tilt-card" data-tilt="">
+<div class="experience-top">
+<span>
                 HARRI NOVAES DIGITAL
               </span>
-
-              <div class="experience-live">
-                <i></i>
+<div class="experience-live">
+<i></i>
                 PROJETO DIGITAL
               </div>
-
-            </div>
-
-
-            <div class="experience-logo">
-              <img
-                src="logo.png"
-                alt="Harri Novaes Digital"
-              >
-            </div>
-
-
-            <div class="experience-question">
-
-              <small>
+</div>
+<div class="experience-logo">
+<img alt="Harri Novaes Digital" src="logo.png"/>
+</div>
+<div class="experience-question">
+<small>
                 VOCÊ IMAGINA.
               </small>
-
-              <h2>
+<h2>
                 Nós pensamos em como fazer.
               </h2>
-
-            </div>
-
-
-            <div class="experience-process">
-
-              <div>
-                <span>01</span>
-                <strong>Ideia</strong>
-              </div>
-
-              <i></i>
-
-              <div>
-                <span>02</span>
-                <strong>Projeto</strong>
-              </div>
-
-              <i></i>
-
-              <div>
-                <span>03</span>
-                <strong>Solução</strong>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="floating-tag tag-one">
+</div>
+<div class="experience-process">
+<div>
+<span>01</span>
+<strong>Ideia</strong>
+</div>
+<i></i>
+<div>
+<span>02</span>
+<strong>Projeto</strong>
+</div>
+<i></i>
+<div>
+<span>03</span>
+<strong>Solução</strong>
+</div>
+</div>
+</div>
+<div class="floating-tag tag-one">
             ⚡ Experiência
           </div>
-
-          <div class="floating-tag tag-two">
+<div class="floating-tag tag-two">
             ✦ Tecnologia
           </div>
-
-          <div class="floating-tag tag-three">
+<div class="floating-tag tag-three">
             ◈ Personalização
           </div>
-
-        </div>
-
-      </div>
-
-
-      <a
-        href="#solucoes"
-        class="scroll-indicator"
-        aria-label="Continuar navegando"
-      >
-        <span>DESCUBRA</span>
-        <i></i>
-      </a>
-
-    </section>
-
-
-    <!-- =====================================================
+</div>
+</div>
+<a aria-label="Continuar navegando" class="scroll-indicator" href="#solucoes">
+<span>DESCUBRA</span>
+<i></i>
+</a>
+</section>
+<!-- =====================================================
          FAIXA ANIMADA
     ====================================================== -->
-
-    <section class="marquee-section">
-
-      <div class="marquee">
-
-        <div class="marquee-track">
-
-          <span>SITES PROFISSIONAIS</span>
-          <i>✦</i>
-
-          <span>SISTEMAS DE GESTÃO</span>
-          <i>✦</i>
-
-          <span>AGENDAMENTOS</span>
-          <i>✦</i>
-
-          <span>SOLUÇÕES PERSONALIZADAS</span>
-          <i>✦</i>
-
-          <span>EXPERIÊNCIAS DIGITAIS</span>
-          <i>✦</i>
-
-          <span>SITES PROFISSIONAIS</span>
-          <i>✦</i>
-
-          <span>SISTEMAS DE GESTÃO</span>
-          <i>✦</i>
-
-          <span>AGENDAMENTOS</span>
-          <i>✦</i>
-
-          <span>SOLUÇÕES PERSONALIZADAS</span>
-          <i>✦</i>
-
-          <span>EXPERIÊNCIAS DIGITAIS</span>
-          <i>✦</i>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
+<section class="marquee-section">
+<div class="marquee">
+<div class="marquee-track">
+<span>SITES PROFISSIONAIS</span>
+<i>✦</i>
+<span>SISTEMAS DE GESTÃO</span>
+<i>✦</i>
+<span>AGENDAMENTOS</span>
+<i>✦</i>
+<span>SOLUÇÕES PERSONALIZADAS</span>
+<i>✦</i>
+<span>EXPERIÊNCIAS DIGITAIS</span>
+<i>✦</i>
+<span>SITES PROFISSIONAIS</span>
+<i>✦</i>
+<span>SISTEMAS DE GESTÃO</span>
+<i>✦</i>
+<span>AGENDAMENTOS</span>
+<i>✦</i>
+<span>SOLUÇÕES PERSONALIZADAS</span>
+<i>✦</i>
+<span>EXPERIÊNCIAS DIGITAIS</span>
+<i>✦</i>
+</div>
+</div>
+</section>
+<!-- =====================================================
          SOLUÇÕES
     ====================================================== -->
-
-    <section
-      class="section solutions-section section-observer"
-      id="solucoes"
-    >
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <span class="section-number">
+<section class="section solutions-section section-observer" id="solucoes">
+<div class="container">
+<div class="section-heading reveal">
+<span class="section-number">
             01
           </span>
-
-          <div>
-
-            <span class="eyebrow">
+<div>
+<span class="eyebrow">
               O QUE PODEMOS CRIAR
             </span>
-
-            <h2>
+<h2>
               Não entregamos apenas páginas.
               <span>Construímos soluções.</span>
-            </h2>
-
-            <p>
+</h2>
+<p>
               Cada negócio tem uma necessidade diferente.
               Por isso, cada projeto começa entendendo o problema
               antes de pensar na tecnologia.
             </p>
-
-          </div>
-
-        </div>
-
-
-        <div class="solutions-grid">
-
-          <article
-            class="solution-card reveal tilt-card"
-            data-tilt
-          >
-
-            <div class="card-light"></div>
-
-            <div class="solution-number">01</div>
-
-            <div class="solution-icon">◇</div>
-
-            <h3>Sites Profissionais</h3>
-
-            <p>
+</div>
+</div>
+<div class="solutions-grid">
+<article class="solution-card reveal tilt-card" data-tilt="">
+<div class="card-light"></div>
+<div class="solution-number">01</div>
+<div class="solution-icon">◇</div>
+<h3>Sites Profissionais</h3>
+<p>
               Sua empresa apresentada de forma moderna,
               profissional e preparada para qualquer tela.
             </p>
-
-            <div class="solution-features">
-              <span>Responsivo</span>
-              <span>Profissional</span>
-              <span>Personalizado</span>
-            </div>
-
-            <div class="solution-arrow">↗</div>
-
-          </article>
-
-
-          <article
-            class="solution-card reveal tilt-card"
-            data-tilt
-          >
-
-            <div class="card-light"></div>
-
-            <div class="solution-number">02</div>
-
-            <div class="solution-icon">◫</div>
-
-            <h3>Sistemas de Agendamento</h3>
-
-            <p>
+<div class="solution-features">
+<span>Responsivo</span>
+<span>Profissional</span>
+<span>Personalizado</span>
+</div>
+<div class="solution-arrow">↗</div>
+</article>
+<article class="solution-card reveal tilt-card" data-tilt="">
+<div class="card-light"></div>
+<div class="solution-number">02</div>
+<div class="solution-icon">◫</div>
+<h3>Sistemas de Agendamento</h3>
+<p>
               Seus clientes podem consultar horários,
               agendar serviços e interagir com seu negócio
               diretamente pelo celular.
             </p>
-
-            <div class="solution-features">
-              <span>Agenda</span>
-              <span>Clientes</span>
-              <span>Automação</span>
-            </div>
-
-            <div class="solution-arrow">↗</div>
-
-          </article>
-
-
-          <article
-            class="solution-card reveal tilt-card"
-            data-tilt
-          >
-
-            <div class="card-light"></div>
-
-            <div class="solution-number">03</div>
-
-            <div class="solution-icon">⬡</div>
-
-            <h3>Sistemas de Gestão</h3>
-
-            <p>
+<div class="solution-features">
+<span>Agenda</span>
+<span>Clientes</span>
+<span>Automação</span>
+</div>
+<div class="solution-arrow">↗</div>
+</article>
+<article class="solution-card reveal tilt-card" data-tilt="">
+<div class="card-light"></div>
+<div class="solution-number">03</div>
+<div class="solution-icon">⬡</div>
+<h3>Sistemas de Gestão</h3>
+<p>
               Painéis administrativos e ferramentas
               criadas para organizar informações e facilitar
               processos do dia a dia.
             </p>
-
-            <div class="solution-features">
-              <span>Painéis</span>
-              <span>Controle</span>
-              <span>Dados</span>
-            </div>
-
-            <div class="solution-arrow">↗</div>
-
-          </article>
-
-
-          <article
-            class="solution-card reveal tilt-card"
-            data-tilt
-          >
-
-            <div class="card-light"></div>
-
-            <div class="solution-number">04</div>
-
-            <div class="solution-icon">✦</div>
-
-            <h3>Projetos Personalizados</h3>
-
-            <p>
+<div class="solution-features">
+<span>Painéis</span>
+<span>Controle</span>
+<span>Dados</span>
+</div>
+<div class="solution-arrow">↗</div>
+</article>
+<article class="solution-card reveal tilt-card" data-tilt="">
+<div class="card-light"></div>
+<div class="solution-number">04</div>
+<div class="solution-icon">✦</div>
+<h3>Projetos Personalizados</h3>
+<p>
               Tem uma necessidade que não cabe em uma solução pronta?
               Podemos estudar a ideia e desenvolver algo específico.
             </p>
-
-            <div class="solution-features">
-              <span>Ideia</span>
-              <span>Projeto</span>
-              <span>Solução</span>
-            </div>
-
-            <div class="solution-arrow">↗</div>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
+<div class="solution-features">
+<span>Ideia</span>
+<span>Projeto</span>
+<span>Solução</span>
+</div>
+<div class="solution-arrow">↗</div>
+</article>
+</div>
+</div>
+</section>
+<!-- =====================================================
          SERÁ QUE É POSSÍVEL?
     ====================================================== -->
-
-    <section
-      class="possibility-section section-observer"
-      id="possivel"
-    >
-
-      <div class="possibility-glow"></div>
-
-
-      <div class="container possibility-container">
-
-        <div class="possibility-intro reveal">
-
-          <span class="eyebrow">
+<section class="possibility-section section-observer" id="possivel">
+<div class="possibility-glow"></div>
+<div class="container possibility-container">
+<div class="possibility-intro reveal">
+<span class="eyebrow">
             E SE EU TIVER UMA IDEIA?
           </span>
-
-          <h2>
+<h2>
             Você pensa:
             <span>“Será que isso é possível?”</span>
-          </h2>
-
-          <p>
+</h2>
+<p>
             Clique em uma ideia e descubra.
           </p>
-
-        </div>
-
-
-        <div class="possibility-experience">
-
-          <div class="possibility-options reveal">
-
-            <button
-              class="possibility-option active"
-              data-possibility="agenda"
-            >
-
-              <span>01</span>
-
-              <div>
-                <strong>
+</div>
+<div class="possibility-experience">
+<div class="possibility-options reveal">
+<button class="possibility-option active" data-possibility="agenda">
+<span>01</span>
+<div>
+<strong>
                   Quero que meus clientes agendem pelo celular
                 </strong>
-
-                <small>
+<small>
                   Atendimento e horários
                 </small>
-              </div>
-
-              <i>→</i>
-
-            </button>
-
-
-            <button
-              class="possibility-option"
-              data-possibility="gestao"
-            >
-
-              <span>02</span>
-
-              <div>
-                <strong>
+</div>
+<i>→</i>
+</button>
+<button class="possibility-option" data-possibility="gestao">
+<span>02</span>
+<div>
+<strong>
                   Quero organizar clientes e informações
                 </strong>
-
-                <small>
+<small>
                   Gestão do negócio
                 </small>
-              </div>
-
-              <i>→</i>
-
-            </button>
-
-
-            <button
-              class="possibility-option"
-              data-possibility="area"
-            >
-
-              <span>03</span>
-
-              <div>
-                <strong>
+</div>
+<i>→</i>
+</button>
+<button class="possibility-option" data-possibility="area">
+<span>03</span>
+<div>
+<strong>
                   Quero uma área exclusiva para meus clientes
                 </strong>
-
-                <small>
+<small>
                   Login e experiência personalizada
                 </small>
-              </div>
-
-              <i>→</i>
-
-            </button>
-
-
-            <button
-              class="possibility-option"
-              data-possibility="ideia"
-            >
-
-              <span>04</span>
-
-              <div>
-                <strong>
+</div>
+<i>→</i>
+</button>
+<button class="possibility-option" data-possibility="ideia">
+<span>04</span>
+<div>
+<strong>
                   Tenho uma ideia diferente de tudo isso
                 </strong>
-
-                <small>
+<small>
                   Projeto personalizado
                 </small>
-              </div>
-
-              <i>→</i>
-
-            </button>
-
-          </div>
-
-
-          <div
-            class="possibility-result reveal"
-            id="possibilityResult"
-          >
-
-            <span class="result-label">
+</div>
+<i>→</i>
+</button>
+</div>
+<div class="possibility-result reveal" id="possibilityResult">
+<span class="result-label">
               RESPOSTA
             </span>
-
-            <div class="result-icon">
+<div class="result-icon">
               ✓
             </div>
-
-            <h3>
+<h3>
               Sim.
               <span>É possível.</span>
-            </h3>
-
-            <p id="possibilityText">
+</h3>
+<p id="possibilityText">
               Podemos criar um sistema onde seus clientes
               consultam horários disponíveis e realizam
               agendamentos diretamente pelo celular.
             </p>
-
-            <div class="result-tech" id="possibilityTags">
-
-              <span>Agendamento</span>
-              <span>Clientes</span>
-              <span>Painel</span>
-
-            </div>
-
-            <a
-              href="#orcamento"
-              class="result-link"
-            >
+<div class="result-tech" id="possibilityTags">
+<span>Agendamento</span>
+<span>Clientes</span>
+<span>Painel</span>
+</div>
+<a class="result-link" href="#orcamento">
               Quero conversar sobre essa ideia
               <strong>→</strong>
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- =====================================================
          PROCESSO
     ====================================================== -->
-
-    <section class="section process-section">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <span class="section-number">
+<section class="section process-section">
+<div class="container">
+<div class="section-heading reveal">
+<span class="section-number">
             02
           </span>
-
-          <div>
-
-            <span class="eyebrow">
+<div>
+<span class="eyebrow">
               COMO FUNCIONA
             </span>
-
-            <h2>
+<h2>
               Da conversa
               <span>ao projeto funcionando.</span>
-            </h2>
-
-          </div>
-
-        </div>
-
-
-        <div class="process-grid">
-
-          <article class="process-card reveal">
-
-            <span class="process-step">
+</h2>
+</div>
+</div>
+<div class="process-grid">
+<article class="process-card reveal">
+<span class="process-step">
               01
             </span>
-
-            <div class="process-symbol">
+<div class="process-symbol">
               ?
             </div>
-
-            <h3>
+<h3>
               Entendemos
             </h3>
-
-            <p>
+<p>
               Primeiro entendemos seu negócio, sua necessidade
               e o que você gostaria de melhorar.
             </p>
-
-          </article>
-
-
-          <article class="process-card reveal">
-
-            <span class="process-step">
+</article>
+<article class="process-card reveal">
+<span class="process-step">
               02
             </span>
-
-            <div class="process-symbol">
+<div class="process-symbol">
               ◇
             </div>
-
-            <h3>
+<h3>
               Planejamos
             </h3>
-
-            <p>
+<p>
               Transformamos a ideia em uma proposta de solução
               clara e adequada ao projeto.
             </p>
-
-          </article>
-
-
-          <article class="process-card reveal">
-
-            <span class="process-step">
+</article>
+<article class="process-card reveal">
+<span class="process-step">
               03
             </span>
-
-            <div class="process-symbol">
+<div class="process-symbol">
               &lt;/&gt;
             </div>
-
-            <h3>
+<h3>
               Desenvolvemos
             </h3>
-
-            <p>
+<p>
               Construímos a experiência, as funcionalidades
               e os recursos necessários.
             </p>
-
-          </article>
-
-
-          <article class="process-card reveal">
-
-            <span class="process-step">
+</article>
+<article class="process-card reveal">
+<span class="process-step">
               04
             </span>
-
-            <div class="process-symbol">
+<div class="process-symbol">
               ✓
             </div>
-
-            <h3>
+<h3>
               Colocamos no ar
             </h3>
-
-            <p>
+<p>
               Testamos, ajustamos e entregamos a solução
               pronta para começar a ser utilizada.
             </p>
-
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
+</article>
+</div>
+</div>
+</section>
+<!-- =====================================================
          PORTFÓLIO V3 — PROJETOS REAIS
     ====================================================== -->
-
-    <section
-      class="section portfolio-section section-observer"
-      id="portfolio"
-    >
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-
-          <span class="section-number">
+<section class="section portfolio-section section-observer" id="portfolio">
+<div class="container">
+<div class="section-heading reveal">
+<span class="section-number">
             03
           </span>
-
-          <div>
-
-            <span class="eyebrow">
+<div>
+<span class="eyebrow">
               PROJETOS REAIS
             </span>
-
-            <h2>
+<h2>
               Não mostramos apenas o resultado.
               <span>Mostramos a solução funcionando.</span>
-            </h2>
-
-            <p>
+</h2>
+<p>
               Conheça projetos desenvolvidos para necessidades reais,
               com experiências diferentes para clientes, alunos,
               funcionários e administradores.
             </p>
+</div>
+</div>
+<div class="hnd-lab" id="hndLab">
+<div class="hnd-lab-intro reveal">
+<div><span class="hnd-lab-eyebrow">✦ ESTÚDIO INTERATIVO / PROJETOS 2026</span>
+<h3>Não veja só imagens. <em>Explore experiências.</em></h3>
+<p>Selecione um projeto e descubra interfaces inspiradas nas versões atualizadas. Os dados mostrados são fictícios: esta é uma demonstração visual, não um acesso aos sistemas reais.</p></div>
+<span class="hnd-lab-pulse"><i></i> EXPERIÊNCIA DISPONÍVEL</span>
+</div>
+<div aria-label="Selecionar projeto" class="hnd-lab-nav" role="tablist">
+<button aria-selected="true" class="hnd-project-tab is-on" data-product="morotti" role="tab" type="button"><span>01</span> MorottiGym 2.0 <small>App de academia</small></button>
+<button aria-selected="false" class="hnd-project-tab" data-product="pretao" role="tab" type="button"><span>02</span> Pretão do Corte <small>Site e agendamentos</small></button>
+<button aria-selected="false" class="hnd-project-tab" data-product="admin" role="tab" type="button"><span>03</span> Gestão Pretão <small>Painel de negócios</small></button>
+</div>
+<div class="hnd-lab-stage" data-product="morotti" id="hndStage">
+<div aria-live="polite" class="hnd-lab-copy">
+<span class="hnd-lab-index" id="hndProjectIndex">01 / ACADEMIA INTELIGENTE</span>
+<h3 id="hndProjectTitle">MorottiGym <span>2.0</span></h3>
+<p id="hndProjectDesc">Um aplicativo que aproxima alunos e professores. Explore as áreas de treino, frequência, desafios e gestão em uma experiência inspirada no projeto atualizado.</p>
+<div class="hnd-feature-pills" id="hndFeaturePills"><span>Treinos</span><span>Frequência</span><span>Ranking</span><span>Gestão</span></div>
+<div class="hnd-lab-tip"><span>↳</span> Clique nas opções do dispositivo para mudar a tela.</div>
+<div class="hnd-lab-actions"><a href="https://morottigym.github.io/morottigym/" id="hndVisitProject" rel="noopener noreferrer" target="_blank">Ver projeto publicado ↗</a><a href="#ideia">Quero algo assim →</a></div>
+</div>
+<div class="hnd-device-area">
+<div class="hnd-halo"></div>
+<div class="hnd-device-shell hnd-phone" id="hndDemoShell">
+<div class="hnd-device-bar"><span class="hnd-device-dot"></span><strong id="hndDeviceBrand">MOROTTIGYM</strong><span>●●●</span></div>
+<div aria-live="polite" class="hnd-device-display" id="hndDeviceScreen"></div>
+</div>
+<div aria-label="Alternar demonstrações" class="hnd-device-options" id="hndDeviceOptions"></div>
+</div>
+</div>
+<div class="hnd-lab-foot"><span>✧ CLIQUE, EXPLORE, DESCUBRA</span><span>Representações visuais de funcionalidades identificadas nos arquivos fornecidos.</span></div>
+</div>
 
-          </div>
-
-        </div>
-
-
-        <!-- =================================================
+<!-- =================================================
              MOROTTIGYM
         ================================================== -->
-
-        <article
-          class="showcase-project project-v3 reveal"
-          data-project="morottigym"
-        >
-
-          <div class="showcase-number">
+<article class="showcase-project project-v3 reveal hnd-old-case" data-project="morottigym">
+<div class="showcase-number">
             01
           </div>
-
-
-          <div class="showcase-visual project-stage">
-
-            <div class="project-device project-device-phone morotti-device">
-
-              <div class="device-top">
-                <span>9:41</span>
-                <i></i>
-                <span>● ● ●</span>
-              </div>
-
-              <div class="project-screen">
-
-                <!-- ALUNO -->
-                <div
-                  class="project-preview active"
-                  data-preview-group="morotti"
-                  data-preview="aluno"
-                >
-
-                  <div class="mg-app">
-
-                    <div class="mg-top">
-                      <div>
-                        <small>ÁREA DO ALUNO</small>
-                        <strong>Olá 👋</strong>
-                      </div>
-
-                      <span class="mg-avatar">M</span>
-                    </div>
-
-                    <div class="mg-hero">
-                      <small>MOROTTIGYM</small>
-                      <strong>
+<div class="showcase-visual project-stage">
+<div class="project-device project-device-phone morotti-device">
+<div class="device-top">
+<span>9:41</span>
+<i></i>
+<span>● ● ●</span>
+</div>
+<div class="project-screen">
+<!-- ALUNO -->
+<div class="project-preview active" data-preview="aluno" data-preview-group="morotti">
+<div class="mg-app">
+<div class="mg-top">
+<div>
+<small>ÁREA DO ALUNO</small>
+<strong>Olá 👋</strong>
+</div>
+<span class="mg-avatar">M</span>
+</div>
+<div class="mg-hero">
+<small>MOROTTIGYM</small>
+<strong>
                         Seu treino está a poucos toques.
                       </strong>
-                      <span>
+<span>
                         Disciplina, foco e constância.
                       </span>
-                    </div>
-
-                    <div class="mg-challenge">
-
-                      <div class="mg-challenge-head">
-                        <div>
-                          <small>🏆 DESAFIO MOROTTIGYM</small>
-                          <strong>Seu ritmo no ranking</strong>
-                        </div>
-
-                        <span>Top 10 →</span>
-                      </div>
-
-                      <div class="mg-stats">
-                        <div>
-                          <strong>#4</strong>
-                          <span>posição</span>
-                        </div>
-
-                        <div>
-                          <strong>12</strong>
-                          <span>visitas</span>
-                        </div>
-
-                        <div>
-                          <strong>3</strong>
-                          <span>semana</span>
-                        </div>
-                      </div>
-
-                      <div class="mg-checkin">
+</div>
+<div class="mg-challenge">
+<div class="mg-challenge-head">
+<div>
+<small>🏆 DESAFIO MOROTTIGYM</small>
+<strong>Seu ritmo no ranking</strong>
+</div>
+<span>Top 10 →</span>
+</div>
+<div class="mg-stats">
+<div>
+<strong>#4</strong>
+<span>posição</span>
+</div>
+<div>
+<strong>12</strong>
+<span>visitas</span>
+</div>
+<div>
+<strong>3</strong>
+<span>semana</span>
+</div>
+</div>
+<div class="mg-checkin">
                         📍 FAZER CHECK-IN
                       </div>
-
-                    </div>
-
-                    <div class="mg-grid">
-
-                      <div>
-                        <b>🏋🏻</b>
-                        <strong>Meu treino</strong>
-                        <span>Treinos da semana</span>
-                      </div>
-
-                      <div>
-                        <b>📢</b>
-                        <strong>Avisos</strong>
-                        <span>Novidades</span>
-                      </div>
-
-                      <div>
-                        <b>👤</b>
-                        <strong>Meu perfil</strong>
-                        <span>Dados e foto</span>
-                      </div>
-
-                      <div>
-                        <b>🕒</b>
-                        <strong>Horários</strong>
-                        <span>Funcionamento</span>
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-
-                <!-- PROFESSOR -->
-                <div
-                  class="project-preview"
-                  data-preview-group="morotti"
-                  data-preview="professor"
-                >
-
-                  <div class="mg-app">
-
-                    <div class="mg-top">
-                      <div>
-                        <small>PAINEL DO PROFESSOR</small>
-                        <strong>Olá 👋</strong>
-                      </div>
-
-                      <span class="mg-avatar gold">
+</div>
+<div class="mg-grid">
+<div>
+<b>🏋🏻</b>
+<strong>Meu treino</strong>
+<span>Treinos da semana</span>
+</div>
+<div>
+<b>📢</b>
+<strong>Avisos</strong>
+<span>Novidades</span>
+</div>
+<div>
+<b>👤</b>
+<strong>Meu perfil</strong>
+<span>Dados e foto</span>
+</div>
+<div>
+<b>🕒</b>
+<strong>Horários</strong>
+<span>Funcionamento</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PROFESSOR -->
+<div class="project-preview" data-preview="professor" data-preview-group="morotti">
+<div class="mg-app">
+<div class="mg-top">
+<div>
+<small>PAINEL DO PROFESSOR</small>
+<strong>Olá 👋</strong>
+</div>
+<span class="mg-avatar gold">
                         P
                       </span>
-                    </div>
-
-                    <div class="mg-hero">
-                      <small>GESTÃO</small>
-                      <strong>
+</div>
+<div class="mg-hero">
+<small>GESTÃO</small>
+<strong>
                         Alunos e treinos em um só lugar.
                       </strong>
-                      <span>
+<span>
                         Gestão rápida e organizada.
                       </span>
-                    </div>
-
-                    <div class="mg-grid mg-grid-admin">
-
-                      <div class="gold-card">
-                        <b>👥</b>
-                        <strong>Alunos</strong>
-                        <span>Consultar e gerenciar</span>
-                      </div>
-
-                      <div class="gold-card">
-                        <b>🏋️</b>
-                        <strong>Treinos</strong>
-                        <span>Selecionar e editar</span>
-                      </div>
-
-                      <div>
-                        <b>➕</b>
-                        <strong>Novo aluno</strong>
-                        <span>Cadastro rápido</span>
-                      </div>
-
-                      <div>
-                        <b>📢</b>
-                        <strong>Avisos</strong>
-                        <span>Publicar comunicado</span>
-                      </div>
-
-                      <div>
-                        <b>📩</b>
-                        <strong>Solicitações</strong>
-                        <span>Pedidos dos alunos</span>
-                      </div>
-
-                      <div>
-                        <b>🪪</b>
-                        <strong>Funcionários</strong>
-                        <span>Níveis de acesso</span>
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="showcase-content">
-
-            <span class="project-type">
+</div>
+<div class="mg-grid mg-grid-admin">
+<div class="gold-card">
+<b>👥</b>
+<strong>Alunos</strong>
+<span>Consultar e gerenciar</span>
+</div>
+<div class="gold-card">
+<b>🏋️</b>
+<strong>Treinos</strong>
+<span>Selecionar e editar</span>
+</div>
+<div>
+<b>➕</b>
+<strong>Novo aluno</strong>
+<span>Cadastro rápido</span>
+</div>
+<div>
+<b>📢</b>
+<strong>Avisos</strong>
+<span>Publicar comunicado</span>
+</div>
+<div>
+<b>📩</b>
+<strong>Solicitações</strong>
+<span>Pedidos dos alunos</span>
+</div>
+<div>
+<b>🪪</b>
+<strong>Funcionários</strong>
+<span>Níveis de acesso</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="showcase-content">
+<span class="project-type">
               SISTEMA PARA ACADEMIA
             </span>
-
-            <h3>
+<h3>
               MorottiGym
             </h3>
-
-            <p>
+<p>
               Aplicação criada para aproximar academia, professores
               e alunos. O projeto reúne área do aluno, treinos,
               check-in presencial, ranking de frequência, avisos,
               perfil e ferramentas de gestão para a equipe.
             </p>
-
-
-            <div
-              class="project-switcher"
-              data-switcher="morotti"
-            >
-
-              <button
-                type="button"
-                class="project-switch active"
-                data-target="aluno"
-              >
+<div class="project-switcher" data-switcher="morotti">
+<button class="project-switch active" data-target="aluno" type="button">
                 Área do aluno
               </button>
-
-              <button
-                type="button"
-                class="project-switch"
-                data-target="professor"
-              >
+<button class="project-switch" data-target="professor" type="button">
                 Gestão
               </button>
-
-            </div>
-
-
-            <div class="project-feature-list">
-
-              <span>✓ Área exclusiva do aluno</span>
-              <span>✓ Treinos personalizados</span>
-              <span>✓ Check-in e ranking</span>
-              <span>✓ Gestão de alunos e treinos</span>
-
-            </div>
-
-
-            <div class="project-tags">
-
-              <span>Academia</span>
-              <span>Alunos</span>
-              <span>Gestão</span>
-              <span>PWA</span>
-
-            </div>
-
-
-            <a
-              class="project-live-link"
-              href="https://morottigym.github.io/morottigym/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+</div>
+<div class="project-feature-list">
+<span>✓ Área exclusiva do aluno</span>
+<span>✓ Treinos personalizados</span>
+<span>✓ Check-in e ranking</span>
+<span>✓ Gestão de alunos e treinos</span>
+</div>
+<div class="project-tags">
+<span>Academia</span>
+<span>Alunos</span>
+<span>Gestão</span>
+<span>PWA</span>
+</div>
+<a class="project-live-link" href="https://morottigym.github.io/morottigym/" rel="noopener noreferrer" target="_blank">
               Abrir projeto publicado
               <strong>↗</strong>
-            </a>
-
-          </div>
-
-        </article>
-
-
-        <!-- =================================================
+</a>
+</div>
+</article>
+<!-- =================================================
              PRETÃO DO CORTE
         ================================================== -->
-
-        <article
-          class="showcase-project project-v3 reverse reveal"
-          data-project="pretao"
-        >
-
-          <div class="showcase-number">
+<article class="showcase-project project-v3 reverse reveal hnd-old-case" data-project="pretao">
+<div class="showcase-number">
             02
           </div>
-
-
-          <div class="showcase-visual project-stage pretao-stage">
-
-            <div class="project-device project-device-browser pretao-device">
-
-              <div class="browser-bar project-browser-bar">
-
-                <div class="browser-dots">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-
-                <div class="browser-address">
+<div class="showcase-visual project-stage pretao-stage">
+<div class="project-device project-device-browser pretao-device">
+<div class="browser-bar project-browser-bar">
+<div class="browser-dots">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="browser-address">
                   PRETÃO DO CORTE
                 </div>
-
-              </div>
-
-
-              <div class="project-screen">
-
-                <!-- SITE -->
-                <div
-                  class="project-preview active"
-                  data-preview-group="pretao"
-                  data-preview="site"
-                >
-
-                  <div class="pc-site">
-
-                    <div class="pc-nav">
-                      <strong>PRETÃO DO CORTE</strong>
-
-                      <div>
-                        <span>Início</span>
-                        <span>Serviços</span>
-                        <span>Produtos</span>
-                        <span>Trabalhos</span>
-                      </div>
-
-                      <b>AGENDAR</b>
-                    </div>
-
-                    <div class="pc-hero">
-
-                      <div class="pc-copy">
-
-                        <small>
+</div>
+<div class="project-screen">
+<!-- SITE -->
+<div class="project-preview active" data-preview="site" data-preview-group="pretao">
+<div class="pc-site">
+<div class="pc-nav">
+<strong>PRETÃO DO CORTE</strong>
+<div>
+<span>Início</span>
+<span>Serviços</span>
+<span>Produtos</span>
+<span>Trabalhos</span>
+</div>
+<b>AGENDAR</b>
+</div>
+<div class="pc-hero">
+<div class="pc-copy">
+<small>
                           BARBEARIA EM RIBEIRÃO PRETO
                         </small>
-
-                        <strong>
-                          Seu estilo.<br>
+<strong>
+                          Seu estilo.<br/>
                           Sua identidade.
                         </strong>
-
-                        <p>
+<p>
                           Renovando autoestima através do corte.
                           Técnica, cuidado e atenção aos detalhes.
                         </p>
-
-                        <div class="pc-actions">
-                          <span>Agendar horário</span>
-                          <span>Ver trabalhos</span>
-                        </div>
-
-                      </div>
-
-
-                      <div class="pc-brand-card">
-
-                        <div class="pc-mark">
+<div class="pc-actions">
+<span>Agendar horário</span>
+<span>Ver trabalhos</span>
+</div>
+</div>
+<div class="pc-brand-card">
+<div class="pc-mark">
                           P
                         </div>
-
-                        <strong>
-                          PRETÃO<br>
+<strong>
+                          PRETÃO<br/>
                           DO CORTE
                         </strong>
-
-                        <span>
+<span>
                           ESTILO • TÉCNICA • IDENTIDADE
                         </span>
-
-                      </div>
-
-                    </div>
-
-                    <div class="pc-info">
-
-                      <div>
-                        <strong>Ribeirão Preto</strong>
-                        <span>Presidente Dutra</span>
-                      </div>
-
-                      <div>
-                        <strong>Atendimento</strong>
-                        <span>Com hora marcada</span>
-                      </div>
-
-                      <div>
-                        <strong>Profissional</strong>
-                        <span>Kaique Vital</span>
-                      </div>
-
-                    </div>
-
-                  </div>
-
-                </div>
-
-
-                <!-- PAINEL -->
-                <div
-                  class="project-preview"
-                  data-preview-group="pretao"
-                  data-preview="painel"
-                >
-
-                  <div class="pc-admin">
-
-                    <aside>
-
-                      <div class="pc-admin-brand">
-                        <div>P</div>
-
-                        <span>
-                          <strong>Pretão do Corte</strong>
-                          <small>Administração</small>
-                        </span>
-                      </div>
-
-                      <small class="pc-admin-label">
+</div>
+</div>
+<div class="pc-info">
+<div>
+<strong>Ribeirão Preto</strong>
+<span>Presidente Dutra</span>
+</div>
+<div>
+<strong>Atendimento</strong>
+<span>Com hora marcada</span>
+</div>
+<div>
+<strong>Profissional</strong>
+<span>Kaique Vital</span>
+</div>
+</div>
+</div>
+</div>
+<!-- PAINEL -->
+<div class="project-preview" data-preview="painel" data-preview-group="pretao">
+<div class="pc-admin">
+<aside>
+<div class="pc-admin-brand">
+<div>P</div>
+<span>
+<strong>Pretão do Corte</strong>
+<small>Administração</small>
+</span>
+</div>
+<small class="pc-admin-label">
                         PRINCIPAL
                       </small>
-
-                      <b class="active">
+<b class="active">
                         ▦ Agenda
                       </b>
-
-                      <b>
+<b>
                         ✂ Serviços
                       </b>
-
-                      <b>
+<b>
                         📦 Produtos
                       </b>
-
-                      <b>
+<b>
                         🛍 Reservas
                       </b>
-
-                      <b>
+<b>
                         ♟ Clientes
                       </b>
-
-                      <small class="pc-admin-label">
+<small class="pc-admin-label">
                         SISTEMA
                       </small>
-
-                      <b>
+<b>
                         ⚙ Configurações
                       </b>
-
-                    </aside>
-
-
-                    <main>
-
-                      <div class="pc-admin-top">
-                        <div>
-                          <small>PAINEL ADMINISTRATIVO</small>
-                          <strong>Agenda</strong>
-                        </div>
-
-                        <span>
+</aside>
+<main>
+<div class="pc-admin-top">
+<div>
+<small>PAINEL ADMINISTRATIVO</small>
+<strong>Agenda</strong>
+</div>
+<span>
                           Kaique Vital
                         </span>
-                      </div>
-
-                      <div class="pc-admin-cards">
-
-                        <div>
-                          <small>HOJE</small>
-                          <strong>6</strong>
-                          <span>agendamentos</span>
-                        </div>
-
-                        <div>
-                          <small>CLIENTES</small>
-                          <strong>24</strong>
-                          <span>cadastrados</span>
-                        </div>
-
-                        <div>
-                          <small>RESERVAS</small>
-                          <strong>3</strong>
-                          <span>produtos</span>
-                        </div>
-
-                      </div>
-
-
-                      <div class="pc-agenda">
-
-                        <div>
-                          <span>09:00</span>
-                          <strong>Cliente agendado</strong>
-                          <small>Corte</small>
-                        </div>
-
-                        <div>
-                          <span>10:00</span>
-                          <strong>Cliente agendado</strong>
-                          <small>Corte + barba</small>
-                        </div>
-
-                        <div>
-                          <span>11:00</span>
-                          <strong>Horário disponível</strong>
-                          <small>Agenda</small>
-                        </div>
-
-                      </div>
-
-                    </main>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="showcase-content">
-
-            <span class="project-type">
+</div>
+<div class="pc-admin-cards">
+<div>
+<small>HOJE</small>
+<strong>6</strong>
+<span>agendamentos</span>
+</div>
+<div>
+<small>CLIENTES</small>
+<strong>24</strong>
+<span>cadastrados</span>
+</div>
+<div>
+<small>RESERVAS</small>
+<strong>3</strong>
+<span>produtos</span>
+</div>
+</div>
+<div class="pc-agenda">
+<div>
+<span>09:00</span>
+<strong>Cliente agendado</strong>
+<small>Corte</small>
+</div>
+<div>
+<span>10:00</span>
+<strong>Cliente agendado</strong>
+<small>Corte + barba</small>
+</div>
+<div>
+<span>11:00</span>
+<strong>Horário disponível</strong>
+<small>Agenda</small>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="showcase-content">
+<span class="project-type">
               SITE + SISTEMA DE GESTÃO
             </span>
-
-            <h3>
+<h3>
               Pretão do Corte
             </h3>
-
-            <p>
+<p>
               Ecossistema digital desenvolvido para uma barbearia:
               presença profissional na internet para o cliente e,
               por trás dela, um painel administrativo para organizar
               agenda, serviços, produtos, reservas e clientes.
             </p>
-
-
-            <div
-              class="project-switcher"
-              data-switcher="pretao"
-            >
-
-              <button
-                type="button"
-                class="project-switch active"
-                data-target="site"
-              >
+<div class="project-switcher" data-switcher="pretao">
+<button class="project-switch active" data-target="site" type="button">
                 Ver site
               </button>
-
-              <button
-                type="button"
-                class="project-switch"
-                data-target="painel"
-              >
+<button class="project-switch" data-target="painel" type="button">
                 Ver painel
               </button>
-
-            </div>
-
-
-            <div class="project-feature-list">
-
-              <span>✓ Agendamento online</span>
-              <span>✓ Área do cliente</span>
-              <span>✓ Produtos e reservas</span>
-              <span>✓ Painel administrativo</span>
-
-            </div>
-
-
-            <div class="project-tags">
-
-              <span>Barbearia</span>
-              <span>Agenda</span>
-              <span>Clientes</span>
-              <span>Gestão</span>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-        <div class="portfolio-message reveal">
-
-          <span>+</span>
-
-          <p>
-            Dois negócios diferentes.
-            <strong>Duas soluções criadas sob medida.</strong>
-          </p>
-
-          <a href="#orcamento">
+</div>
+<div class="project-feature-list">
+<span>✓ Agendamento online</span>
+<span>✓ Área do cliente</span>
+<span>✓ Produtos e reservas</span>
+<span>✓ Painel administrativo</span>
+</div>
+<div class="project-tags">
+<span>Barbearia</span>
+<span>Agenda</span>
+<span>Clientes</span>
+<span>Gestão</span>
+</div>
+</div>
+</article>
+<div class="portfolio-message reveal">
+<span>+</span>
+<p>Duas marcas, diferentes necessidades. Demonstrações atualizadas para mostrar o que a tecnologia pode construir.</p>
+<a href="#orcamento">
             O próximo projeto pode ser o seu →
           </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-
-
-    <!-- HND 3.0 — PLANOS COM ENTRADA ACESSÍVEL -->
-    <section class="section plans-section section-observer hnd-pricing" id="planos">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-number">04</span>
-          <div><span class="eyebrow">INVESTIMENTO INTELIGENTE</span>
-          <h2>Comece com o que você precisa. <span>Evolua quando fizer sentido.</span></h2>
-          <p>Não precisa começar com um sistema gigante. Escolha uma solução que cabe no momento do seu negócio e vamos conversar sobre a melhor forma de construir.</p></div>
-        </div>
-        <div class="hnd-price-head reveal"><div><span class="hnd-kicker">SEU PRIMEIRO PASSO</span><strong>A partir de R$ 390</strong><small>Valor de criação para projetos com escopo definido. Sem compromisso para conversar.</small></div><a href="#ideia" class="hnd-text-link">Descobrir a solução ideal <span>↗</span></a></div>
-        <div class="hnd-plan-grid">
-          <article class="hnd-plan reveal"><span class="hnd-plan-index">01 / COMEÇAR</span><h3>Presença Digital</h3><p>Uma página objetiva e bonita para apresentar seu negócio e facilitar o contato.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 390</strong><span>por projeto</span></div><ul><li>Página única responsiva</li><li>Apresentação dos seus serviços</li><li>Botão direto para o WhatsApp</li><li>Informações e localização</li></ul><p class="hnd-exclusion">Domínio, hospedagem e atualizações são combinados à parte.</p><a href="#orcamento" data-plan="Presença Digital" class="plan-button hnd-plan-button">Quero começar <span>↗</span></a></article>
-          <article class="hnd-plan hnd-featured reveal"><span class="hnd-popular">BOA ESCOLHA PARA NEGÓCIOS</span><span class="hnd-plan-index">02 / CRESCER</span><h3>Site Profissional</h3><p>Um espaço digital mais completo para transmitir credibilidade e mostrar seus diferenciais.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 690</strong><span>por projeto</span></div><ul><li>Site com até 4 seções principais</li><li>Design personalizado e responsivo</li><li>Vitrine de serviços ou trabalhos</li><li>Contato e WhatsApp integrados</li></ul><p class="hnd-exclusion">Recursos extras e custos recorrentes são orçados separadamente.</p><a href="#orcamento" data-plan="Site Profissional" class="plan-button hnd-plan-button">Quero este site <span>↗</span></a></article>
-          <article class="hnd-plan reveal"><span class="hnd-plan-index">03 / ORGANIZAR</span><h3>Sistema Essencial</h3><p>Uma primeira ferramenta sob medida para simplificar uma rotina específica do seu negócio.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 1.190</strong><span>por projeto</span></div><ul><li>Um fluxo principal de trabalho</li><li>Painel simples de controle</li><li>Interface adaptada ao celular</li><li>Funcionalidades de escopo limitado</li></ul><p class="hnd-exclusion">Banco de dados, autenticação e integrações dependem da proposta técnica.</p><a href="#orcamento" data-plan="Sistema Essencial" class="plan-button hnd-plan-button">Conversar sobre sistema <span>↗</span></a></article>
-          <article class="hnd-plan hnd-custom reveal"><span class="hnd-plan-index">04 / SOB MEDIDA</span><div class="hnd-custom-mark">✳</div><h3>Projeto Personalizado</h3><p>Agenda, gestão, área do cliente, automação e integrações: construímos um plano para o que sua empresa realmente precisa.</p><div class="hnd-price"><strong class="hnd-consult">Vamos conversar.</strong><span>Orçamento individual</span></div><ul><li>Escopo estudado com você</li><li>Funcionalidades por prioridade</li><li>Possibilidade de desenvolver em etapas</li><li>Proposta transparente</li></ul><a href="#orcamento" data-plan="Projeto Personalizado" class="plan-button hnd-plan-button">Contar minha ideia <span>↗</span></a></article>
-        </div>
-        <p class="hnd-legal reveal">* Valores iniciais para os escopos descritos. O orçamento final depende das necessidades do projeto. Manutenção, domínio, hospedagem e serviços de terceiros são combinados à parte.</p>
-      </div>
-    </section>
-
-    <section class="section hnd-idea section-observer" id="ideia">
-      <div class="container hnd-idea-layout">
-        <div class="hnd-idea-copy reveal"><span class="eyebrow">UMA EXPERIÊNCIA FEITA PARA VOCÊ</span><h2>Sua ideia merece <span>um primeiro passo.</span></h2><p>Responda três perguntas rápidas. Ao terminar, abrimos uma mensagem pronta para você enviar no WhatsApp. Sem cadastro e sem compromisso.</p><div class="hnd-idea-steps"><span>01. Seu objetivo</span><span>02. Sua prioridade</span><span>03. Seu momento</span></div></div>
-        <div class="hnd-wizard reveal" id="hndWizard"><div class="hnd-wizard-header"><span>DESCUBRA SUA SOLUÇÃO</span><span id="hndStepCount">ETAPA 01 / 03</span></div><div class="hnd-wizard-track"><i id="hndStepFill"></i></div><div id="hndWizardScreen" aria-live="polite"></div><div class="hnd-wizard-bottom"><button type="button" id="hndBack" class="hnd-back" disabled>← Voltar</button><span>Leva menos de um minuto</span></div></div>
-      </div>
-    </section>
-
-    <section class="section hnd-faq"><div class="container"><div class="section-heading reveal"><span class="section-number">05</span><div><span class="eyebrow">SEM SURPRESAS</span><h2>Dúvidas comuns. <span>Respostas claras.</span></h2></div></div><div class="hnd-faq-list reveal"><details><summary>Preciso pagar para pedir um orçamento?</summary><p>Não. A primeira conversa serve para entender sua ideia e avaliar uma proposta, sem compromisso.</p></details><details><summary>O valor anunciado já inclui tudo?</summary><p>Não necessariamente. Cada opção tem um escopo inicial. Custos como domínio, hospedagem, manutenção e integrações são detalhados antes da contratação.</p></details><details><summary>Posso começar pequeno e ampliar depois?</summary><p>Sim. Podemos planejar etapas para priorizar o que traz mais valor ao seu negócio.</p></details><details><summary>Vocês fazem algo diferente dos planos?</summary><p>Sim. Conte sua necessidade: avaliamos a viabilidade e preparamos um orçamento personalizado.</p></details></div></div></section>
-
-    <!-- =====================================================
+</div>
+</div>
+</section>
+<!-- HND 3.0 — PLANOS COM ENTRADA ACESSÍVEL -->
+<section class="section plans-section section-observer hnd-pricing" id="planos">
+<div class="container">
+<div class="section-heading reveal">
+<span class="section-number">04</span>
+<div><span class="eyebrow">INVESTIMENTO INTELIGENTE</span>
+<h2>Comece com o que você precisa. <span>Evolua quando fizer sentido.</span></h2>
+<p>Não precisa começar com um sistema gigante. Escolha uma solução que cabe no momento do seu negócio e vamos conversar sobre a melhor forma de construir.</p></div>
+</div>
+<div class="hnd-price-head reveal"><div><span class="hnd-kicker">SEU PRIMEIRO PASSO</span><strong>A partir de R$ 390</strong><small>Criação com possibilidade de parcelamento + mensalidade de administração informada antes da contratação.</small></div><a class="hnd-text-link" href="#ideia">Descobrir a solução ideal <span>↗</span></a></div>
+<div class="hnd-plan-grid">
+<article class="hnd-plan reveal"><span class="hnd-plan-index">01 / COMEÇAR</span><h3>Presença Digital</h3><p>Uma página objetiva e bonita para apresentar seu negócio e facilitar o contato.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 390</strong><span>criação única • parcelamento disponível*</span></div><ul><li>Página única responsiva</li><li>Apresentação dos seus serviços</li><li>Botão direto para o WhatsApp</li><li>Informações e localização</li></ul><div class="hnd-monthly"><span>Administração e manutenção</span><strong>a partir de R$ 29/mês</strong><small>Condições e serviços definidos na proposta.</small></div><p class="hnd-exclusion">Domínio e serviços de terceiros podem ter custos extras.</p><a class="plan-button hnd-plan-button" data-plan="Presença Digital" href="#orcamento">Quero começar <span>↗</span></a></article>
+<article class="hnd-plan hnd-featured reveal"><span class="hnd-popular">BOA ESCOLHA PARA NEGÓCIOS</span><span class="hnd-plan-index">02 / CRESCER</span><h3>Site Profissional</h3><p>Um espaço digital mais completo para transmitir credibilidade e mostrar seus diferenciais.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 690</strong><span>criação única • parcelamento disponível*</span></div><ul><li>Site com até 4 seções principais</li><li>Design personalizado e responsivo</li><li>Vitrine de serviços ou trabalhos</li><li>Contato e WhatsApp integrados</li></ul><div class="hnd-monthly"><span>Administração e manutenção</span><strong>a partir de R$ 49/mês</strong><small>Condições e serviços definidos na proposta.</small></div><p class="hnd-exclusion">Domínio, infraestrutura e recursos extras são detalhados na proposta.</p><a class="plan-button hnd-plan-button" data-plan="Site Profissional" href="#orcamento">Quero este site <span>↗</span></a></article>
+<article class="hnd-plan reveal"><span class="hnd-plan-index">03 / ORGANIZAR</span><h3>Sistema Essencial</h3><p>Uma primeira ferramenta sob medida para simplificar uma rotina específica do seu negócio.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 1.190</strong><span>criação única • parcelamento disponível*</span></div><ul><li>Um fluxo principal de trabalho</li><li>Painel simples de controle</li><li>Interface adaptada ao celular</li><li>Funcionalidades de escopo limitado</li></ul><div class="hnd-monthly"><span>Administração e manutenção</span><strong>a partir de R$ 79/mês</strong><small>Condições e serviços definidos na proposta.</small></div><p class="hnd-exclusion">Banco de dados, autenticação, hospedagem e integrações dependem do projeto.</p><a class="plan-button hnd-plan-button" data-plan="Sistema Essencial" href="#orcamento">Conversar sobre sistema <span>↗</span></a></article>
+<article class="hnd-plan hnd-custom reveal"><span class="hnd-plan-index">04 / SOB MEDIDA</span><div class="hnd-custom-mark">✳</div><h3>Projeto Personalizado</h3><p>Agenda, gestão, área do cliente, automação e integrações: construímos um plano para o que sua empresa realmente precisa.</p><div class="hnd-price"><strong class="hnd-consult">Vamos conversar.</strong><span>Criação parcelável e mensalidade sob proposta*</span></div><ul><li>Escopo estudado com você</li><li>Funcionalidades por prioridade</li><li>Possibilidade de desenvolver em etapas</li><li>Proposta transparente</li></ul><a class="plan-button hnd-plan-button" data-plan="Projeto Personalizado" href="#orcamento">Contar minha ideia <span>↗</span></a></article>
+</div>
+<div class="hnd-price-explainer reveal"><strong>Como funciona o pagamento?</strong><p><b>1. Criação do projeto:</b> valor inicial que pode ser parcelado, conforme as condições apresentadas no orçamento. <b>2. Administração e manutenção:</b> mensalidade separada, para os serviços recorrentes contratados. Você saberá o que está incluído antes de fechar.</p></div><p class="hnd-legal reveal">* Valores “a partir de” são sugestões iniciais, sujeitas a confirmação do escopo. Parcelamento, número de parcelas, eventuais juros e condições de pagamento são definidos no orçamento. Mensalidades não incluem automaticamente domínio, hospedagem, banco de dados, integrações ou serviços de terceiros; esses custos serão discriminados quando aplicáveis.</p>
+</div>
+</section>
+<section class="section hnd-idea section-observer" id="ideia">
+<div class="container hnd-idea-layout">
+<div class="hnd-idea-copy reveal"><span class="eyebrow">UMA EXPERIÊNCIA FEITA PARA VOCÊ</span><h2>Sua ideia merece <span>um primeiro passo.</span></h2><p>Responda três perguntas rápidas. Ao terminar, abrimos uma mensagem pronta para você enviar no WhatsApp. Sem cadastro e sem compromisso.</p><div class="hnd-idea-steps"><span>01. Seu objetivo</span><span>02. Sua prioridade</span><span>03. Seu momento</span></div></div>
+<div class="hnd-wizard reveal" id="hndWizard"><div class="hnd-wizard-header"><span>DESCUBRA SUA SOLUÇÃO</span><span id="hndStepCount">ETAPA 01 / 03</span></div><div class="hnd-wizard-track"><i id="hndStepFill"></i></div><div aria-live="polite" id="hndWizardScreen"></div><div class="hnd-wizard-bottom"><button class="hnd-back" disabled="" id="hndBack" type="button">← Voltar</button><span>Leva menos de um minuto</span></div></div>
+</div>
+</section>
+<section class="section hnd-faq"><div class="container"><div class="section-heading reveal"><span class="section-number">05</span><div><span class="eyebrow">SEM SURPRESAS</span><h2>Dúvidas comuns. <span>Respostas claras.</span></h2></div></div><div class="hnd-faq-list reveal"><details><summary>Preciso pagar para pedir um orçamento?</summary><p>Não. A primeira conversa serve para entender sua ideia e avaliar uma proposta, sem compromisso.</p></details><details><summary>O valor anunciado já inclui tudo?</summary><p>Não necessariamente. Cada opção tem um escopo inicial. Custos como domínio, hospedagem, manutenção e integrações são detalhados antes da contratação.</p></details><details><summary>Posso parcelar o valor de criação?</summary><p>Sim, podemos apresentar opções de parcelamento na proposta. Quantidade de parcelas, eventuais taxas e condições serão informadas antes da contratação.</p></details><details><summary>Existe alguma mensalidade depois de criar o site?</summary><p>A administração e manutenção são cobradas separadamente quando contratadas. Os valores iniciais sugeridos aparecem nos planos, e o orçamento esclarece os serviços incluídos, os custos de infraestrutura e as condições de cancelamento.</p></details><details><summary>Posso começar pequeno e ampliar depois?</summary><p>Sim. Podemos planejar etapas para priorizar o que traz mais valor ao seu negócio.</p></details><details><summary>Vocês fazem algo diferente dos planos?</summary><p>Sim. Conte sua necessidade: avaliamos a viabilidade e preparamos um orçamento personalizado.</p></details></div></div></section>
+<!-- =====================================================
          SOBRE
     ====================================================== -->
-
-    <section
-      class="section about-section section-observer"
-      id="sobre"
-    >
-
-      <div class="container about-grid">
-
-        <div class="about-heading reveal">
-
-          <span class="section-number">
+<section class="section about-section section-observer" id="sobre">
+<div class="container about-grid">
+<div class="about-heading reveal">
+<span class="section-number">
             06
           </span>
-
-          <span class="eyebrow">
+<span class="eyebrow">
             HARRI NOVAES DIGITAL
           </span>
-
-          <h2>
+<h2>
             Tecnologia não precisa
             <span>parecer impossível.</span>
-          </h2>
-
-        </div>
-
-
-        <div class="about-content reveal">
-
-          <p class="about-lead">
+</h2>
+</div>
+<div class="about-content reveal">
+<p class="about-lead">
             A Harri Novaes Digital nasceu para transformar
             necessidades reais de negócios em soluções digitais
             práticas, modernas e personalizadas.
           </p>
-
-          <p>
+<p>
             O objetivo não é simplesmente colocar uma empresa
             na internet. É entender o que pode ser melhorado
             através da tecnologia e desenvolver uma solução
             que faça sentido para aquela realidade.
           </p>
-
-          <div class="about-values">
-
-            <div>
-              <strong>01</strong>
-              <span>Entender antes de criar</span>
-            </div>
-
-            <div>
-              <strong>02</strong>
-              <span>Desenvolver com propósito</span>
-            </div>
-
-            <div>
-              <strong>03</strong>
-              <span>Manter simples para quem usa</span>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
+<div class="about-values">
+<div>
+<strong>01</strong>
+<span>Entender antes de criar</span>
+</div>
+<div>
+<strong>02</strong>
+<span>Desenvolver com propósito</span>
+</div>
+<div>
+<strong>03</strong>
+<span>Manter simples para quem usa</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =====================================================
          FRASE
     ====================================================== -->
-
-    <section class="statement-section">
-
-      <div class="container">
-
-        <div class="statement reveal">
-
-          <span>
+<section class="statement-section">
+<div class="container">
+<div class="statement reveal">
+<span>
             UMA IDEIA
           </span>
-
-          <h2>
+<h2>
             pode começar com uma conversa.
           </h2>
-
-          <p>
+<p>
             E terminar com algo que antes você
             nem imaginava ser possível.
           </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
+</div>
+</div>
+</section>
+<!-- =====================================================
          ORÇAMENTO
     ====================================================== -->
-
-    <section
-      class="contact-section section-observer"
-      id="orcamento"
-    >
-
-      <div class="contact-light"></div>
-
-
-      <div class="container contact-content reveal">
-
-        <img
-          src="logo.png"
-          alt="Harri Novaes Digital"
-          class="contact-logo"
-        >
-
-        <span class="eyebrow">
+<section class="contact-section section-observer" id="orcamento">
+<div class="contact-light"></div>
+<div class="container contact-content reveal">
+<img alt="Harri Novaes Digital" class="contact-logo" src="logo.png"/>
+<span class="eyebrow">
           VAMOS CONVERSAR?
         </span>
-
-        <h2>
+<h2>
           Talvez o seu próximo projeto
           <span>comece agora.</span>
-        </h2>
-
-        <p>
+</h2>
+<p>
           Conte o que você gostaria de criar ou melhorar.
           Vamos entender sua ideia e descobrir juntos
           qual solução faz sentido para o seu negócio.
         </p>
-
-
-        <div
-          class="selected-plan"
-          id="selectedPlan"
-          hidden
-        >
+<div class="selected-plan" hidden="" id="selectedPlan">
           Plano selecionado:
           <strong id="selectedPlanName"></strong>
-        </div>
-
-
-        <a
-          href="https://wa.me/5516988033045?text=Ol%C3%A1%21%20Conheci%20a%20Harri%20Novaes%20Digital%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button primary contact-button magnetic"
-          id="whatsappButton"
-        >
-
-          <span class="whatsapp-symbol">
+</div>
+<a class="button primary contact-button magnetic" href="https://wa.me/5516988033045?text=Ol%C3%A1%21%20Conheci%20a%20Harri%20Novaes%20Digital%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." id="whatsappButton" rel="noopener noreferrer" target="_blank">
+<span class="whatsapp-symbol">
             ◉
           </span>
 
           Falar sobre meu projeto
 
           <strong>→</strong>
-
-        </a>
-
-
-        <span class="contact-phone">
+</a>
+<span class="contact-phone">
           WhatsApp • (16) 98803-3045
         </span>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- =====================================================
+</div>
+</section>
+</main>
+<!-- =====================================================
        RODAPÉ
   ====================================================== -->
-
-  <footer class="footer">
-
-    <div class="container footer-main">
-
-      <div class="footer-brand">
-
-        <img
-          src="logo.png"
-          alt="Harri Novaes Digital"
-        >
-
-        <p>
+<footer class="footer">
+<div class="container footer-main">
+<div class="footer-brand">
+<img alt="Harri Novaes Digital" src="logo.png"/>
+<p>
           Sites, sistemas e soluções digitais
           personalizadas para negócios.
         </p>
-
-      </div>
-
-
-      <div class="footer-links">
-
-        <div>
-
-          <strong>NAVEGAÇÃO</strong>
-
-          <a href="#inicio">Início</a>
-          <a href="#solucoes">Soluções</a>
-          <a href="#portfolio">Projetos</a>
-          <a href="#planos">Planos</a>
-
-        </div>
-
-
-        <div>
-
-          <strong>CONTATO</strong>
-
-          <a
-            href="https://wa.me/5516988033045"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+</div>
+<div class="footer-links">
+<div>
+<strong>NAVEGAÇÃO</strong>
+<a href="#inicio">Início</a>
+<a href="#solucoes">Soluções</a>
+<a href="#portfolio">Projetos</a>
+<a href="#planos">Planos</a>
+</div>
+<div>
+<strong>CONTATO</strong>
+<a href="https://wa.me/5516988033045" rel="noopener noreferrer" target="_blank">
             WhatsApp
           </a>
-
-          <span>
+<span>
             (16) 98803-3045
           </span>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-      <span>
+</div>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>
         © 2026 Harri Novaes Digital
       </span>
-
-      <span>
+<span>
         Criado para mostrar que é possível.
       </span>
-
-    </div>
-
-  </footer>
-
-
-  <!-- =====================================================
+</div>
+</footer>
+<!-- =====================================================
        BOTÃO FLUTUANTE
   ====================================================== -->
-
-  <a
-    href="https://wa.me/5516988033045?text=Ol%C3%A1%21%20Conheci%20a%20Harri%20Novaes%20Digital%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
-    target="_blank"
-    rel="noopener noreferrer"
-    class="floating-whatsapp"
-    aria-label="Falar pelo WhatsApp"
-  >
-
-    <span>◉</span>
-
-    <div>
-      <small>FALE COMIGO</small>
-      <strong>WhatsApp</strong>
-    </div>
-
-  </a>
-
-
-  <!-- =====================================================
+<a aria-label="Falar pelo WhatsApp" class="floating-whatsapp" href="https://wa.me/5516988033045?text=Ol%C3%A1%21%20Conheci%20a%20Harri%20Novaes%20Digital%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." rel="noopener noreferrer" target="_blank">
+<span>◉</span>
+<div>
+<small>FALE COMIGO</small>
+<strong>WhatsApp</strong>
+</div>
+</a>
+<!-- =====================================================
        CURSOR DECORATIVO
   ====================================================== -->
-
-  <div
-    class="custom-cursor"
-    id="customCursor"
-    aria-hidden="true"
-  ></div>
-
-
-  <script src="script.js"></script>
-  <script>
+<div aria-hidden="true" class="custom-cursor" id="customCursor"></div>
+<script src="script.js"></script>
+<script>
 
 /* HND 3.0 — navegação e briefing interativo */
 (() => {
@@ -1858,6 +1182,37 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #f2
 })();
 
   </script>
-
-</body>
+<script>
+/* HND 5.0 — self-contained portfolio demos, no real client data or credentials */
+(()=>{
+const projects={
+ morotti:{label:'01 / ACADEMIA INTELIGENTE',name:'MorottiGym <span>2.0</span>',desc:'Uma experiência mobile para alunos e equipe: treinos, frequência, desafios e biblioteca de exercícios. Inspirada na nova index da MorottiGym 2.0.',features:['Treinos','Biblioteca','Check-in','Ranking'],url:'https://morottigym.github.io/morottigym/',brand:'MOROTTIGYM 2.0',width:'phone',views:[
+ ['Início',`<div class="ds-head"><strong><span class="ds-red">MOROTTI</span> GYM</strong><small>ÁREA DO ALUNO</small></div><div class="ds-hero"><small>FORÇA • DISCIPLINA • EVOLUÇÃO</small><strong>Seu treino começa aqui.</strong><p>Uma experiência pensada para sua evolução.</p></div><div class="ds-grid"><div class="ds-tile"><b>🏋️</b><strong>Meu treino</strong><small>Treinos da semana</small></div><div class="ds-tile"><b>🧩</b><strong>Montador</strong><small>Crie seu treino</small></div><div class="ds-tile"><b>🏆</b><strong>Ranking</strong><small>Desafio Morotti</small></div><div class="ds-tile"><b>📅</b><strong>Frequência</strong><small>Seu calendário</small></div></div><div class="ds-banner"><strong>✦ Evolução em cada visita</strong><p>Treinos e frequência reunidos em um só lugar.</p></div>`],
+ ['Treinos',`<div class="ds-head"><strong>🏋️ Meu treino</strong><small>EXEMPLO</small></div><div class="ds-hero"><small>SEU PLANEJAMENTO</small><strong>Treino A • Superior</strong><p>Um espaço para organizar exercícios, séries e repetições.</p></div><div class="ds-row"><div><strong>Supino reto</strong><small>Peito • 3 séries • 12 repetições</small></div><span class="ds-tag">01</span></div><div class="ds-row"><div><strong>Remada articulada</strong><small>Costas • 3 séries • 12 repetições</small></div><span class="ds-tag">02</span></div><div class="ds-row"><div><strong>Elevação lateral</strong><small>Ombros • 3 séries • 12 repetições</small></div><span class="ds-tag">03</span></div><div class="ds-button">+ Montar meu treino</div><p class="ds-note">Demonstração ilustrativa com exercícios de exemplo.</p>`],
+ ['Desafio',`<div class="ds-head"><strong>🏆 Morotti Champions</strong><small>EXEMPLO</small></div><div class="ds-hero"><small>DISCIPLINA RECONHECIDA</small><strong>Seu ritmo merece destaque.</strong><p>Acompanhe ranking, check-ins e conquistas.</p></div><div class="ds-numbers"><div class="ds-number"><strong>12</strong><small>visitas</small></div><div class="ds-number"><strong>3</strong><small>semana</small></div><div class="ds-number"><strong>4º</strong><small>posição</small></div></div><div class="ds-row"><strong>🥇 Participante A</strong><span class="ds-tag">18 visitas</span></div><div class="ds-row"><strong>🥈 Participante B</strong><span class="ds-tag">16 visitas</span></div><div class="ds-row"><strong>🥉 Participante C</strong><span class="ds-tag">14 visitas</span></div><div class="ds-button">📍 Check-in ilustrativo</div><p class="ds-note">Números inteiramente fictícios, sem integração com banco de dados.</p>`],
+ ['Biblioteca',`<div class="ds-head"><strong>📚 Exercícios</strong><small>BIBLIOTECA</small></div><div class="ds-hero"><small>PERSONALIZAÇÃO</small><strong>Monte do seu jeito.</strong><p>Exercícios organizados por equipamento e grupo muscular.</p></div><div class="ds-row"><div><strong>01 • Hammer reto</strong><small>Peito • variações</small></div><span class="ds-tag">Abrir</span></div><div class="ds-row"><div><strong>08 • Peck Deck</strong><small>Peito / costas</small></div><span class="ds-tag">Abrir</span></div><div class="ds-row"><div><strong>15 • Puxada frontal</strong><small>Costas • pegadas</small></div><span class="ds-tag">Abrir</span></div><div class="ds-row"><div><strong>Halteres e barras</strong><small>Exercícios sem máquina numerada</small></div><span class="ds-tag">Abrir</span></div>`]
+ ]},
+ pretao:{label:'02 / EXPERIÊNCIA DO CLIENTE',name:'Pretão <span>do Corte</span>',desc:'Site e aplicativo com nova identidade escura e dourada, serviços, galeria, catálogo, reserva de produtos e agendamento em etapas.',features:['Agendamentos','Produtos','Área do cliente','Galeria'],brand:'PRETÃO DO CORTE',width:'phone',views:[
+ ['Início',`<div class="ds-head"><strong class="ds-mark">✂ PRETÃO DO CORTE</strong><small>RIBEIRÃO PRETO</small></div><div class="ds-hero"><small>ESTILO • TÉCNICA • IDENTIDADE</small><strong>Seu estilo.<br>Sua identidade.</strong><p>Corte, barba e uma experiência feita para o cliente.</p></div><div class="ds-grid"><div class="ds-tile"><b>✂</b><strong>Serviços</strong><small>Escolha seu corte</small></div><div class="ds-tile"><b>📆</b><strong>Agendar</strong><small>Escolha a data</small></div><div class="ds-tile"><b>🛍</b><strong>Produtos</strong><small>Catálogo e reservas</small></div><div class="ds-tile"><b>👤</b><strong>Minha conta</strong><small>Agendamentos</small></div></div><div class="ds-button">Reservar horário ↗</div>`],
+ ['Agendar',`<div class="ds-head"><strong>📆 Reserve seu horário</strong><small>SIMULAÇÃO</small></div><div class="ds-hero"><small>AGENDAMENTO ONLINE</small><strong>Do serviço à confirmação.</strong><p>Uma jornada guiada para simplificar reservas.</p></div><div class="ds-row"><div><strong>01 • Serviço</strong><small>Corte ou barba</small></div><span class="ds-tag">✓</span></div><div class="ds-row"><div><strong>02 • Profissional</strong><small>Selecionar atendimento</small></div><span class="ds-tag">→</span></div><div class="ds-row"><div><strong>03 • Data e horário</strong><small>Consultar disponibilidade</small></div><span class="ds-tag">→</span></div><div class="ds-row"><div><strong>04 • Confirmar</strong><small>Finalizar agendamento</small></div><span class="ds-tag">→</span></div><div class="ds-button">Iniciar agendamento</div><p class="ds-note">Fluxo ilustrativo. Nenhum horário real é reservado aqui.</p>`],
+ ['Produtos',`<div class="ds-head"><strong>🛍 Catálogo</strong><small>VITRINE DIGITAL</small></div><div class="ds-hero"><small>CUIDADOS ALÉM DO CORTE</small><strong>Produtos e reservas.</strong><p>Vitrine integrada à gestão da barbearia.</p></div><div class="ds-row"><div><strong>Produtos para cabelo</strong><small>Foto, preço e estoque</small></div><span class="ds-tag">Reservar</span></div><div class="ds-row"><div><strong>Produtos para barba</strong><small>Catálogo organizado</small></div><span class="ds-tag">Reservar</span></div><div class="ds-row"><div><strong>Área do cliente</strong><small>Consultar pedidos e reservas</small></div><span class="ds-tag">Entrar</span></div><div class="ds-button">Explorar produtos</div><p class="ds-note">Categorias ilustrativas; não refletem estoque atual.</p>`],
+ ['Minha área',`<div class="ds-head"><strong>👤 Área do cliente</strong><small>EXEMPLO</small></div><div class="ds-hero"><small>ACESSO EXCLUSIVO</small><strong>Seu atendimento organizado.</strong><p>Conta pessoal e consulta de agendamentos.</p></div><div class="ds-row"><div><strong>Meus agendamentos</strong><small>Acompanhar situação do pedido</small></div><span class="ds-tag">Abrir</span></div><div class="ds-row"><div><strong>Minhas reservas</strong><small>Produtos selecionados</small></div><span class="ds-tag">Abrir</span></div><div class="ds-row"><div><strong>Meu cadastro</strong><small>Informações da conta</small></div><span class="ds-tag">Abrir</span></div><p class="ds-note">Demonstração estática, sem solicitar dados pessoais.</p>`]
+ ]},
+ admin:{label:'03 / NEGÓCIO SOB CONTROLE',name:'Gestão <span>Pretão</span>',desc:'Painel administrativo para o dia a dia: agenda, clientes, serviços, produtos, reservas, financeiro, mensalistas e configurações.',features:['Agenda','Clientes','Financeiro','Mensalistas'],brand:'PAINEL • PRETÃO DO CORTE',width:'browser',views:[
+ ['Visão geral',`<div class="ds-head"><strong>Painel administrativo</strong><small>DEMONSTRAÇÃO</small></div><div class="ds-hero"><small>VISÃO DE NEGÓCIO</small><strong>Gestão simples.<br>Barbearia organizada.</strong><p>Informações do negócio em um só lugar.</p></div><div class="ds-numbers"><div class="ds-number"><strong>6</strong><small>agendas</small></div><div class="ds-number"><strong>24</strong><small>clientes</small></div><div class="ds-number"><strong>3</strong><small>reservas</small></div></div><div class="ds-grid"><div class="ds-tile"><b>📆</b><strong>Agenda</strong><small>Horários e bloqueios</small></div><div class="ds-tile"><b>👥</b><strong>Clientes</strong><small>Cadastros</small></div><div class="ds-tile"><b>📦</b><strong>Produtos</strong><small>Catálogo e estoque</small></div><div class="ds-tile"><b>💰</b><strong>Financeiro</strong><small>Movimentações</small></div></div>`],
+ ['Agenda',`<div class="ds-head"><strong>📅 Agenda do dia</strong><small>HORÁRIOS FICTÍCIOS</small></div><div class="ds-hero"><small>ATENDIMENTOS</small><strong>Tudo no horário certo.</strong><p>Organização de atendimentos e bloqueios.</p></div><div class="ds-row"><div><strong>09:00 • Cliente de exemplo</strong><small>Corte</small></div><span class="ds-tag">Confirmado</span></div><div class="ds-row"><div><strong>10:00 • Cliente de exemplo</strong><small>Corte e barba</small></div><span class="ds-tag">Confirmado</span></div><div class="ds-row"><div><strong>11:00 • Disponível</strong><small>Horário aberto</small></div><span class="ds-tag">Livre</span></div><div class="ds-button">+ Bloquear horário</div>`],
+ ['Financeiro',`<div class="ds-head"><strong>💰 Financeiro</strong><small>ILUSTRATIVO</small></div><div class="ds-hero"><small>CONTROLE</small><strong>Movimentações organizadas.</strong><p>Visão das entradas e lançamentos do negócio.</p></div><div class="ds-numbers"><div class="ds-number"><strong>R$ 180</strong><small>exemplo</small></div><div class="ds-number"><strong>3</strong><small>lançamentos</small></div><div class="ds-number"><strong>1</strong><small>período</small></div></div><div class="ds-row"><div><strong>Atendimento ilustrativo</strong><small>Movimentação de exemplo</small></div><span class="ds-tag">R$ 60</span></div><div class="ds-row"><div><strong>Atendimento ilustrativo</strong><small>Movimentação de exemplo</small></div><span class="ds-tag">R$ 120</span></div><p class="ds-note">Valores fictícios, não representam faturamento real.</p>`],
+ ['Mensalistas',`<div class="ds-head"><strong>✂ Mensalistas</strong><small>PLANO DE CORTES</small></div><div class="ds-hero"><small>RELACIONAMENTO</small><strong>Clientes recorrentes.</strong><p>Gestão de planos, mensalistas e acompanhamento de uso.</p></div><div class="ds-row"><div><strong>1 • Criar um plano</strong><small>Definir a modalidade</small></div><span class="ds-tag">Plano</span></div><div class="ds-row"><div><strong>2 • Adicionar mensalista</strong><small>Vincular cliente</small></div><span class="ds-tag">Pessoa</span></div><div class="ds-row"><div><strong>3 • Acompanhar cortes</strong><small>Controle do plano</small></div><span class="ds-tag">Controle</span></div><p class="ds-note">Sem exibição de nomes ou dados de clientes reais.</p>`],
+ ['Estoque',`<div class="ds-head"><strong>📦 Produtos e reservas</strong><small>GESTÃO</small></div><div class="ds-hero"><small>CATÁLOGO</small><strong>Uma operação mais simples.</strong><p>Cadastro, estoque e gerenciamento de reservas.</p></div><div class="ds-row"><div><strong>Adicionar produto</strong><small>Nome, categoria e preço</small></div><span class="ds-tag">Novo</span></div><div class="ds-row"><div><strong>Controlar estoque</strong><small>Disponibilidade de produtos</small></div><span class="ds-tag">Estoque</span></div><div class="ds-row"><div><strong>Confirmar reservas</strong><small>Solicitações de clientes</small></div><span class="ds-tag">Reservas</span></div>`]
+ ]}
+};
+const root=document.querySelector('#hndLab');if(!root)return;
+const stage=root.querySelector('#hndStage'), screen=root.querySelector('#hndDeviceScreen'),options=root.querySelector('#hndDeviceOptions'),shell=root.querySelector('#hndDemoShell');let chosen='morotti';
+function choose(key,view=0){chosen=key;const d=projects[key];stage.dataset.product=key;root.querySelectorAll('.hnd-project-tab').forEach(b=>{const on=b.dataset.product===key;b.classList.toggle('is-on',on);b.setAttribute('aria-selected',String(on));b.tabIndex=on?0:-1});root.querySelector('#hndProjectIndex').textContent=d.label;root.querySelector('#hndProjectTitle').innerHTML=d.name;root.querySelector('#hndProjectDesc').textContent=d.desc;root.querySelector('#hndFeaturePills').replaceChildren(...d.features.map(x=>{let s=document.createElement('span');s.textContent=x;return s}));root.querySelector('#hndDeviceBrand').textContent=d.brand;const link=root.querySelector('#hndVisitProject');if(d.url){link.hidden=false;link.href=d.url}else{link.hidden=true;link.removeAttribute('href')};shell.className='hnd-device-shell hnd-'+d.width;options.replaceChildren(...d.views.map(([label],i)=>{const b=document.createElement('button');b.type='button';b.textContent=label;b.setAttribute('aria-pressed',String(i===view));b.classList.toggle('is-on',i===view);b.addEventListener('click',()=>showView(i));return b}));showView(view)}
+function showView(i){const d=projects[chosen];options.querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('is-on',i===j);b.setAttribute('aria-pressed',String(i===j))});screen.innerHTML='<div class="hnd-screen '+(chosen==='pretao'?'pret':chosen==='admin'?'admin':'')+'">'+d.views[i][1]+'</div>';screen.scrollTop=0;screen.animate?.([{opacity:.35,transform:'translateY(10px)'},{opacity:1,transform:'translateY(0)'}],{duration:280,easing:'ease-out'});}
+root.querySelectorAll('.hnd-project-tab').forEach(b=>b.addEventListener('click',()=>choose(b.dataset.product)));
+choose('morotti');
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){root.querySelectorAll('.hnd-project-tab,.hnd-device-options').forEach(el=>el.addEventListener('click',e=>{const x=e.clientX,y=e.clientY;if(!x||!y)return;let s=document.createElement('span');s.className='hnd-spark';s.textContent='✦';s.style.left=x+'px';s.style.top=y+'px';document.body.append(s);setTimeout(()=>s.remove(),600)}))}
+})();
+</script></body>
 </html>
