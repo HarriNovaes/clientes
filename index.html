@@ -1,835 +1,191 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="#070809" name="theme-color"/>
-<title>
-    Harri Novaes Digital | Sites, Sistemas e Soluções Digitais
-  </title>
-<meta content="Sites profissionais, sistemas de gestão, agendamentos e soluções digitais personalizadas para negócios." name="description"/>
-<link href="style.css" rel="stylesheet"/>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08090b">
+<meta name="description" content="Harri Novaes Digital — Sites, aplicativos e sistemas personalizados. Explore demonstrações interativas e descubra o potencial da sua ideia.">
+<title>Harri Novaes Digital — Ideias que você pode experimentar</title>
 <style>
+:root{color-scheme:dark;--bg:#08090b;--card:#141518;--card2:#1a1b20;--line:#ffffff20;--muted:#a7a9b0;--text:#f7f5ef;--gold:#e4b66a;--gold2:#fff0c5;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,"Segoe UI",Arial,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}::selection{background:var(--gold);color:#14100a}:focus-visible{outline:2px solid #ffdc94;outline-offset:4px}
+#progress{position:fixed;top:0;left:0;width:0;height:3px;background:linear-gradient(90deg,#aa672a,#ffedac);z-index:200;box-shadow:0 0 16px #efc27888}.bgfx{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse 40% 26% at var(--px,70%) var(--py,12%),#b78c3c12,transparent 90%),linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:auto,52px 52px,52px 52px;mask-image:linear-gradient(black,transparent 85%)}.wrap{width:min(1200px,calc(100% - 48px));margin:auto}.muted{color:var(--muted)}.eyebrow{font-size:11px;font-weight:850;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}.grad{background:linear-gradient(110deg,#fff8e8,#e6b96a 65%,#ad773f);color:transparent;background-clip:text}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(46px,7.8vw,111px);line-height:.99;letter-spacing:-.075em;margin:18px 0 26px}h2{font-size:clamp(36px,5.5vw,74px);line-height:1.04;letter-spacing:-.065em;margin:18px 0}h3{letter-spacing:-.04em}p{line-height:1.7}.btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;background:var(--gold);color:#17120c;border:1px solid #f1ca87;border-radius:13px;padding:15px 19px;font-weight:850;transition:transform .25s,box-shadow .25s,background .25s;min-height:48px}.btn:hover{transform:translateY(-3px);box-shadow:0 12px 37px #e9b56c35}.btn.ghost{background:#ffffff08;border-color:#ffffff32;color:var(--text)}.btn.ghost:hover{background:#ffffff14}.btn.tiny{min-height:38px;padding:9px 13px;font-size:12px}.pill{display:inline-flex;gap:9px;align-items:center;padding:9px 13px;border:1px solid #e4b66a52;border-radius:100px;background:#e4b66a0b;font-size:11px;color:#f3d5a1;font-weight:700}.dot{width:7px;height:7px;border-radius:100%;background:#66d89d;box-shadow:0 0 15px #66d89d}
+header{position:fixed;top:3px;left:0;right:0;z-index:100;background:#090a0bdc;backdrop-filter:blur(20px);border-bottom:1px solid #ffffff12}.headerrow{min-height:76px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:12px;min-width:0}.mark{height:42px;width:42px;border:1px solid #cda058;border-radius:13px;display:grid;place-items:center;font-weight:950;color:#f6dba9;background:linear-gradient(145deg,#362818,#0d0c0b);box-shadow:inset 0 0 18px #d5a4541c;letter-spacing:-.11em}.brandname{display:flex;flex-direction:column;line-height:1.2}.brandname strong{font-size:14px;letter-spacing:.05em}.brandname small{font-size:9px;letter-spacing:.23em;color:var(--gold)}nav{display:flex;align-items:center;gap:23px;margin-left:auto}nav a{font-size:12px;font-weight:750;color:#cacbd0;transition:color .2s}nav a:hover{color:var(--gold)}.headercta{font-size:12px;padding:12px 16px}.hamb{display:none;background:none;border:1px solid #ffffff30;color:white;border-radius:10px;padding:10px 13px}
+.hero{position:relative;min-height:100svh;display:grid;align-items:center;padding:130px 0 90px;isolation:isolate}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 55% 57% at 85% 45%,#bf8b4023,transparent 70%)}.hero-grid{display:grid;grid-template-columns:1.07fr .93fr;gap:7%;align-items:center}.hero p{font-size:clamp(15px,1.6vw,18px);max-width:600px;color:#c4c4c8}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 40px}.hero-proof{display:flex;flex-wrap:wrap;gap:22px}.hero-proof span{display:flex;flex-direction:column;gap:3px;border-left:1px solid #cba05955;padding-left:15px}.hero-proof strong{font-size:13px}.hero-proof small{font-size:11px;color:#888b94}.hero-art{position:relative;min-height:500px;display:grid;place-items:center;perspective:1000px}.art-panel{width:min(410px,95%);background:linear-gradient(145deg,#24201a,#0e1014 65%);border:1px solid #d5ae6a4c;border-radius:27px;padding:22px;box-shadow:0 40px 120px #000b,0 0 90px #e3a95313;transform:rotateY(-10deg) rotateX(5deg);animation:float 7s ease-in-out infinite}.art-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.16em;color:#a8a0a0}.art-dots{display:flex;gap:5px}.art-dots i{width:7px;height:7px;border-radius:50%;background:#7b6b54}.art-center{margin:48px 0 34px;text-align:center}.art-center .big{font-size:90px;font-weight:900;line-height:1;letter-spacing:-.13em;background:linear-gradient(130deg,#fff2d1,#c48d3d);color:transparent;background-clip:text}.art-center h3{margin:12px 0 5px;font-size:26px}.art-center p{font-size:12px;margin:0}.art-bars{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.art-bars div{background:#ffffff0b;border:1px solid #ffffff14;border-radius:12px;padding:14px 10px;font-size:10px;color:#b8b8ba}.art-bars b{display:block;font-size:18px;color:#f4d59b;margin-bottom:5px}.float-label{position:absolute;padding:12px 16px;border:1px solid #dfb77855;border-radius:14px;background:#191713ef;backdrop-filter:blur(10px);font-size:12px;font-weight:800;box-shadow:0 15px 35px #0006;animation:float 5s ease-in-out infinite}.float-label.a{top:10%;right:0}.float-label.b{bottom:10%;left:0;animation-delay:-2s}.float-label.c{right:1%;bottom:20%;animation-delay:-1s}@keyframes float{50%{transform:translateY(-13px) rotateY(-7deg) rotateX(3deg)}}.art-panel:hover{animation-play-state:paused}.scrollhint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.17em;color:#aba39a;text-transform:uppercase}.scrollhint:after{content:"↓";display:block;text-align:center;font-size:23px;margin-top:8px;color:var(--gold)}
+.marquee{border-top:1px solid #ffffff19;border-bottom:1px solid #ffffff19;background:#d7aa62;color:#17110c;overflow:hidden}.marquee-track{display:flex;gap:45px;white-space:nowrap;padding:15px 0;font-size:12px;font-weight:950;letter-spacing:.13em;animation:marquee 28s linear infinite;width:max-content}.marquee-track b{font-weight:950}@keyframes marquee{to{transform:translateX(-50%)}}
+section.block{padding:112px 0}.sectionhead{max-width:850px;margin-bottom:43px}.sectionhead p{max-width:650px;color:#aaaeb7}.mini-index{font-size:11px;font-weight:900;color:#a78b60;letter-spacing:.19em}.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{min-height:310px;padding:28px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(155deg,#1c1d21,#101114);position:relative;overflow:hidden;transition:transform .25s,border-color .25s}.service:hover{transform:translateY(-9px);border-color:#c89e5d}.service .icon{font-size:38px;margin:15px 0 35px;color:var(--gold)}.service h3{font-size:23px}.service p{color:#afb1b8;font-size:13px}.service button{border:0;background:none;color:var(--gold);padding:0;font-size:12px;font-weight:850;text-align:left}.service:after{content:"";position:absolute;width:160px;height:160px;right:-100px;top:-100px;border-radius:50%;background:#e4b66a29;filter:blur(30px);transition:.3s}.service:hover:after{right:-40px;top:-40px}
+.idea-line{padding:70px 0;background:linear-gradient(125deg,#21190f,#0d0d10 70%);border-block:1px solid #b88d4a34}.idea-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}.idea-grid h2{font-size:clamp(32px,4vw,57px)}.idea-grid p{color:#b8b9bf}.idea-options{display:grid;gap:10px}.idea-option{background:#ffffff09;border:1px solid #ffffff20;border-radius:14px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:15px;text-align:left;color:white;font-weight:800;transition:.25s}.idea-option:hover,.idea-option.on{border-color:var(--gold);background:#b88a4120;transform:translateX(4px)}.idea-answer{margin-top:13px;min-height:105px;padding:20px;background:#e4b66a12;border:1px solid #e4b66a55;border-radius:14px;color:#f1dfba;line-height:1.6;font-size:14px}
+/* PROJECT STUDIO */
+.studio-intro{text-align:center;max-width:900px;margin:0 auto 42px}.studio-intro p{color:#aeb1b8}.studio-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:16px}.studio-tab{background:#18191c;border:1px solid #ffffff20;border-radius:16px;padding:20px 17px;color:#f3f1e9;text-align:left;transition:.28s;display:flex;align-items:center;gap:13px}.studio-tab:hover{transform:translateY(-4px);border-color:#dab47777}.studio-tab[aria-selected=true]{background:linear-gradient(145deg,#30251b,#171618);border-color:#e4b66a;box-shadow:0 0 45px #d89c4020}.studio-tab b{display:block;font-size:14px}.studio-tab small{display:block;margin-top:5px;color:#a3a0a2;font-size:10px}.studio-ico{font-size:25px}.stage{border:1px solid #ffffff21;border-radius:28px;background:linear-gradient(140deg,#161618,#0b0c0f);overflow:hidden;position:relative}.stage:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 35% 30% at 35% 35%,var(--accent-glow,#d9ae5520),transparent);pointer-events:none}.stage-layout{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:0;min-height:670px}.stage-preview{padding:36px;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}.stage-toolbar{width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}.stage-toolbar span{font-size:10px;color:#b9b1a4;letter-spacing:.17em;font-weight:800}.stage-toolbar button{border:1px solid #ffffff28;background:#ffffff09;color:white;padding:8px 11px;border-radius:10px;font-size:11px}.stage-copy{padding:60px 40px 45px 30px;display:flex;flex-direction:column;justify-content:center;border-left:1px solid #ffffff13}.stage-copy h3{font-size:clamp(30px,3.4vw,51px);line-height:1.08;margin:16px 0}.stage-copy p{font-size:14px;color:#b0b2b8;max-width:420px}.featurechips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 28px}.featurechips span{border:1px solid #ffffff22;border-radius:100px;padding:8px 11px;font-size:10px;color:#ddd2bd}.stage-note{font-size:11px;color:#979ba5;line-height:1.5}.stage-nav{display:flex;flex-wrap:wrap;gap:7px;margin:20px 0}.stage-nav button{border:1px solid #ffffff29;border-radius:9px;padding:9px 12px;background:#ffffff08;color:#d7d8df;font-size:11px;font-weight:800}.stage-nav button.on{background:var(--gold);color:#21190c;border-color:var(--gold)}.device{width:100%;max-width:380px;height:540px;border:9px solid #252629;border-radius:38px;background:#101113;overflow:hidden;box-shadow:0 30px 80px #000a,0 0 0 1px #626367;position:relative;transition:max-width .35s,border-radius .35s}.device.wide{max-width:740px;height:510px;border-radius:19px;border-width:6px}.devicebar{height:27px;background:#17191b;color:#c1c1c2;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:10px}.device.wide .devicebar{height:27px}.screen{height:calc(100% - 27px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#696969 #1c1c1c}.device.wide .screen{height:calc(100% - 27px)}.demo-notice{font-size:10px;color:#e9c888;text-align:center}.studio-footer{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:16px;color:#9da0a7;font-size:11px;flex-wrap:wrap}
+/* GYM embedded styles */
+.gym{background:#111113;color:#f7f7fa;min-height:100%;font-size:13px}.gym-head{position:sticky;top:0;background:#18181b;padding:12px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #343438;z-index:2}.gym-logo{width:34px;height:34px;background:#3b1016;color:#f95b69;border:1px solid #73303b;display:grid;place-items:center;border-radius:50%;font-weight:900}.gym-head b{letter-spacing:.1em;color:#ff4455}.gym-head small{display:block;letter-spacing:.1em;font-size:8px;color:#aaa}.gym-body{padding:16px}.gym-hero{background:linear-gradient(135deg,#37141b,#1b1b20);border:1px solid #5b252e;border-radius:17px;padding:19px;margin-bottom:12px}.gym-hero small{color:#ff9ea8;font-size:9px;letter-spacing:.14em;font-weight:900}.gym-hero h4{font-size:23px;margin:9px 0}.gym-hero p{font-size:11px;line-height:1.45;color:#cac6ca}.gym-challenge{background:#24171c;border:1px solid #72313b;padding:14px;border-radius:16px;margin:10px 0}.gym-row{display:flex;justify-content:space-between;align-items:center;gap:12px}.gym-k{color:#f5b942;font-weight:900;font-size:10px;letter-spacing:.09em}.gym-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:13px 0}.gym-stat{background:#29282d;border-radius:10px;padding:10px 5px;text-align:center}.gym-stat b{display:block;font-size:19px}.gym-stat small{color:#999;font-size:9px}.gym-btn{background:#df2238;color:#fff;border:0;border-radius:10px;padding:12px;width:100%;font-weight:900;font-size:11px}.gym-btn.alt{background:#382024;border:1px solid #9a3944}.gym-quick{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.gym-tile{padding:14px;background:#242429;border:1px solid #3b3b41;border-radius:12px;text-align:left;color:#fff;min-height:78px;font-size:12px;font-weight:850}.gym-tile small{display:block;color:#9c9ca4;margin-top:7px;font-size:9px}.gym-list{background:#232328;padding:14px;margin:8px 0;border-radius:13px;border:1px solid #36363c}.gym-list b{display:block;margin-bottom:5px}.gym-list small{color:#a9a9b0;font-size:10px}.gym-heading{color:#f26774;font-size:10px;font-weight:900;letter-spacing:.14em}.gym-tabs{display:flex;gap:6px;margin:12px 0}.gym-tabs button{flex:1;background:#29292e;border:1px solid #3f3f47;color:#e3e3e4;border-radius:9px;padding:9px 5px;font-size:10px}.gym-tabs button.on{background:#7d1d2e;border-color:#cb334b}.gym-search{width:100%;padding:12px;background:#28282d;border:1px solid #44444b;border-radius:10px;color:#fff;margin:10px 0}.gym-bottom{display:flex;justify-content:space-around;background:#18181b;padding:11px 0;position:sticky;bottom:0;border-top:1px solid #3b3b3e}.gym-bottom button{font-size:10px;color:#a6a6aa;border:0;background:none}.gym-bottom button.on{color:#fb6e80}
+/* SHOP embedded styles */
+.shop{background:#0b0b0b;color:#fff7e8;min-height:100%;font-size:12px}.shop-head{padding:17px;background:#0e0d0c;border-bottom:1px solid #5b452f;display:flex;justify-content:space-between;align-items:center;gap:10px}.shop-logo{font-weight:950;letter-spacing:.08em;color:#f2c46e}.shop-head button{background:#eeb75e;border:0;border-radius:8px;color:#15100a;padding:9px;font-size:10px;font-weight:900}.shop-body{padding:18px}.shop-hero{padding:28px 16px;background:radial-gradient(circle at 80% 0,#4b2b13,#17120e 55%,#0a0a0a);border:1px solid #5b4125;border-radius:17px;margin-bottom:15px}.shop-hero small{color:#dba34b;letter-spacing:.13em;font-size:9px;font-weight:800}.shop-hero h4{font-size:36px;line-height:1.05;margin:18px 0}.shop-hero em{color:#f6cc80;font-style:normal}.shop-hero p{color:#b6ada3;font-size:11px}.shop-btn{background:linear-gradient(90deg,#ffe19e,#d59635);border:0;color:#1b1308;padding:11px 13px;border-radius:9px;font-weight:900;font-size:10px}.shop-btn.secondary{background:#33291e;color:#f8d295;border:1px solid #705334}.shop-panel{border:1px solid #514333;background:#1a1714;border-radius:13px;padding:15px;margin:9px 0}.shop-panel b{font-size:14px}.shop-panel p{font-size:10px;color:#c2b5a5;margin:7px 0}.shop-h{color:#e4b468;font-size:10px;font-weight:900;letter-spacing:.14em;margin:16px 0 9px}.shop-steps{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.shop-steps span{font-size:9px;padding:7px;background:#26211c;border:1px solid #5b4834;border-radius:7px}.shop-steps span.on{background:#e1af5b;color:#201709}.shop-options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.shop-options button{padding:13px 9px;border-radius:10px;background:#27221e;border:1px solid #594532;color:white;font-size:10px}.shop-options button.on{background:#61411f;border-color:#f6c778}.shop-input{width:100%;padding:11px;background:#28231f;border:1px solid #5a4836;color:white;border-radius:8px;margin:7px 0}.shop-mini-nav{display:flex;justify-content:space-around;background:#16120e;border-top:1px solid #6b4b2a;padding:13px 5px;position:sticky;bottom:0}.shop-mini-nav button{background:none;border:0;color:#e0c299;font-size:10px}.shop-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.product-demo{background:#211b16;border:1px solid #59432c;border-radius:12px;overflow:hidden}.product-demo .pic{height:75px;background:linear-gradient(135deg,#4a3825,#16110d);display:grid;place-items:center;font-size:31px}.product-demo .descr{padding:10px;font-size:11px}.product-demo small{display:block;color:#b5a89b;font-size:9px}
+/* ADMIN embedded styles */
+.adm{--am:#543b29;--ab:#f6f0e8;--al:#e4d8c9;color:#2e241b;background:#faf7f2;display:flex;min-height:100%;font-size:12px}.adm-side{background:#291e17;color:#fff7eb;width:150px;flex-shrink:0;padding:15px 9px}.adm-side b{color:#d8ad73;font-size:13px}.adm-side small{display:block;color:#c0ac98;font-size:9px;margin:8px 0 19px}.adm-side button{display:block;width:100%;padding:10px 7px;margin:4px 0;background:transparent;border:0;border-radius:7px;text-align:left;color:#decfc0;font-size:10px}.adm-side button.on{background:#7d5738;color:white}.adm-main{flex:1;padding:20px;min-width:0}.adm-main .ak{font-size:9px;letter-spacing:.15em;font-weight:900;color:#a27b55}.adm-main h4{font-size:22px;margin:7px 0 17px}.adm-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.adm-stat{background:white;border:1px solid #e3d8ce;border-radius:10px;padding:12px 7px}.adm-stat small{display:block;color:#8b7d6e;font-size:9px}.adm-stat b{font-size:18px;color:#503a29}.adm-panel{padding:14px;background:#fff;border:1px solid #e5d8cd;border-radius:12px;margin-top:11px}.adm-panel h5{font-size:12px;margin:0 0 10px}.adm-row{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #f0e8e0;padding:11px 0;font-size:10px}.adm-row small{display:block;color:#908276}.adm-tag{color:#684c31;background:#f5ebdf;border-radius:100px;padding:5px 7px;font-size:9px}.adm-bars{height:92px;display:flex;align-items:end;gap:7px;padding-top:10px}.adm-bars i{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(#b78a59,#4a3220)}.adm-action{color:#fff;background:#573d2b;border:0;padding:9px 12px;border-radius:8px;margin-top:12px;font-size:10px}.adm-mobilemenu{display:none}
+/* PRICING */
+.pricing{background:linear-gradient(#151416,#0c0c10);border-block:1px solid #ffffff1b}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.plan{padding:28px;background:#1b1b1f;border:1px solid #ffffff1d;border-radius:21px;display:flex;flex-direction:column;min-height:460px;transition:.25s}.plan:hover{transform:translateY(-6px);border-color:#c99f64}.plan.featured{border-color:#ddb46d;background:linear-gradient(140deg,#332718,#181719 62%)}.plan small{font-size:11px;color:#cda76e;letter-spacing:.13em;font-weight:850}.plan h3{font-size:24px;margin:12px 0}.plan .price{font-size:47px;font-weight:900;letter-spacing:-.06em;color:#ffdfa3;margin:20px 0 0}.plan .install{font-size:12px;color:#c0bdba}.plan .recurring{padding:13px;border:1px solid #b98d4b55;background:#d4a15110;border-radius:11px;margin:22px 0}.plan .recurring b{color:#f6d391}.plan ul{list-style:none;padding:0;margin:0 0 22px;display:grid;gap:12px;flex:1}.plan li{font-size:12px;color:#cccdd1}.plan li:before{content:"✓";color:var(--gold);margin-right:10px}.plan .btn{width:100%;font-size:12px}.fine{font-size:11px;color:#9ea0a7;line-height:1.7}.calculator{margin-top:27px;border:1px solid #e1b56d50;border-radius:20px;padding:26px;display:grid;grid-template-columns:1fr 1fr;gap:25px;background:#e4b66a08}.calculator label,.brief label{display:block;color:#d5cbbd;font-size:11px;letter-spacing:.1em;font-weight:850;margin-bottom:8px;text-transform:uppercase}select,input,textarea{color:#fff;background:#1c1c20;border:1px solid #ffffff34;border-radius:11px;padding:13px;width:100%;outline:none}select:focus,input:focus,textarea:focus{border-color:var(--gold)}.calc-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result{border-radius:15px;padding:19px;background:#191717;border:1px solid #d5ae6945}.result .big{font-size:clamp(28px,3.5vw,48px);font-weight:900;color:#f8d594;letter-spacing:-.055em}.result p{margin:5px 0;font-size:12px;color:#bab7b3}
+/* BRIEF */
+.brief-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:10%;align-items:center}.briefpanel{padding:30px;background:linear-gradient(145deg,#292016,#121316);border:1px solid #d3a86670;border-radius:24px}.briefpanel h3{font-size:26px}.brief-step{font-size:10px;color:#dfb774;letter-spacing:.14em;font-weight:900}.brief-progress{height:4px;background:#ffffff1d;margin:16px 0 27px;border-radius:5px}.brief-progress i{display:block;height:100%;width:25%;background:#e7b76a;transition:width .3s}.brief-options{display:grid;gap:10px;margin:18px 0}.brief-options button{padding:15px;border:1px solid #ffffff35;border-radius:10px;background:#ffffff0b;color:white;text-align:left;font-weight:750}.brief-options button:hover,.brief-options button.on{border-color:#f1c176;background:#b3833d30}.brief-controls{display:flex;justify-content:space-between;gap:10px;margin-top:18px}.brief-controls button{min-width:105px}.briefpanel textarea{min-height:110px;resize:vertical}.briefpanel .btn{width:100%}.faq{max-width:870px;margin:0 auto}.faq details{padding:21px 4px;border-bottom:1px solid #ffffff29}.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:15px;font-weight:800}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";font-size:24px;color:var(--gold)}.faq details[open] summary:after{content:"−"}.faq details p{color:#aeb1b8;margin:14px 0 0;font-size:14px}footer{padding:55px 0 25px;background:#060607;border-top:1px solid #ffffff18}.footer-grid{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-grid p{font-size:12px;color:#aaa;max-width:350px}.footer-links{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#ccc}.footer-bottom{border-top:1px solid #ffffff16;margin-top:38px;padding-top:20px;font-size:11px;color:#85868d;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}.floatwa{position:fixed;bottom:22px;right:22px;background:#e3b469;color:#17110b;border-radius:100px;padding:14px 17px;z-index:90;font-size:12px;font-weight:900;box-shadow:0 15px 50px #0009}.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,130px);background:#282118;border:1px solid #c9a265;color:#fff0d2;padding:13px 18px;border-radius:13px;font-size:12px;z-index:201;transition:.35s;max-width:min(500px,90vw);text-align:center;pointer-events:none}.toast.show{transform:translate(-50%,0)}.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.reveal.seen{opacity:1;transform:none}.overlay{position:fixed;inset:0;background:#000b;backdrop-filter:blur(12px);z-index:180;display:none;place-items:center;padding:20px}.overlay.open{display:grid}.modal{position:relative;width:min(610px,100%);background:#1c1a18;border:1px solid #c79d5d;border-radius:22px;padding:30px}.modal h3{font-size:28px}.modal p{color:#bbb;font-size:14px}.modal .close{position:absolute;right:14px;top:12px;background:#ffffff12;border:1px solid #ffffff24;color:white;border-radius:9px;padding:8px 11px}.command{width:100%;border-radius:12px;margin:5px 0;background:#29241f;color:#f5ddae;border:1px solid #8d704e;padding:12px;text-align:left}
+@media(max-width:1100px){nav{gap:13px}.stage-layout{grid-template-columns:1fr}.stage-copy{border-left:0;border-top:1px solid #ffffff19;padding:35px}.stage-preview{padding:20px}.device.wide{max-width:850px}.hero-grid{gap:3%}.plans{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:780px){.wrap{width:min(100% - 32px,1200px)}nav{display:none;position:absolute;top:74px;left:0;right:0;background:#0b0b0e;border-bottom:1px solid #ffffff30;padding:20px;flex-direction:column;align-items:stretch;gap:20px}nav.open{display:flex}.hamb{display:block;margin-left:auto}.headercta{display:none}.hero{min-height:auto;padding:140px 0 95px}.hero-grid,.idea-grid,.brief-wrap,.calculator{grid-template-columns:1fr}.hero-art{min-height:390px}.art-panel{width:85%;transform:none;animation:none}.float-label{font-size:10px}.cards3,.plans{grid-template-columns:1fr}.studio-tabs{grid-template-columns:1fr}.studio-tab{padding:14px}.stage-layout{min-height:0}.stage-preview{padding:13px}.stage-copy{padding:27px 20px}.device{height:510px}.device.wide{height:455px;border-radius:12px}.adm-side{width:105px}.adm-side b{font-size:10px}.adm-side button{font-size:9px}.adm-main{padding:10px}.adm-stats{grid-template-columns:repeat(2,1fr)}.adm-stat b{font-size:14px}.hero-proof{gap:13px}.hero-proof span{max-width:30%}.btn{padding:13px 15px}section.block{padding:76px 0}.calculator{gap:18px}.floatwa{bottom:10px;right:10px}}
+@media(max-width:390px){.device{height:480px;border-width:6px;border-radius:23px}.device.wide{height:410px}.adm-side{width:87px;padding:9px 4px}.adm-side button{font-size:8px}.adm-main{padding:8px}.adm-panel{padding:9px}.shop-body,.gym-body{padding:10px}.hero-art{min-height:310px}.art-center .big{font-size:68px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
-/* HND 3.0 — MELHORIAS INTEGRADAS, SEM ALTERAR style.css */
-:root {--hnd-glow:rgba(216,167,94,.12)}
-body::after{content:"";position:fixed;top:0;left:0;width:var(--hnd-progress,0%);height:3px;background:linear-gradient(90deg,#b77b36,#f4dca4);z-index:100002;pointer-events:none;box-shadow:0 0 16px #d8a75e99}
-a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #f2ce8a;outline-offset:5px}
-.hero h1{letter-spacing:-.06em;line-height:1.08}.hero-description{max-width:580px}
-.hnd-pricing{position:relative;overflow:hidden}.hnd-pricing::before{content:"";position:absolute;right:-10%;top:5%;height:500px;width:500px;background:radial-gradient(circle,rgba(216,167,94,.11),transparent 68%);pointer-events:none}
-.hnd-price-head{display:flex;justify-content:space-between;align-items:center;gap:25px;border:1px solid rgba(216,167,94,.24);background:linear-gradient(125deg,rgba(216,167,94,.10),rgba(216,167,94,.015));border-radius:22px;padding:26px 32px;margin:32px 0 28px}
-.hnd-price-head>div{display:grid;gap:4px}.hnd-kicker{font-size:11px;letter-spacing:.2em;color:#f2ce8a;font-weight:750}.hnd-price-head strong{font-size:clamp(29px,3.4vw,45px);line-height:1.2;letter-spacing:-.04em}.hnd-price-head small{font-size:13px;color:#aeb0b4}.hnd-text-link{white-space:nowrap;color:#f2ce8a;font-weight:700}.hnd-text-link span{margin-left:10px}
-.hnd-plan-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}.hnd-plan{position:relative;display:flex;flex-direction:column;min-width:0;gap:13px;padding:29px 22px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(150deg,rgba(27,29,32,.93),rgba(10,11,13,.97));border-radius:24px;transition:border-color .3s ease,box-shadow .3s ease,transform .3s ease;overflow:hidden}.hnd-plan:hover{transform:translateY(-8px);border-color:rgba(216,167,94,.55);box-shadow:0 22px 65px #0008,0 0 0 1px #d8a75e1c}.hnd-featured{border-color:rgba(216,167,94,.55);background:linear-gradient(145deg,rgba(59,43,23,.75),#111113 60%)}.hnd-plan-index{font-size:10px;font-weight:800;letter-spacing:.17em;color:#d8a75e}.hnd-plan h3{font-size:24px;line-height:1.16;letter-spacing:-.035em}.hnd-plan>p:not(.hnd-exclusion){font-size:13px;color:#a9acb3;min-height:84px}.hnd-price{display:flex;flex-direction:column;gap:0;border-top:1px solid #ffffff18;border-bottom:1px solid #ffffff18;padding:16px 0}.hnd-price small{color:#b2b2b2;font-size:11px}.hnd-price strong{font-size:36px;letter-spacing:-.06em;color:#f5dfb6;line-height:1.25}.hnd-price span{font-size:11px;color:#999ea5}.hnd-plan ul{list-style:none;display:grid;gap:10px;margin:7px 0 0;padding:0}.hnd-plan li{font-size:12px;line-height:1.5;color:#dedede;display:flex;gap:9px}.hnd-plan li::before{content:"✓";color:#d8a75e;font-weight:900}.hnd-exclusion{color:#999!important;font-size:11px!important;margin-top:auto}.hnd-plan-button{margin-top:auto;display:flex!important;justify-content:space-between;align-items:center;text-align:left!important;padding:14px!important;border-radius:12px!important;background:#d8a75e!important;color:#111!important;font-weight:800!important;transition:filter .2s,transform .2s}.hnd-plan-button:hover{filter:brightness(1.12);transform:translateY(-2px)}.hnd-popular{font-size:9px;line-height:1.4;letter-spacing:.08em;position:absolute;right:10px;top:12px;color:#f9e1ad;max-width:115px;text-align:right}.hnd-custom-mark{position:absolute;right:15px;top:25px;color:#d8a75e;font-size:42px;opacity:.6}.hnd-consult{font-size:23px!important;letter-spacing:-.025em!important}.hnd-legal{color:#a1a4a9;font-size:12px;margin-top:25px;line-height:1.65}
-.hnd-idea{background:radial-gradient(ellipse at 70% 40%,rgba(185,130,54,.12),transparent 60%);padding-block:110px}.hnd-idea-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center}.hnd-idea-copy h2{font-size:clamp(36px,4.4vw,64px);line-height:1.1;letter-spacing:-.05em;margin:22px 0}.hnd-idea-copy h2 span{color:#d8a75e}.hnd-idea-copy>p{color:#b1b4ba;max-width:470px}.hnd-idea-steps{display:flex;gap:15px;flex-wrap:wrap;margin-top:33px;font-size:11px;color:#d8a75e;letter-spacing:.06em}.hnd-wizard{padding:clamp(22px,4vw,36px);border:1px solid rgba(216,167,94,.35);background:linear-gradient(145deg,#1b1916,#0a0b0e 75%);border-radius:28px;box-shadow:0 30px 100px #0007}.hnd-wizard-header{display:flex;justify-content:space-between;gap:10px;color:#d5b781;font-size:10px;letter-spacing:.12em;font-weight:800}.hnd-wizard-track{margin:17px 0 28px;background:#ffffff18;height:4px;border-radius:4px;overflow:hidden}.hnd-wizard-track i{display:block;height:100%;width:33.333%;background:#d8a75e;border-radius:4px;transition:width .3s}.hnd-wizard h3{font-size:clamp(22px,3vw,30px);line-height:1.25;letter-spacing:-.035em;min-height:65px;margin-bottom:18px}.hnd-choice-list{display:grid;gap:10px}.hnd-choice{width:100%;padding:16px 17px;display:flex;justify-content:space-between;text-align:left;align-items:center;gap:10px;border-radius:12px;background:#ffffff08;border:1px solid #ffffff18;color:#eee;transition:.2s}.hnd-choice:hover{border-color:#d8a75e;background:#d8a75e15;transform:translateX(3px)}.hnd-choice span{color:#d8a75e}.hnd-wizard-bottom{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-top:25px;font-size:11px;color:#888}.hnd-back{background:transparent;border:0;color:#d8a75e}.hnd-back:disabled{color:#777;cursor:default}.hnd-wizard-result p{font-size:14px;color:#bec0c3;margin:0 0 22px}.hnd-send{display:block;background:#d8a75e;color:#15110b;border-radius:12px;text-align:center;padding:16px;font-weight:850}.hnd-again{border:0;background:transparent;color:#d8a75e;margin-top:16px}
-.hnd-faq{padding-block:85px}.hnd-faq-list{max-width:850px;margin:20px auto 0}.hnd-faq-list details{border-bottom:1px solid #ffffff1e;padding:17px 4px}.hnd-faq-list summary{cursor:pointer;font-size:16px;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:15px}.hnd-faq-list summary::-webkit-details-marker{display:none}.hnd-faq-list summary::after{content:"+";font-size:23px;color:#d8a75e}.hnd-faq-list details[open] summary::after{content:"−"}.hnd-faq-list details p{color:#aeb2b8;font-size:14px;padding:15px 25px 5px 0;max-width:700px}
-@media(max-width:1100px){.hnd-plan-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hnd-plan>p:not(.hnd-exclusion){min-height:0}.hnd-featured{order:0}}@media(max-width:720px){.hnd-price-head{align-items:flex-start;flex-direction:column;padding:23px}.hnd-plan-grid{grid-template-columns:1fr}.hnd-plan{padding:25px}.hnd-idea{padding-block:75px}.hnd-idea-layout{grid-template-columns:1fr}.hnd-idea-steps{gap:8px}.hnd-idea-steps span{font-size:10px}.hnd-faq{padding-block:65px}.hnd-popular{max-width:125px}.hnd-price-head strong{font-size:33px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}.hnd-plan,.hnd-choice,.hnd-plan-button{transition:none!important}.hnd-plan:hover,.hnd-choice:hover,.hnd-plan-button:hover{transform:none!important}}
+/* Vídeos dos exercícios — reprodução em modal sem sair da demonstração */
+.gym-video-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:9px}
+.gym-video-btn{border:1px solid #a44d58;border-radius:9px;background:#3a1d24;color:#ffe1e5;padding:9px 12px;font-size:10px;font-weight:850}
+.gym-video-btn:hover{background:#622636;border-color:#f36d80}
+.gym-video-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.video-demo-card{width:min(640px,100%);background:#141416;border:1px solid #883844;border-radius:20px;padding:18px;position:relative;box-shadow:0 28px 95px #000b}
+.video-demo-head{padding:5px 38px 15px 5px}.video-demo-head small{color:#ff8594;font-size:10px;font-weight:900;letter-spacing:.12em}.video-demo-head h3{margin:7px 0 0;font-size:21px}
+.video-demo-player{background:#070708;border:1px solid #38383d;border-radius:13px;min-height:200px;display:grid;place-items:center;overflow:hidden}
+.video-demo-player iframe,.video-demo-player video{display:block;width:100%;aspect-ratio:16/9;max-height:65vh;border:0;background:#000}
+.video-demo-empty{padding:30px 22px;text-align:center;max-width:460px}.video-demo-empty strong{display:block;font-size:16px;margin:8px 0}.video-demo-empty p{font-size:12px;line-height:1.6;color:#b6b6bc}.video-demo-hint{color:#aeb0b8;font-size:11px;line-height:1.5;margin:13px 4px 2px}
+@media(max-width:560px){.video-demo-card{padding:13px}.video-demo-player{min-height:180px}.video-demo-head h3{font-size:18px}}
 
-  
-/* HND 3.1 — condições comerciais transparentes */
-.hnd-monthly{display:grid;gap:4px;padding:13px 14px;border:1px solid rgba(216,167,94,.22);border-radius:13px;background:rgba(216,167,94,.055)}
-.hnd-monthly>span{font-size:11px;color:#d8c9aa}.hnd-monthly>strong{color:#f5dfb6;font-size:19px;letter-spacing:-.025em}.hnd-monthly>small{color:#a5a8ad;font-size:10px;line-height:1.4}
-.hnd-price-explainer{margin-top:28px;padding:22px 25px;border:1px solid rgba(216,167,94,.24);border-radius:18px;background:rgba(216,167,94,.045)}
-.hnd-price-explainer>strong{display:block;margin-bottom:9px;color:#f5dfb6;font-size:18px}.hnd-price-explainer p{color:#bfc0c3;font-size:13px;line-height:1.75}.hnd-price-explainer b{color:#fff}
-
-/* HND 5.0 — Interactive Project Studio */
-.hnd-old-case{display:none!important}
-.hnd-lab{margin:48px 0 55px;--lab-accent:#e11d2e;--lab-ink:#fff;position:relative}
-.hnd-lab-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:26px}.hnd-lab-eyebrow{font:800 11px/1.5 inherit;letter-spacing:.2em;color:#eac785}.hnd-lab-intro h3{font-size:clamp(34px,4vw,58px);line-height:1.05;letter-spacing:-.055em;margin:13px 0 16px;max-width:810px}.hnd-lab-intro h3 em{font-style:normal;color:#d6a75f}.hnd-lab-intro p{max-width:680px;color:#9fa3ad;font-size:14px;line-height:1.75}.hnd-lab-pulse{white-space:nowrap;color:#d4bf97;letter-spacing:.12em;font-size:10px;font-weight:800;border:1px solid #6a5335;border-radius:40px;padding:11px 14px}.hnd-lab-pulse i{display:inline-block;width:7px;height:7px;background:#72cc8f;border-radius:50%;margin-right:7px;box-shadow:0 0 12px #72cc8f;animation:hnd-pulse 2s infinite}@keyframes hnd-pulse{50%{opacity:.4;box-shadow:0 0 2px #72cc8f}}
-.hnd-lab-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 13px}.hnd-project-tab{border:1px solid #ffffff19;background:linear-gradient(140deg,#17181b,#101114);border-radius:15px;padding:18px;text-align:left;color:#f5f5f5;font-weight:850;font-size:15px;cursor:pointer;transition:.3s;display:grid;grid-template-columns:36px 1fr;column-gap:10px;align-items:center}.hnd-project-tab span{grid-row:span 2;color:#be9256;font-size:12px}.hnd-project-tab small{grid-column:2;color:#989aa3;font-size:11px;font-weight:500;margin-top:4px}.hnd-project-tab:hover{transform:translateY(-3px);border-color:#b48b54}.hnd-project-tab.is-on{border-color:#d4a55a;background:linear-gradient(125deg,#332718,#161617);box-shadow:0 0 30px #d0a05217}.hnd-lab-stage{--accent:#e11d2e;display:grid;grid-template-columns:.9fr 1.1fr;min-height:585px;border:1px solid #60503b;border-radius:27px;overflow:hidden;background:radial-gradient(circle at 75% 35%,#33251b55,transparent 43%),linear-gradient(130deg,#17191d,#0a0b0e 70%);position:relative;isolation:isolate}.hnd-lab-stage[data-product="pretao"]{--accent:#e8ac42;background:radial-gradient(circle at 76% 30%,#8350213d,transparent 48%),linear-gradient(130deg,#161412,#0a0b0e 75%)}.hnd-lab-stage[data-product="admin"]{--accent:#ba875b;background:radial-gradient(circle at 76% 30%,#c5a37e25,transparent 48%),linear-gradient(130deg,#181510,#0a0b0e 75%)}.hnd-lab-copy{padding:clamp(28px,5vw,64px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;z-index:2}.hnd-lab-index{font-size:10px;letter-spacing:.17em;color:#d8b47c;font-weight:850;margin-bottom:22px}.hnd-lab-copy h3{font-size:clamp(34px,4.2vw,57px);letter-spacing:-.055em;line-height:1.05;margin:0 0 22px}.hnd-lab-copy h3 span{color:#dfba7f}.hnd-lab-copy>p{font-size:14px;line-height:1.85;color:#b0b1b6;max-width:430px}.hnd-feature-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.hnd-feature-pills span{border:1px solid #ffffff24;padding:8px 11px;border-radius:100px;color:#d6d6d7;font-size:11px}.hnd-lab-tip{font-size:12px;color:#bba47c;margin-top:28px;line-height:1.5}.hnd-lab-tip span{font-size:21px;margin-right:6px}.hnd-lab-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.hnd-lab-actions a{padding:13px 17px;border-radius:11px;border:1px solid #876839;color:#ecd19b;font-size:12px;font-weight:800;transition:.2s}.hnd-lab-actions a:hover{background:#d6a75f;color:#15120f;transform:translateY(-2px)}.hnd-lab-actions a:nth-child(2){background:#dbad68;color:#20150a}
-.hnd-device-area{position:relative;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:14px;padding:36px 24px;min-width:0}.hnd-halo{position:absolute;width:390px;height:390px;max-width:100%;background:radial-gradient(circle,var(--accent),transparent 65%);opacity:.09;filter:blur(25px);pointer-events:none}.hnd-device-shell{position:relative;z-index:1;background:#0c0c0e;color:#fff;border:7px solid #383839;box-shadow:0 26px 75px #000b,0 0 0 1px #ffffff26 inset;overflow:hidden;transition:width .45s,border-radius .45s,transform .45s;transform:perspective(1100px) rotateY(-5deg) rotateX(2deg)}.hnd-device-shell:hover{transform:perspective(1100px) rotateY(0) rotateX(0)}.hnd-device-shell.hnd-phone{width:min(295px,100%);height:450px;border-radius:35px}.hnd-device-shell.hnd-browser{width:min(550px,100%);height:395px;border-radius:16px;border-width:5px}.hnd-device-bar{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;gap:10px;border-bottom:1px solid #ffffff1c;font-size:9px;letter-spacing:.11em;background:#111114}.hnd-device-bar span{color:#98989f}.hnd-device-dot{width:7px;height:7px;background:var(--accent);border-radius:50%;box-shadow:0 0 13px var(--accent)}.hnd-device-display{padding:15px;height:calc(100% - 37px);overflow:auto;scrollbar-width:thin;scrollbar-color:#555 transparent}.hnd-device-options{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;z-index:2;max-width:580px}.hnd-device-options button{border:1px solid #ffffff30;border-radius:100px;background:#1d1d21;color:#c9c7c3;padding:9px 12px;font-size:11px;font-weight:700;cursor:pointer;transition:.2s}.hnd-device-options button:hover{border-color:#e8bc7a}.hnd-device-options button.is-on{background:#d5ab6c;border-color:#d5ab6c;color:#1b1208}.hnd-lab-foot{display:flex;gap:16px;justify-content:space-between;color:#777e86;font-size:10px;letter-spacing:.08em;padding:16px 2px}.hnd-lab-foot span:first-child{color:#c9a86f}
-/* Rendered sample applications */
-.hnd-screen{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#fafafa;font-size:12px}.hnd-screen *{box-sizing:border-box}.hnd-screen .ds-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.hnd-screen .ds-head strong{font-size:14px;letter-spacing:.04em}.hnd-screen .ds-head small{font-size:9px;color:#8f939a}.hnd-screen .ds-mark{color:#fbbf24}.hnd-screen .ds-red{color:#ef5160}.hnd-screen .ds-hero{background:linear-gradient(125deg,#3b171c,#19191e);border:1px solid #66333d;border-radius:15px;padding:17px;margin-bottom:12px}.hnd-screen .ds-hero small{font-size:9px;letter-spacing:.12em;color:#ffb7bd}.hnd-screen .ds-hero strong{display:block;font-size:17px;line-height:1.25;margin-top:7px}.hnd-screen .ds-hero p{font-size:10px;color:#b2a6ad;margin-top:8px}.hnd-screen .ds-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.hnd-screen .ds-tile{background:#242428;border:1px solid #37373e;border-radius:12px;padding:13px 10px;min-height:75px}.hnd-screen .ds-tile b{display:block;font-size:20px;margin-bottom:8px}.hnd-screen .ds-tile strong{font-size:11px}.hnd-screen .ds-tile small{display:block;color:#95959c;margin-top:4px;font-size:9px}.hnd-screen .ds-banner{border-radius:12px;padding:14px;margin:12px 0;background:#2b2020;border:1px solid #65462a}.hnd-screen .ds-banner strong{display:block;color:#ffd478;margin-bottom:6px}.hnd-screen .ds-banner p{color:#bfb9b6;font-size:10px}.hnd-screen .ds-row{background:#242428;border:1px solid #39393f;border-radius:11px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px;margin-bottom:9px}.hnd-screen .ds-row strong{display:block;font-size:11px}.hnd-screen .ds-row small{display:block;font-size:9px;color:#a9a7a7;margin-top:4px}.hnd-screen .ds-tag{padding:6px 8px;background:#55242a;border-radius:50px;color:#ffbcc3;font-size:9px;font-weight:800}.hnd-screen .ds-numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.hnd-screen .ds-number{text-align:center;background:#262529;border-radius:10px;padding:10px 3px}.hnd-screen .ds-number strong{display:block;font-size:19px;color:#ffb94b}.hnd-screen .ds-number small{font-size:9px;color:#aaa}.hnd-screen .ds-sub{margin:15px 0 10px;font-size:11px;color:#aaa;letter-spacing:.1em}.hnd-screen .ds-button{background:linear-gradient(100deg,#b51c2b,#e63c4b);color:#fff;text-align:center;border-radius:10px;padding:12px;font-weight:800;margin-top:12px}.hnd-screen .ds-days{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.hnd-screen .ds-day{text-align:center;padding:8px 3px;border-radius:6px;background:#252529;color:#b9b8bd;font-size:10px}.hnd-screen .ds-day.done{background:#66242d;color:#ffdfe2}.hnd-screen .ds-note{font-size:10px;color:#96949b;margin-top:14px;line-height:1.5}
-.hnd-screen.pret{color:#f9f0e4}.hnd-screen.pret .ds-hero{background:linear-gradient(130deg,#422b17,#18110c);border-color:#795329}.hnd-screen.pret .ds-hero small{color:#ffe0a6}.hnd-screen.pret .ds-tile{background:#241e17;border-color:#56402b}.hnd-screen.pret .ds-row{background:#231c15;border-color:#56402b}.hnd-screen.pret .ds-button{background:linear-gradient(125deg,#ffe09a,#d9942d);color:#20150a}.hnd-screen.pret .ds-tag{background:#4e321b;color:#ffdc9e}.hnd-screen.pret .ds-number{background:#231c15}
-.hnd-screen.admin{color:#342318;background:#f9f4ed;min-height:100%;padding:8px;border-radius:8px}.hnd-screen.admin .ds-head strong{color:#35271e}.hnd-screen.admin .ds-hero{background:#3a251b;border-color:#835d3c}.hnd-screen.admin .ds-hero strong{color:#fff}.hnd-screen.admin .ds-hero small{color:#e3b981}.hnd-screen.admin .ds-hero p{color:#ddd}.hnd-screen.admin .ds-tile{background:#fff;border-color:#e2d2bf;color:#382820}.hnd-screen.admin .ds-tile small{color:#78685b}.hnd-screen.admin .ds-row{background:white;border-color:#e7daca;color:#35261d}.hnd-screen.admin .ds-row small{color:#78685b}.hnd-screen.admin .ds-tag{background:#f2e6d7;color:#714b2d}.hnd-screen.admin .ds-number{background:#efe5d8}.hnd-screen.admin .ds-number strong{color:#65432b}.hnd-screen.admin .ds-number small{color:#78685b}.hnd-screen.admin .ds-sub{color:#655346}.hnd-screen.admin .ds-button{background:#4b3020}.hnd-screen.admin .ds-note{color:#665b51}
-/* Microinteractions */
-.hnd-spark{position:fixed;z-index:100001;pointer-events:none;color:#dfb76d;font-size:20px;animation:hnd-spark .55s forwards}@keyframes hnd-spark{to{opacity:0;transform:translateY(-24px) scale(1.5)}}
-@media(max-width:960px){.hnd-lab-stage{grid-template-columns:1fr}.hnd-lab-copy{padding:32px 30px 6px}.hnd-lab-copy h3{font-size:42px}.hnd-device-area{padding:22px 24px 38px}.hnd-lab-intro{align-items:flex-start;flex-direction:column}.hnd-lab-nav{grid-template-columns:1fr 1fr 1fr}.hnd-project-tab{display:block;font-size:12px}.hnd-project-tab span{display:block;margin-bottom:8px}.hnd-project-tab small{display:block}}
-@media(max-width:620px){.hnd-lab-nav{grid-template-columns:1fr}.hnd-project-tab{display:flex;align-items:center;gap:10px;padding:13px}.hnd-project-tab span,.hnd-project-tab small{margin:0}.hnd-project-tab small{margin-left:auto;font-size:9px}.hnd-lab-stage{border-radius:19px}.hnd-lab-copy{padding:27px 20px 4px}.hnd-lab-copy h3{font-size:37px}.hnd-lab-copy>p{font-size:13px}.hnd-device-area{padding-inline:12px}.hnd-device-shell.hnd-phone{height:430px}.hnd-device-shell.hnd-browser{height:330px}.hnd-lab-foot{display:block;line-height:1.9}.hnd-lab-pulse{font-size:9px}}
-@media(prefers-reduced-motion:reduce){.hnd-device-shell,.hnd-project-tab{transition:none!important;transform:none!important}.hnd-lab-pulse i{animation:none}.hnd-spark{display:none}}
+/* MorottiGym 2.0 — paleta extraída da index original: #09090b, #151518, #202024, #e11d2e, #f5b942 */
+.gym{--mg-red:#e11d2e;--mg-gold:#f5b942;background:#101012;color:#fafafa}
+.gym-head{background:#151518;border-color:#2b2b30}.gym-head b{color:#e11d2e}.gym-logo{background:#271216;color:#e11d2e;border-color:#5c2028}
+.gym-demo-tag{font-size:9px;color:#f5b942;border:1px solid #5a4720;background:#2b2518;padding:5px 7px;border-radius:6px;margin-left:auto;font-weight:900}
+.gym-hero{background:linear-gradient(135deg,#2b1115,#18181b 62%);border-color:#482126}.gym-hero small{color:#fda4af}.gym-challenge{background:linear-gradient(145deg,#261317,#19191d 62%);border-color:#51242b}.gym-stat{background:#27272a}.gym-btn{background:linear-gradient(135deg,#e11d2e,#a91522);border:1px solid #ef4444;box-shadow:0 8px 16px #e11d2e22}.gym-btn.alt{background:#29292e;border-color:#3a3a40;color:#fff;box-shadow:none}.gym-tile{background:linear-gradient(145deg,#242428,#1b1b1f);border-color:#303036;border-radius:17px}.gym-tile.gold{border-color:#5a4720;background:linear-gradient(145deg,#2b2518,#1b1b1f)}.gym-heading{color:#e11d2e}.gym-list{background:#1d1d21;border-color:#303036}.gym-tabs button.on{background:#3b171c;border-color:#7f2631;color:#fecdd3}.gym-bottom{background:#101012;border-color:#2e2e33;gap:4px}.gym-bottom button{flex:1;padding:5px 0;font-size:9px}.gym-bottom button.on{color:#fb7185}.gym-sub{font-size:11px;color:#a1a1aa;line-height:1.55;margin:9px 0 15px}
+.gym-chrono,.gym-focus{margin:12px 0;padding:17px;background:linear-gradient(145deg,#251518,#17171b);border:1px solid #51242b;border-radius:17px}.gym-chrono>strong{display:block;text-align:center;font-size:clamp(29px,5vw,40px);font-variant-numeric:tabular-nums;letter-spacing:.04em;margin:15px 0;color:#fff}.gym-split{display:grid;grid-template-columns:1fr 1fr;gap:7px}.gym-split .gym-btn{font-size:10px;min-width:0;padding:10px 5px}.gym-focus h4{font-size:23px;line-height:1.15;margin:14px 0 7px}.gym-focus p{font-size:11px;color:#a1a1aa}.gym-set-chips{display:flex;gap:8px;margin:16px 0}.gym-set-chips span{width:38px;height:38px;border-radius:11px;border:1px solid #3f3f46;display:grid;place-items:center;background:#27272a;color:#a1a1aa;font-weight:900}.gym-set-chips span.done{background:#174b2b;border-color:#22c55e;color:#86efac}.gym-set-chips span.now{background:#3b171c;border-color:#e11d2e;color:#fff}.gym-sets{text-align:center;margin:16px 0}.gym-sets strong{font-size:48px;display:block;color:#fff;font-variant-numeric:tabular-nums}.gym-sets span{font-size:10px;color:#fda4af;letter-spacing:.15em}.gym-rest{text-align:center;padding:15px 4px}.gym-rest span{font-size:10px;letter-spacing:.1em;color:#f5b942;font-weight:900}.gym-rest strong{display:block;font-size:52px;font-variant-numeric:tabular-nums;margin:12px 0}.gym-rest small{display:block;color:#aaa;margin-bottom:15px}.gym-success{background:#123621;border:1px solid #2c8c50;border-radius:12px;padding:20px;text-align:center;font-size:17px;font-weight:900;margin:17px 0}.gym-success small{display:block;color:#a1e4b4;margin-top:8px;font-size:11px}.gym-text-btn{border:0;background:transparent;color:#fda4af;font-size:10px;font-weight:900}.gym-start{margin:8px 0 13px}.gym-calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.gym-calendar span{background:#27272a;border-radius:8px;text-align:center;padding:11px 0;color:#a1a1aa;font-size:11px}.gym-calendar span.present{background:#6e1b27;color:white;border:1px solid #e11d2e}.gym textarea.gym-search{resize:vertical;font-size:12px}.gym-video-btn{background:#3a1519;border-color:#7f2631;color:#fecdd3}
+@media(max-width:390px){.gym-body{padding:10px}.gym-focus{padding:12px}.gym-set-chips span{width:32px;height:32px}}
 </style>
-<style>
-/* HND 6 — Réplicas visuais demonstrativas, com escopo isolado */
-#portfolio .section-heading{margin-bottom:30px}.studio6{--accent:#e11d2e;--tint:#fda4af;color:#fff;background:#0d0f12;border:1px solid #373638;border-radius:30px;overflow:hidden;position:relative;box-shadow:0 35px 90px #0005}.studio6 *{box-sizing:border-box}.studio6 button{font:inherit;cursor:pointer}.s6-intro{padding:48px clamp(22px,5vw,66px) 26px;background:radial-gradient(ellipse at 80% 10%,#49301250,transparent 55%)}.s6-kicker,.s6-serial{color:#f2bc68;letter-spacing:.15em;font-weight:800;font-size:11px}.s6-intro h3{font-size:clamp(30px,4vw,56px);line-height:1.11;letter-spacing:-.04em;margin:18px 0 14px}.s6-intro h3 em{color:#edbb72;font-style:normal}.s6-intro p{color:#bcbcc1;max-width:720px;font-size:15px;line-height:1.7}.s6-hint{margin-top:17px;color:#d6ae6d;font-size:12px;font-weight:800}.s6-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:16px clamp(15px,3vw,42px) 24px}.s6-choice{border:1px solid #37383c;background:#191b1e;color:#efeff1;border-radius:15px;display:flex;gap:12px;align-items:center;text-align:left;min-width:0;padding:13px 15px;transition:.25s}.s6-choice:hover,.s6-choice.active{border-color:#c8a061;background:#292321;transform:translateY(-2px)}.s6-choice b{font-size:12px;letter-spacing:.045em}.s6-choice small{display:block;color:#a6a5aa;margin-top:5px;font-size:11px}.s6-ic{width:39px;height:39px;border-radius:12px;display:grid;place-items:center;flex:none;font-size:21px;font-weight:950}.s6-ic.gym{background:#3b151e;color:#ff4b5d}.s6-ic.shop{background:#3d2c16;color:#f4bd62}.s6-ic.admin{background:#e9d7be;color:#67452d}.s6-arr{margin-left:auto;color:#c7a268}.s6-stage{--accent:#e11d2e;--tint:#fda4af;background:radial-gradient(ellipse at 85% 25%,#4c20245c,transparent 46%),#101114;border-top:1px solid #393338;transition:background .5s}.s6-stage[data-app="shop"]{--accent:#e9a63b;--tint:#ffe0a2;background:radial-gradient(ellipse at 85% 25%,#6b481f66,transparent 46%),#12100f}.s6-stage[data-app="admin"]{--accent:#815637;--tint:#e5c9a9;background:radial-gradient(ellipse at 85% 25%,#7a573447,transparent 46%),#181410}.s6-stage-top{display:flex;justify-content:space-between;gap:10px;padding:18px clamp(20px,3vw,42px);border-bottom:1px solid #ffffff12;font-size:10px;font-weight:900;letter-spacing:.13em;color:#e3c29b}.s6-live{color:#b7babd}.s6-live i{display:inline-block;height:7px;width:7px;background:#4ade80;border-radius:50%;box-shadow:0 0 12px #4ade80;margin-right:6px}.s6-grid{display:grid;grid-template-columns:minmax(230px,.8fr) minmax(300px,1.2fr);gap:20px;align-items:center;padding:35px clamp(15px,4vw,55px)}.s6-story{align-self:center}.s6-story h3{font-size:clamp(30px,3.2vw,50px);letter-spacing:-.04em;line-height:1.07;margin:17px 0}.s6-story h3 em{color:var(--tint);font-style:normal}.s6-story>p{font-size:14px;line-height:1.8;color:#b6b3b5;max-width:360px}.s6-chips{display:flex;gap:7px;flex-wrap:wrap;margin:20px 0 34px}.s6-chips span{background:#ffffff0b;border:1px solid #ffffff1c;color:#e0d7d1;border-radius:40px;padding:7px 10px;font-size:11px}.s6-tour{display:flex;gap:13px;align-items:center;border-top:1px solid #ffffff20;border-bottom:1px solid #ffffff20;padding:19px 0}.s6-tour-number{font-size:30px;font-weight:900;color:var(--tint)}.s6-tour strong,.s6-tour small{display:block}.s6-tour small{font-size:11px;color:#b3afb2;margin-top:5px}.s6-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:25px}.s6-actions button{border:0;border-radius:12px;color:#141010;background:linear-gradient(135deg,#ffe5b0,#e1a556);padding:13px 18px;font-size:12px;font-weight:900}.s6-actions button span{margin-left:20px}.s6-actions a{color:#e8d6bc;font-size:12px;text-decoration:underline;text-underline-offset:5px}.s6-display{display:grid;justify-items:center;min-width:0}.s6-device{width:min(355px,100%);height:590px;overflow:hidden;border:9px solid #050505;border-radius:37px;background:#111;box-shadow:0 30px 75px #000a,0 0 0 1px #7776;position:relative;transition:width .45s,border-radius .45s,height .45s;transform:translateZ(0)}.s6-device.is-desktop{width:min(100%,690px);height:485px;border:7px solid #24201c;border-radius:17px}.s6-device-head{height:28px;background:#111114;display:flex;justify-content:space-between;align-items:center;gap:4px;color:#aaa;font:800 9px system-ui;padding:0 14px;letter-spacing:.12em}.s6-device.is-desktop .s6-device-head{background:#eadfce;color:#765a44}.s6-dots{color:#b67e65}.s6-screen{height:calc(100% - 28px);overflow:auto;background:#101011;scrollbar-width:thin;scrollbar-color:#6665 transparent}.s6-screen button{min-height:35px}.s6-caption{color:#a4a2a4;font-size:9px;letter-spacing:.095em;text-align:center;margin:18px 0 0;max-width:450px;line-height:1.6}.s6-bottom{padding:17px clamp(17px,4vw,45px) 23px;border-top:1px solid #ffffff14;display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap}.s6-nav{display:flex;gap:8px;flex-wrap:wrap}.s6-nav button{background:#ffffff0c;color:#d3d1d2;border:1px solid #ffffff24;padding:10px 13px;border-radius:9px;font-size:11px;font-weight:850;transition:.2s}.s6-nav button.active,.s6-nav button:hover{background:var(--accent);border-color:var(--accent);color:white}.s6-help{font-size:10px;color:#aaa}
-/* Morotti app */
-.s6-screen .mg6{font-family:'Segoe UI',Arial,sans-serif;background:#101012;color:#f8f8fa;min-height:100%;font-size:12px}.mg6-top{background:#151518;border-bottom:1px solid #303035;padding:13px 14px;display:flex;gap:9px;align-items:center}.mg6-logo{background:#391418;color:#f53c4d;width:35px;height:35px;display:grid;place-items:center;border-radius:50%;font-weight:950;font-size:20px}.mg6-top b{font-size:15px;letter-spacing:.09em;color:#f43f50}.mg6-top small{display:block;color:#8d8d98;font-size:8px;letter-spacing:.14em;margin-top:3px}.mg6-page{padding:14px 15px 55px}.mg6-kicker{color:#ef4456;font-size:10px;letter-spacing:.13em;font-weight:900;margin-bottom:8px}.mg6-title{font-size:19px;font-weight:900;margin:3px 0 6px}.mg6-muted{font-size:11px;color:#aaaab2;line-height:1.55}.mg6-hero{background:linear-gradient(140deg,#331417,#1a1a1f);border:1px solid #53262c;border-radius:18px;padding:17px;margin:13px 0}.mg6-hero strong{display:block;font-size:21px;line-height:1.18}.mg6-hero small{display:block;font-size:9px;color:#f9a1ab;font-weight:900;margin-bottom:8px}.mg6-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:13px}.mg6-tile{background:#212126;border:1px solid #37373d;border-radius:14px;padding:15px 11px;text-align:left;color:white;min-height:100px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}.mg6-tile span{font-size:22px}.mg6-tile b{font-size:12px}.mg6-tile small{font-size:10px;color:#9999a3}.mg6-tile:hover{border-color:#f43f50}.mg6-card{background:#202024;border:1px solid #343439;border-radius:14px;padding:13px;margin-top:10px}.mg6-card b{font-size:12px}.mg6-card p{font-size:10px;color:#a5a5af;line-height:1.5;margin-top:4px}.mg6-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.mg6-stats div{text-align:center;background:#25252a;border:1px solid #393940;border-radius:12px;padding:11px 5px}.mg6-stats b{display:block;font-size:19px}.mg6-stats small{color:#9c9ca5;font-size:9px}.mg6-cta{background:#db1d2e;border:1px solid #fc5162;color:white;padding:12px;width:100%;border-radius:11px;font-weight:900;font-size:11px;margin-top:10px}.mg6-cta:focus-visible{outline:2px solid white}.mg6-list{display:flex;flex-direction:column;gap:9px;margin-top:13px}.mg6-row{background:#212126;border:1px solid #39393f;border-radius:12px;padding:12px;display:flex;align-items:center;gap:8px}.mg6-row strong{display:block;font-size:12px}.mg6-row small{display:block;color:#a8a8b1;font-size:10px;margin-top:4px}.mg6-row>div{flex:1}.mg6-pill{color:#ffd58a;background:#332713;border:1px solid #5d4927;border-radius:8px;padding:6px;font-size:9px}.mg6-bottom{position:sticky;bottom:0;display:grid;grid-template-columns:repeat(4,1fr);background:#151517f5;border-top:1px solid #343439;padding:8px 5px}.mg6-bottom button{border:0;background:transparent;color:#92929a;font-size:9px;font-weight:800}.mg6-bottom button.on{color:#fb5a68}.mg6-bottom button span{display:block;font-size:17px;margin-bottom:4px}.mg6-search{background:#26262b;border:1px solid #414147;padding:11px;color:#eee;width:100%;border-radius:10px;margin:13px 0}.mg6-choice{background:#25252a;color:#eee;border:1px solid #404047;border-radius:11px;padding:10px;font-size:11px}.mg6-choice.sel{background:#461a20;border-color:#e11d2e}
-/* Pretão public */
-.s6-screen .pc6{font-family:Arial,sans-serif;background:#0b0b0b;color:#f9f5ed;min-height:100%;font-size:12px}.pc6-head{background:#090909;border-bottom:1px solid #4a3928;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:8px}.pc6-head b{color:#f6c478;letter-spacing:.035em;font-size:15px}.pc6-head button{background:#e8ab49;color:#23170c;border:0;border-radius:8px;padding:8px;font-size:9px;font-weight:900}.pc6-page{padding:17px 15px 45px}.pc6-hero{background:radial-gradient(ellipse at 90% 2%,#583916,#110f0d 68%);border:1px solid #513a21;border-radius:20px;padding:23px 17px;margin-bottom:15px}.pc6-kicker{font-size:9px;font-weight:850;letter-spacing:.15em;color:#e9b55e}.pc6-hero strong{display:block;font-size:29px;letter-spacing:-.04em;line-height:1.05;margin:15px 0}.pc6-hero strong em{color:#ffdb8b;font-style:normal}.pc6-hero p{font-size:11px;line-height:1.6;color:#c6b9aa}.pc6-gold{background:linear-gradient(135deg,#ffe0a0,#d69832);border:0;color:#1a130a;padding:12px 14px;border-radius:11px;font-weight:900;width:100%;margin-top:15px}.pc6-section{font-weight:900;font-size:16px;margin:16px 0 12px}.pc6-card{background:#1b1917;border:1px solid #4d3e2d;border-radius:13px;padding:13px;margin:9px 0}.pc6-card strong{display:block;font-size:12px}.pc6-card small{display:block;margin-top:6px;font-size:10px;color:#bdb1a4;line-height:1.5}.pc6-card button,.pc6-card .tag{background:#3f2f1b;color:#ffcf78;border:1px solid #8b602f;border-radius:8px;padding:7px 9px;font-size:10px;font-weight:900;margin-top:9px}.pc6-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}.pc6-options button{background:#221f1c;border:1px solid #50402f;color:white;padding:13px 7px;border-radius:10px;font-size:11px}.pc6-options button.sel{border-color:#f5b04c;background:#42301a}.pc6-step{display:flex;gap:8px;margin:11px 0 16px}.pc6-step span{flex:1;text-align:center;border-bottom:3px solid #50402c;padding-bottom:7px;color:#96908a;font-size:9px}.pc6-step span.on{border-color:#f3bc67;color:#ffd58b}.pc6-muted{color:#b7a99c;font-size:11px;line-height:1.55}.pc6-bottom{position:sticky;bottom:0;background:#11100ffa;border-top:1px solid #5b4129;padding:10px;display:grid;grid-template-columns:repeat(4,1fr);gap:3px}.pc6-bottom button{background:none;border:0;color:#bfb4a8;font-size:9px;font-weight:800}.pc6-bottom button.on{color:#f6c46a}.pc6-bottom button span{font-size:17px;display:block;margin-bottom:3px}.pc6-input{width:100%;margin:8px 0;padding:12px;border:1px solid #64513b;border-radius:10px;background:#24211e;color:white}
-/* Pretão admin authentic light UI */
-.s6-screen .ad6{font-family:Arial,sans-serif;background:#f5f0e9;color:#2e2018;min-height:100%;font-size:12px;display:grid;grid-template-columns:145px 1fr}.ad6-side{background:#1c1815;color:#f0e1ce;padding:17px 12px;min-height:100%}.ad6-side h4{font-size:14px;margin:0 0 7px;color:#e4b476}.ad6-side small{display:block;font-size:8px;color:#a99a89;letter-spacing:.13em;margin:15px 0 8px}.ad6-side button{display:block;width:100%;text-align:left;border:0;border-radius:8px;padding:9px;color:#dbd2c7;background:transparent;font-size:10px;margin:3px 0}.ad6-side button.on,.ad6-side button:hover{background:#65432b;color:white}.ad6-main{min-width:0;padding:18px}.ad6-label{font-size:9px;color:#977b66;letter-spacing:.12em;font-weight:900}.ad6-title{font-size:23px;letter-spacing:-.035em;margin:5px 0 17px}.ad6-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.ad6-stat{background:white;border:1px solid #e5dacf;border-radius:11px;padding:10px}.ad6-stat small{font-size:9px;color:#8c7b70;display:block}.ad6-stat b{font-size:18px;display:block;margin-top:6px;color:#503321}.ad6-panel{margin:15px 0;background:#fff;border:1px solid #e8ddd3;border-radius:13px;padding:13px}.ad6-panel h5{font-size:12px;margin:0 0 11px}.ad6-row{display:flex;gap:8px;justify-content:space-between;padding:11px 0;border-bottom:1px solid #eee5dd;font-size:10px}.ad6-row:last-child{border:0}.ad6-row small{color:#8c7a6b;display:block;margin-top:4px}.ad6-btn{background:#4b3020;color:white;border:0;border-radius:8px;padding:9px;font-size:10px;font-weight:800}.ad6-graph{display:flex;align-items:end;gap:7px;height:72px;padding:9px 0 0}.ad6-graph i{flex:1;display:block;border-radius:4px 4px 0 0;background:linear-gradient(#bb936a,#67462f)}.ad6-flag{border-radius:6px;padding:5px;background:#e9f6ed;color:#288553;font-size:9px;font-weight:900}.ad6-notice{color:#8d7262;font-size:9px;margin-top:14px}
-@media(max-width:850px){.s6-grid{grid-template-columns:1fr;gap:30px}.s6-story{text-align:center}.s6-story>p{max-width:620px;margin:auto}.s6-chips,.s6-actions{justify-content:center}.s6-tour{justify-content:center}.s6-device.is-desktop{height:450px}.s6-choices{grid-template-columns:1fr 1fr}.s6-choice:last-child{grid-column:1/-1}}@media(max-width:550px){.studio6{border-radius:20px}.s6-intro{padding:30px 20px 20px}.s6-choices{grid-template-columns:1fr;padding:12px}.s6-choice:last-child{grid-column:auto}.s6-grid{padding:25px 12px}.s6-story h3{font-size:34px}.s6-stage-top{font-size:8px}.s6-device{height:530px;width:min(330px,100%)}.s6-device.is-desktop{height:420px}.ad6{grid-template-columns:93px 1fr}.ad6-side{padding:12px 7px}.ad6-side h4{font-size:10px}.ad6-side button{font-size:8px;padding:8px 4px}.ad6-main{padding:11px}.ad6-title{font-size:18px}.ad6-cards{grid-template-columns:1fr 1fr}.ad6-stat b{font-size:15px}.s6-bottom{justify-content:center}.s6-help{text-align:center}}
-@media(prefers-reduced-motion:reduce){.s6-choice,.s6-device,.s6-stage{transition:none}}
-</style></head>
+</head>
 <body>
-<!-- =====================================================
-       ABERTURA
-  ====================================================== -->
-<div class="intro-screen" id="introScreen">
-<div class="intro-content">
-<img alt="Harri Novaes Digital" class="intro-logo" src="logo.png"/>
-<div class="intro-line"></div>
-<span class="intro-text">
-        TRANSFORMANDO IDEIAS EM SOLUÇÕES DIGITAIS
-      </span>
-</div>
-</div>
-<!-- =====================================================
-       EFEITOS GERAIS
-  ====================================================== -->
-<div aria-hidden="true" class="page-effects">
-<div class="mouse-glow" id="mouseGlow"></div>
-<div class="background-grid"></div>
-<div class="background-light light-one"></div>
-<div class="background-light light-two"></div>
-</div>
-<!-- =====================================================
-       CABEÇALHO
-  ====================================================== -->
-<header class="header" id="header">
-<div class="container header-content">
-<a aria-label="Harri Novaes Digital" class="brand" href="#inicio">
-<img alt="Harri Novaes Digital" class="brand-logo" src="logo.png"/>
-</a>
-<nav class="nav" id="nav">
-<a class="nav-link active" href="#inicio">
-          Início
-        </a>
-<a class="nav-link" href="#solucoes">
-          Soluções
-        </a>
-<a class="nav-link" href="#possivel">
-          É possível?
-        </a>
-<a class="nav-link" href="#portfolio">
-          Projetos
-        </a>
-<a class="nav-link" href="#planos">
-          Planos
-        </a>
-<a class="nav-link" href="#sobre">
-          Sobre
-        </a>
-</nav>
-<a class="header-button magnetic" href="#orcamento">
-        Vamos conversar
-      </a>
-<button aria-expanded="false" aria-label="Abrir menu" class="menu-button" id="menuButton">
-<span></span>
-<span></span>
-<span></span>
-</button>
-</div>
-</header>
+<div id="progress" aria-hidden="true"></div><div class="bgfx" aria-hidden="true"></div>
+<header><div class="wrap headerrow"><a class="brand" href="#inicio" aria-label="Harri Novaes Digital — Início"><span class="mark">HN</span><span class="brandname"><strong>HARRI NOVAES</strong><small>DIGITAL STUDIO</small></span></a><nav id="mainnav" aria-label="Navegação principal"><a href="#inicio">Início</a><a href="#solucoes">Soluções</a><a href="#laboratorio">Experimente</a><a href="#investimento">Investimento</a><a href="#conversar">Sua ideia</a></nav><button class="btn tiny headercta" data-scroll="conversar">Criar meu projeto ↗</button><button class="hamb" id="hamb" aria-expanded="false" aria-controls="mainnav" aria-label="Abrir menu">☰</button></div></header>
 <main>
-<!-- =====================================================
-         HERO
-    ====================================================== -->
-<section class="hero section-observer" id="inicio">
-<div class="hero-orb hero-orb-one"></div>
-<div class="hero-orb hero-orb-two"></div>
-<div class="container hero-content">
-<!-- TEXTO -->
-<div class="hero-text reveal" data-reveal="left">
-<div class="hero-status">
-<span class="status-dot"></span>
-<span>
-              DESENVOLVIMENTO DE SOLUÇÕES DIGITAIS
-            </span>
-</div>
-<h1>
-            Sua ideia pode
-            <span class="gradient-text">
-              se tornar realidade.
-            </span>
-</h1>
-<p class="hero-description">
-            Criamos sites, sistemas e experiências digitais
-            personalizadas para transformar ideias em ferramentas
-            reais para o seu negócio.
-          </p>
-<div class="hero-actions">
-<a class="button primary magnetic" href="#orcamento">
-<span>Quero transformar minha ideia</span>
-<strong>→</strong>
-</a>
-<a class="button secondary" href="#portfolio">
-              Explorar projetos reais
-            </a>
-</div>
-<div class="hero-proof">
-<div>
-<strong>Sites</strong>
-<span>Presença digital profissional</span>
-</div>
-<div>
-<strong>Sistemas</strong>
-<span>Ferramentas para o negócio</span>
-</div>
-<div>
-<strong>Soluções</strong>
-<span>Projetos personalizados</span>
-</div>
-</div>
-</div>
-<!-- EXPERIÊNCIA VISUAL -->
-<div class="hero-experience reveal" data-reveal="right">
-<div class="experience-card tilt-card" data-tilt="">
-<div class="experience-top">
-<span>
-                HARRI NOVAES DIGITAL
-              </span>
-<div class="experience-live">
-<i></i>
-                PROJETO DIGITAL
-              </div>
-</div>
-<div class="experience-logo">
-<img alt="Harri Novaes Digital" src="logo.png"/>
-</div>
-<div class="experience-question">
-<small>
-                VOCÊ IMAGINA.
-              </small>
-<h2>
-                Nós pensamos em como fazer.
-              </h2>
-</div>
-<div class="experience-process">
-<div>
-<span>01</span>
-<strong>Ideia</strong>
-</div>
-<i></i>
-<div>
-<span>02</span>
-<strong>Projeto</strong>
-</div>
-<i></i>
-<div>
-<span>03</span>
-<strong>Solução</strong>
-</div>
-</div>
-</div>
-<div class="floating-tag tag-one">
-            ⚡ Experiência
-          </div>
-<div class="floating-tag tag-two">
-            ✦ Tecnologia
-          </div>
-<div class="floating-tag tag-three">
-            ◈ Personalização
-          </div>
-</div>
-</div>
-<a aria-label="Continuar navegando" class="scroll-indicator" href="#solucoes">
-<span>DESCUBRA</span>
-<i></i>
-</a>
-</section>
-<!-- =====================================================
-         FAIXA ANIMADA
-    ====================================================== -->
-<section class="marquee-section">
-<div class="marquee">
-<div class="marquee-track">
-<span>SITES PROFISSIONAIS</span>
-<i>✦</i>
-<span>SISTEMAS DE GESTÃO</span>
-<i>✦</i>
-<span>AGENDAMENTOS</span>
-<i>✦</i>
-<span>SOLUÇÕES PERSONALIZADAS</span>
-<i>✦</i>
-<span>EXPERIÊNCIAS DIGITAIS</span>
-<i>✦</i>
-<span>SITES PROFISSIONAIS</span>
-<i>✦</i>
-<span>SISTEMAS DE GESTÃO</span>
-<i>✦</i>
-<span>AGENDAMENTOS</span>
-<i>✦</i>
-<span>SOLUÇÕES PERSONALIZADAS</span>
-<i>✦</i>
-<span>EXPERIÊNCIAS DIGITAIS</span>
-<i>✦</i>
-</div>
-</div>
-</section>
-<!-- =====================================================
-         SOLUÇÕES
-    ====================================================== -->
-<section class="section solutions-section section-observer" id="solucoes">
-<div class="container">
-<div class="section-heading reveal">
-<span class="section-number">
-            01
-          </span>
-<div>
-<span class="eyebrow">
-              O QUE PODEMOS CRIAR
-            </span>
-<h2>
-              Não entregamos apenas páginas.
-              <span>Construímos soluções.</span>
-</h2>
-<p>
-              Cada negócio tem uma necessidade diferente.
-              Por isso, cada projeto começa entendendo o problema
-              antes de pensar na tecnologia.
-            </p>
-</div>
-</div>
-<div class="solutions-grid">
-<article class="solution-card reveal tilt-card" data-tilt="">
-<div class="card-light"></div>
-<div class="solution-number">01</div>
-<div class="solution-icon">◇</div>
-<h3>Sites Profissionais</h3>
-<p>
-              Sua empresa apresentada de forma moderna,
-              profissional e preparada para qualquer tela.
-            </p>
-<div class="solution-features">
-<span>Responsivo</span>
-<span>Profissional</span>
-<span>Personalizado</span>
-</div>
-<div class="solution-arrow">↗</div>
-</article>
-<article class="solution-card reveal tilt-card" data-tilt="">
-<div class="card-light"></div>
-<div class="solution-number">02</div>
-<div class="solution-icon">◫</div>
-<h3>Sistemas de Agendamento</h3>
-<p>
-              Seus clientes podem consultar horários,
-              agendar serviços e interagir com seu negócio
-              diretamente pelo celular.
-            </p>
-<div class="solution-features">
-<span>Agenda</span>
-<span>Clientes</span>
-<span>Automação</span>
-</div>
-<div class="solution-arrow">↗</div>
-</article>
-<article class="solution-card reveal tilt-card" data-tilt="">
-<div class="card-light"></div>
-<div class="solution-number">03</div>
-<div class="solution-icon">⬡</div>
-<h3>Sistemas de Gestão</h3>
-<p>
-              Painéis administrativos e ferramentas
-              criadas para organizar informações e facilitar
-              processos do dia a dia.
-            </p>
-<div class="solution-features">
-<span>Painéis</span>
-<span>Controle</span>
-<span>Dados</span>
-</div>
-<div class="solution-arrow">↗</div>
-</article>
-<article class="solution-card reveal tilt-card" data-tilt="">
-<div class="card-light"></div>
-<div class="solution-number">04</div>
-<div class="solution-icon">✦</div>
-<h3>Projetos Personalizados</h3>
-<p>
-              Tem uma necessidade que não cabe em uma solução pronta?
-              Podemos estudar a ideia e desenvolver algo específico.
-            </p>
-<div class="solution-features">
-<span>Ideia</span>
-<span>Projeto</span>
-<span>Solução</span>
-</div>
-<div class="solution-arrow">↗</div>
-</article>
-</div>
-</div>
-</section>
-<!-- =====================================================
-         SERÁ QUE É POSSÍVEL?
-    ====================================================== -->
-<section class="possibility-section section-observer" id="possivel">
-<div class="possibility-glow"></div>
-<div class="container possibility-container">
-<div class="possibility-intro reveal">
-<span class="eyebrow">
-            E SE EU TIVER UMA IDEIA?
-          </span>
-<h2>
-            Você pensa:
-            <span>“Será que isso é possível?”</span>
-</h2>
-<p>
-            Clique em uma ideia e descubra.
-          </p>
-</div>
-<div class="possibility-experience">
-<div class="possibility-options reveal">
-<button class="possibility-option active" data-possibility="agenda">
-<span>01</span>
-<div>
-<strong>
-                  Quero que meus clientes agendem pelo celular
-                </strong>
-<small>
-                  Atendimento e horários
-                </small>
-</div>
-<i>→</i>
-</button>
-<button class="possibility-option" data-possibility="gestao">
-<span>02</span>
-<div>
-<strong>
-                  Quero organizar clientes e informações
-                </strong>
-<small>
-                  Gestão do negócio
-                </small>
-</div>
-<i>→</i>
-</button>
-<button class="possibility-option" data-possibility="area">
-<span>03</span>
-<div>
-<strong>
-                  Quero uma área exclusiva para meus clientes
-                </strong>
-<small>
-                  Login e experiência personalizada
-                </small>
-</div>
-<i>→</i>
-</button>
-<button class="possibility-option" data-possibility="ideia">
-<span>04</span>
-<div>
-<strong>
-                  Tenho uma ideia diferente de tudo isso
-                </strong>
-<small>
-                  Projeto personalizado
-                </small>
-</div>
-<i>→</i>
-</button>
-</div>
-<div class="possibility-result reveal" id="possibilityResult">
-<span class="result-label">
-              RESPOSTA
-            </span>
-<div class="result-icon">
-              ✓
-            </div>
-<h3>
-              Sim.
-              <span>É possível.</span>
-</h3>
-<p id="possibilityText">
-              Podemos criar um sistema onde seus clientes
-              consultam horários disponíveis e realizam
-              agendamentos diretamente pelo celular.
-            </p>
-<div class="result-tech" id="possibilityTags">
-<span>Agendamento</span>
-<span>Clientes</span>
-<span>Painel</span>
-</div>
-<a class="result-link" href="#orcamento">
-              Quero conversar sobre essa ideia
-              <strong>→</strong>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- =====================================================
-         PROCESSO
-    ====================================================== -->
-<section class="section process-section">
-<div class="container">
-<div class="section-heading reveal">
-<span class="section-number">
-            02
-          </span>
-<div>
-<span class="eyebrow">
-              COMO FUNCIONA
-            </span>
-<h2>
-              Da conversa
-              <span>ao projeto funcionando.</span>
-</h2>
-</div>
-</div>
-<div class="process-grid">
-<article class="process-card reveal">
-<span class="process-step">
-              01
-            </span>
-<div class="process-symbol">
-              ?
-            </div>
-<h3>
-              Entendemos
-            </h3>
-<p>
-              Primeiro entendemos seu negócio, sua necessidade
-              e o que você gostaria de melhorar.
-            </p>
-</article>
-<article class="process-card reveal">
-<span class="process-step">
-              02
-            </span>
-<div class="process-symbol">
-              ◇
-            </div>
-<h3>
-              Planejamos
-            </h3>
-<p>
-              Transformamos a ideia em uma proposta de solução
-              clara e adequada ao projeto.
-            </p>
-</article>
-<article class="process-card reveal">
-<span class="process-step">
-              03
-            </span>
-<div class="process-symbol">
-              &lt;/&gt;
-            </div>
-<h3>
-              Desenvolvemos
-            </h3>
-<p>
-              Construímos a experiência, as funcionalidades
-              e os recursos necessários.
-            </p>
-</article>
-<article class="process-card reveal">
-<span class="process-step">
-              04
-            </span>
-<div class="process-symbol">
-              ✓
-            </div>
-<h3>
-              Colocamos no ar
-            </h3>
-<p>
-              Testamos, ajustamos e entregamos a solução
-              pronta para começar a ser utilizada.
-            </p>
-</article>
-</div>
-</div>
-</section>
-<!-- =====================================================
-         PORTFÓLIO V3 — PROJETOS REAIS
-    ====================================================== -->
-<section class="section portfolio-section section-observer" id="portfolio">
-<div class="container">
-<div class="section-heading reveal">
-<span class="section-number">
-            03
-          </span>
-<div>
-<span class="eyebrow">
-              PROJETOS REAIS
-            </span>
-<h2>
-              Não mostramos apenas o resultado.
-              <span>Mostramos a solução funcionando.</span>
-</h2>
-<p>
-              Conheça projetos desenvolvidos para necessidades reais,
-              com experiências diferentes para clientes, alunos,
-              funcionários e administradores.
-            </p>
-</div>
-</div><div class="studio6" id="studio6">
-<div class="s6-intro"><div class="s6-kicker">HARRI NOVAES DIGITAL / LABORATÓRIO DE EXPERIÊNCIAS</div><h3>Não assista a uma demonstração.<br/><em>Entre na experiência.</em></h3><p>Três universos, três interfaces diferentes, reconstruídas com base no código dos projetos. Clique nas telas, avance pelos fluxos e descubra o que foi desenvolvido.</p><div class="s6-hint">✦ Escolha um projeto para começar</div></div>
-<div class="s6-choices"><button class="s6-choice active" data-app="gym" type="button"><span class="s6-ic gym">M</span><span><b>MOROTTIGYM 2.0</b><small>Aplicativo de academia</small></span><span class="s6-arr">↗</span></button><button class="s6-choice" data-app="shop" type="button"><span class="s6-ic shop">✂</span><span><b>PRETÃO DO CORTE</b><small>Experiência do cliente</small></span><span class="s6-arr">↗</span></button><button class="s6-choice" data-app="admin" type="button"><span class="s6-ic admin">▦</span><span><b>GESTÃO PRETÃO</b><small>Sistema administrativo</small></span><span class="s6-arr">↗</span></button></div>
-<div class="s6-stage" data-app="gym">
-<div class="s6-stage-top"><span id="s6-stage-tag">01 / ACADEMIA</span><span class="s6-live"><i></i> DEMONSTRAÇÃO INTERATIVA</span></div>
-<div class="s6-grid"><div class="s6-story"><span class="s6-serial">PROJETO DIGITAL / 2026</span><h3 id="s6-story-title">MorottiGym <em>2.0</em></h3><p id="s6-story-desc">Uma experiência construída para o dia a dia da academia. Navegue entre a página pública, o painel do aluno, o treino, a frequência e o ranking.</p><div class="s6-chips" id="s6-story-chips"><span>Aluno</span><span>Treinos</span><span>Ranking</span></div><div class="s6-tour"><span class="s6-tour-number" id="s6-tour-number">01</span><div><strong id="s6-tour-name">Início</strong><small id="s6-tour-desc">Use os botões da interface para navegar.</small></div></div><div class="s6-actions"><button id="s6-next" type="button">Próxima tela <span>↗</span></button><a href="https://morottigym.github.io/morottigym/" id="s6-real" rel="noopener noreferrer" target="_blank">Abrir projeto publicado ↗</a></div></div>
-<div class="s6-display"><div class="s6-device" id="s6-device"><div class="s6-device-head"><span class="s6-dots">● ● ●</span><span id="s6-device-label">MOROTTI GYM</span><span>•••</span></div><div aria-live="polite" class="s6-screen" id="s6-screen"></div></div><div class="s6-caption">AMBIENTE DE DEMONSTRAÇÃO · DADOS ILUSTRATIVOS · SEM ACESSO AO BANCO REAL</div></div></div>
-<div class="s6-bottom"><div aria-label="Telas da demonstração" class="s6-nav" id="s6-nav"></div><span class="s6-help">Dica: os elementos destacados dentro das telas também são clicáveis.</span></div>
-</div>
-</div>
-
-<!-- =================================================
-             MOROTTIGYM
-        ================================================== -->
-
-<!-- =================================================
-             PRETÃO DO CORTE
-        ================================================== -->
-
-<div class="portfolio-message reveal">
-<span>+</span>
-<p>Duas marcas, diferentes necessidades. Demonstrações atualizadas para mostrar o que a tecnologia pode construir.</p>
-<a href="#orcamento">
-            O próximo projeto pode ser o seu →
-          </a>
-</div>
-</div>
-</section>
-<!-- HND 3.0 — PLANOS COM ENTRADA ACESSÍVEL -->
-<section class="section plans-section section-observer hnd-pricing" id="planos">
-<div class="container">
-<div class="section-heading reveal">
-<span class="section-number">04</span>
-<div><span class="eyebrow">INVESTIMENTO INTELIGENTE</span>
-<h2>Comece com o que você precisa. <span>Evolua quando fizer sentido.</span></h2>
-<p>Não precisa começar com um sistema gigante. Escolha uma solução que cabe no momento do seu negócio e vamos conversar sobre a melhor forma de construir.</p></div>
-</div>
-<div class="hnd-price-head reveal"><div><span class="hnd-kicker">SEU PRIMEIRO PASSO</span><strong>A partir de R$ 390</strong><small>Criação com possibilidade de parcelamento + mensalidade de administração informada antes da contratação.</small></div><a class="hnd-text-link" href="#ideia">Descobrir a solução ideal <span>↗</span></a></div>
-<div class="hnd-plan-grid">
-<article class="hnd-plan reveal"><span class="hnd-plan-index">01 / COMEÇAR</span><h3>Presença Digital</h3><p>Uma página objetiva e bonita para apresentar seu negócio e facilitar o contato.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 390</strong><span>criação única • parcelamento disponível*</span></div><ul><li>Página única responsiva</li><li>Apresentação dos seus serviços</li><li>Botão direto para o WhatsApp</li><li>Informações e localização</li></ul><div class="hnd-monthly"><span>Administração e manutenção</span><strong>a partir de R$ 29/mês</strong><small>Condições e serviços definidos na proposta.</small></div><p class="hnd-exclusion">Domínio e serviços de terceiros podem ter custos extras.</p><a class="plan-button hnd-plan-button" data-plan="Presença Digital" href="#orcamento">Quero começar <span>↗</span></a></article>
-<article class="hnd-plan hnd-featured reveal"><span class="hnd-popular">BOA ESCOLHA PARA NEGÓCIOS</span><span class="hnd-plan-index">02 / CRESCER</span><h3>Site Profissional</h3><p>Um espaço digital mais completo para transmitir credibilidade e mostrar seus diferenciais.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 690</strong><span>criação única • parcelamento disponível*</span></div><ul><li>Site com até 4 seções principais</li><li>Design personalizado e responsivo</li><li>Vitrine de serviços ou trabalhos</li><li>Contato e WhatsApp integrados</li></ul><div class="hnd-monthly"><span>Administração e manutenção</span><strong>a partir de R$ 49/mês</strong><small>Condições e serviços definidos na proposta.</small></div><p class="hnd-exclusion">Domínio, infraestrutura e recursos extras são detalhados na proposta.</p><a class="plan-button hnd-plan-button" data-plan="Site Profissional" href="#orcamento">Quero este site <span>↗</span></a></article>
-<article class="hnd-plan reveal"><span class="hnd-plan-index">03 / ORGANIZAR</span><h3>Sistema Essencial</h3><p>Uma primeira ferramenta sob medida para simplificar uma rotina específica do seu negócio.</p><div class="hnd-price"><small>a partir de</small><strong>R$ 1.190</strong><span>criação única • parcelamento disponível*</span></div><ul><li>Um fluxo principal de trabalho</li><li>Painel simples de controle</li><li>Interface adaptada ao celular</li><li>Funcionalidades de escopo limitado</li></ul><div class="hnd-monthly"><span>Administração e manutenção</span><strong>a partir de R$ 79/mês</strong><small>Condições e serviços definidos na proposta.</small></div><p class="hnd-exclusion">Banco de dados, autenticação, hospedagem e integrações dependem do projeto.</p><a class="plan-button hnd-plan-button" data-plan="Sistema Essencial" href="#orcamento">Conversar sobre sistema <span>↗</span></a></article>
-<article class="hnd-plan hnd-custom reveal"><span class="hnd-plan-index">04 / SOB MEDIDA</span><div class="hnd-custom-mark">✳</div><h3>Projeto Personalizado</h3><p>Agenda, gestão, área do cliente, automação e integrações: construímos um plano para o que sua empresa realmente precisa.</p><div class="hnd-price"><strong class="hnd-consult">Vamos conversar.</strong><span>Criação parcelável e mensalidade sob proposta*</span></div><ul><li>Escopo estudado com você</li><li>Funcionalidades por prioridade</li><li>Possibilidade de desenvolver em etapas</li><li>Proposta transparente</li></ul><a class="plan-button hnd-plan-button" data-plan="Projeto Personalizado" href="#orcamento">Contar minha ideia <span>↗</span></a></article>
-</div>
-<div class="hnd-price-explainer reveal"><strong>Como funciona o pagamento?</strong><p><b>1. Criação do projeto:</b> valor inicial que pode ser parcelado, conforme as condições apresentadas no orçamento. <b>2. Administração e manutenção:</b> mensalidade separada, para os serviços recorrentes contratados. Você saberá o que está incluído antes de fechar.</p></div><p class="hnd-legal reveal">* Valores “a partir de” são sugestões iniciais, sujeitas a confirmação do escopo. Parcelamento, número de parcelas, eventuais juros e condições de pagamento são definidos no orçamento. Mensalidades não incluem automaticamente domínio, hospedagem, banco de dados, integrações ou serviços de terceiros; esses custos serão discriminados quando aplicáveis.</p>
-</div>
-</section>
-<section class="section hnd-idea section-observer" id="ideia">
-<div class="container hnd-idea-layout">
-<div class="hnd-idea-copy reveal"><span class="eyebrow">UMA EXPERIÊNCIA FEITA PARA VOCÊ</span><h2>Sua ideia merece <span>um primeiro passo.</span></h2><p>Responda três perguntas rápidas. Ao terminar, abrimos uma mensagem pronta para você enviar no WhatsApp. Sem cadastro e sem compromisso.</p><div class="hnd-idea-steps"><span>01. Seu objetivo</span><span>02. Sua prioridade</span><span>03. Seu momento</span></div></div>
-<div class="hnd-wizard reveal" id="hndWizard"><div class="hnd-wizard-header"><span>DESCUBRA SUA SOLUÇÃO</span><span id="hndStepCount">ETAPA 01 / 03</span></div><div class="hnd-wizard-track"><i id="hndStepFill"></i></div><div aria-live="polite" id="hndWizardScreen"></div><div class="hnd-wizard-bottom"><button class="hnd-back" disabled="" id="hndBack" type="button">← Voltar</button><span>Leva menos de um minuto</span></div></div>
-</div>
-</section>
-<section class="section hnd-faq"><div class="container"><div class="section-heading reveal"><span class="section-number">05</span><div><span class="eyebrow">SEM SURPRESAS</span><h2>Dúvidas comuns. <span>Respostas claras.</span></h2></div></div><div class="hnd-faq-list reveal"><details><summary>Preciso pagar para pedir um orçamento?</summary><p>Não. A primeira conversa serve para entender sua ideia e avaliar uma proposta, sem compromisso.</p></details><details><summary>O valor anunciado já inclui tudo?</summary><p>Não necessariamente. Cada opção tem um escopo inicial. Custos como domínio, hospedagem, manutenção e integrações são detalhados antes da contratação.</p></details><details><summary>Posso parcelar o valor de criação?</summary><p>Sim, podemos apresentar opções de parcelamento na proposta. Quantidade de parcelas, eventuais taxas e condições serão informadas antes da contratação.</p></details><details><summary>Existe alguma mensalidade depois de criar o site?</summary><p>A administração e manutenção são cobradas separadamente quando contratadas. Os valores iniciais sugeridos aparecem nos planos, e o orçamento esclarece os serviços incluídos, os custos de infraestrutura e as condições de cancelamento.</p></details><details><summary>Posso começar pequeno e ampliar depois?</summary><p>Sim. Podemos planejar etapas para priorizar o que traz mais valor ao seu negócio.</p></details><details><summary>Vocês fazem algo diferente dos planos?</summary><p>Sim. Conte sua necessidade: avaliamos a viabilidade e preparamos um orçamento personalizado.</p></details></div></div></section>
-<!-- =====================================================
-         SOBRE
-    ====================================================== -->
-<section class="section about-section section-observer" id="sobre">
-<div class="container about-grid">
-<div class="about-heading reveal">
-<span class="section-number">
-            06
-          </span>
-<span class="eyebrow">
-            HARRI NOVAES DIGITAL
-          </span>
-<h2>
-            Tecnologia não precisa
-            <span>parecer impossível.</span>
-</h2>
-</div>
-<div class="about-content reveal">
-<p class="about-lead">
-            A Harri Novaes Digital nasceu para transformar
-            necessidades reais de negócios em soluções digitais
-            práticas, modernas e personalizadas.
-          </p>
-<p>
-            O objetivo não é simplesmente colocar uma empresa
-            na internet. É entender o que pode ser melhorado
-            através da tecnologia e desenvolver uma solução
-            que faça sentido para aquela realidade.
-          </p>
-<div class="about-values">
-<div>
-<strong>01</strong>
-<span>Entender antes de criar</span>
-</div>
-<div>
-<strong>02</strong>
-<span>Desenvolver com propósito</span>
-</div>
-<div>
-<strong>03</strong>
-<span>Manter simples para quem usa</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- =====================================================
-         FRASE
-    ====================================================== -->
-<section class="statement-section">
-<div class="container">
-<div class="statement reveal">
-<span>
-            UMA IDEIA
-          </span>
-<h2>
-            pode começar com uma conversa.
-          </h2>
-<p>
-            E terminar com algo que antes você
-            nem imaginava ser possível.
-          </p>
-</div>
-</div>
-</section>
-<!-- =====================================================
-         ORÇAMENTO
-    ====================================================== -->
-<section class="contact-section section-observer" id="orcamento">
-<div class="contact-light"></div>
-<div class="container contact-content reveal">
-<img alt="Harri Novaes Digital" class="contact-logo" src="logo.png"/>
-<span class="eyebrow">
-          VAMOS CONVERSAR?
-        </span>
-<h2>
-          Talvez o seu próximo projeto
-          <span>comece agora.</span>
-</h2>
-<p>
-          Conte o que você gostaria de criar ou melhorar.
-          Vamos entender sua ideia e descobrir juntos
-          qual solução faz sentido para o seu negócio.
-        </p>
-<div class="selected-plan" hidden="" id="selectedPlan">
-          Plano selecionado:
-          <strong id="selectedPlanName"></strong>
-</div>
-<a class="button primary contact-button magnetic" href="https://wa.me/5516988033045?text=Ol%C3%A1%21%20Conheci%20a%20Harri%20Novaes%20Digital%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." id="whatsappButton" rel="noopener noreferrer" target="_blank">
-<span class="whatsapp-symbol">
-            ◉
-          </span>
-
-          Falar sobre meu projeto
-
-          <strong>→</strong>
-</a>
-<span class="contact-phone">
-          WhatsApp • (16) 98803-3045
-        </span>
-</div>
-</section>
+<section class="hero" id="inicio"><div class="wrap hero-grid"><div class="reveal"><span class="pill"><i class="dot"></i> DESENVOLVIMENTO QUE VOCÊ PODE EXPLORAR</span><h1>Não é só um site.<br><span class="grad">É uma experiência.</span></h1><p>Sua ideia merece mais que uma página bonita. Criamos sites, aplicativos e sistemas que dão vida a negócios — e você pode explorar exemplos aqui mesmo.</p><div class="hero-actions"><a href="#laboratorio" class="btn">Entrar no laboratório <span>↗</span></a><a href="#conversar" class="btn ghost">Tenho uma ideia <span>→</span></a></div><div class="hero-proof"><span><strong>Experiência</strong><small>Interações reais</small></span><span><strong>Design</strong><small>Identidade própria</small></span><span><strong>Soluções</strong><small>Feitas para negócios</small></span></div></div><div class="hero-art reveal" aria-label="Representação visual do estúdio"><div class="art-panel" id="artpanel"><div class="art-top"><span>HARRI NOVAES / DIGITAL STUDIO</span><span class="art-dots"><i></i><i></i><i></i></span></div><div class="art-center"><div class="big">HN.</div><h3>Ideias em movimento.</h3><p>Do primeiro clique à solução completa.</p></div><div class="art-bars"><div><b>01</b>Imagine</div><div><b>02</b>Experimente</div><div><b>03</b>Realize</div></div></div><span class="float-label a">✦ Interfaces vivas</span><span class="float-label b">⌁ Soluções sob medida</span><span class="float-label c">◈ Feito para você</span></div></div><a class="scrollhint" href="#solucoes">Comece a descoberta</a></section>
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>SITES PROFISSIONAIS ✦ SISTEMAS DE GESTÃO ✦ AGENDAMENTOS ✦ EXPERIÊNCIAS DIGITAIS ✦ SEU NEGÓCIO MAIS INTELIGENTE ✦ </span><span>SITES PROFISSIONAIS ✦ SISTEMAS DE GESTÃO ✦ AGENDAMENTOS ✦ EXPERIÊNCIAS DIGITAIS ✦ SEU NEGÓCIO MAIS INTELIGENTE ✦ </span></div></div>
+<section class="block" id="solucoes"><div class="wrap"><div class="sectionhead reveal"><span class="eyebrow">01 / Não começa no código</span><h2>O que você imagina <span class="grad">pode ganhar forma.</span></h2><p>Toque em uma possibilidade. Veja como ela se conecta a necessidades reais de empresas, profissionais e clientes.</p></div><div class="cards3"><article class="service reveal"><small class="mini-index">01 / PRESENÇA</small><div class="icon">◇</div><h3>Sites que representam.</h3><p>Uma vitrine digital com personalidade, informação clara e caminho direto até o atendimento.</p><button data-scroll="laboratorio" data-pick="shop">Explorar um site de verdade ↗</button></article><article class="service reveal"><small class="mini-index">02 / RELACIONAMENTO</small><div class="icon">◫</div><h3>Agendamentos inteligentes.</h3><p>Jornadas organizadas para quem reserva e para quem administra, em uma mesma experiência.</p><button data-scroll="laboratorio" data-pick="shop">Testar uma jornada ↗</button></article><article class="service reveal"><small class="mini-index">03 / CONTROLE</small><div class="icon">⬡</div><h3>Sistemas para trabalhar melhor.</h3><p>Área do cliente, painel, rotina e dados estruturados em ferramentas pensadas para o negócio.</p><button data-scroll="laboratorio" data-pick="admin">Conhecer o painel ↗</button></article></div></div></section>
+<section class="idea-line"><div class="wrap idea-grid"><div class="reveal"><span class="eyebrow">02 / Toque numa possibilidade</span><h2>“Mas será que <span class="grad">dá para criar isso?</span>”</h2><p>Algumas ideias parecem grandes até serem divididas em etapas. Escolha um cenário para descobrir o que pode ser desenvolvido.</p></div><div class="reveal"><div class="idea-options" id="ideaOptions"><button class="idea-option on" data-idea="agenda">Quero agendamento pelo celular <b>→</b></button><button class="idea-option" data-idea="clientes">Quero uma área de clientes <b>→</b></button><button class="idea-option" data-idea="controle">Quero controlar meu negócio <b>→</b></button><button class="idea-option" data-idea="diferente">Minha ideia não existe pronta <b>→</b></button></div><div class="idea-answer" id="ideaAnswer" aria-live="polite">✦ É possível desenvolver um fluxo em que o cliente escolhe o serviço, consulta disponibilidades e solicita um horário. Explore um exemplo demonstrativo no Pretão do Corte.</div></div></div></section>
+<section class="block" id="laboratorio"><div class="wrap"><div class="studio-intro reveal"><span class="eyebrow">03 / Laboratório de projetos</span><h2>Não basta mostrar.<br><span class="grad">Você precisa experimentar.</span></h2><p>Explore três demonstrações isoladas, baseadas nos projetos enviados. Navegue pelas telas, descubra recursos e compare como cada experiência foi pensada. Os dados são exemplos e nenhuma ação altera os sistemas reais.</p></div><div class="studio-tabs" role="tablist" aria-label="Escolha uma demonstração"><button role="tab" aria-selected="true" class="studio-tab" data-app="gym"><span class="studio-ico">🏋️</span><span><b>MorottiGym 2.0</b><small>App de academia · aluno e equipe</small></span></button><button role="tab" aria-selected="false" class="studio-tab" data-app="shop"><span class="studio-ico">✂</span><span><b>Pretão do Corte</b><small>Experiência pública · agendamentos</small></span></button><button role="tab" aria-selected="false" class="studio-tab" data-app="admin"><span class="studio-ico">▦</span><span><b>Painel do Pretão</b><small>Gestão · reservas · financeiro</small></span></button></div>
+<div class="stage reveal" id="stage"><div class="stage-layout"><div class="stage-preview"><div class="stage-toolbar"><span>◉ LIVE EXPERIENCE / MODO DEMO</span><button id="restartDemo">↺ Reiniciar</button></div><div class="device" id="device"><div class="devicebar"><span id="deviceTitle">MOROTTIGYM</span><span>● ● ●</span></div><div class="screen" id="screen" aria-label="Tela demonstrativa interativa"></div></div><span class="demo-notice">AMBIENTE DEMONSTRATIVO · DADOS FICTÍCIOS</span></div><div class="stage-copy"><span class="eyebrow" id="caseLabel">PROJETO / 01</span><h3 id="caseTitle">Treinar é só o começo.</h3><p id="caseDescription">Uma experiência para alunos e equipe, com treinos, frequência, desafio e gestão.</p><div class="featurechips" id="caseFeatures"></div><span class="eyebrow">EXPLORE AS TELAS</span><div class="stage-nav" id="screenNav"></div><p class="stage-note" id="caseNote">Esta demonstração não usa contas ou dados verdadeiros.</p><div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:20px"><button class="btn tiny" id="nextScreen">Próxima descoberta →</button><a class="btn ghost tiny" id="realLink" href="https://morottigym.github.io/morottigym/" target="_blank" rel="noopener noreferrer">Abrir projeto publicado ↗</a></div></div></div></div><div class="studio-footer"><span>São demonstrações reconstruídas a partir das indexes, não cópias conectadas aos sistemas.</span><button class="btn tiny ghost" id="surprise">✦ Surpreenda-me</button></div></div></section>
+<section class="block pricing" id="investimento"><div class="wrap"><div class="sectionhead reveal"><span class="eyebrow">04 / Investimento possível</span><h2>Um projeto profissional.<br><span class="grad">Um começo acessível.</span></h2><p>Escolha o ponto de partida. A criação é um investimento inicial que pode ter parcelamento combinado; administração, hospedagem e manutenção são serviços recorrentes separados.</p></div><div class="plans"><article class="plan reveal"><small>COMEÇAR / 01</small><h3>Presença Digital</h3><p class="muted">Uma página objetiva para apresentar seu negócio.</p><div class="price">R$ 390</div><span class="install">Criação · condições de parcelamento sob consulta</span><div class="recurring">Administração desde <b>R$ 29/mês</b></div><ul><li>Página responsiva</li><li>Apresentação do negócio</li><li>Contato e WhatsApp</li><li>Escopo e revisões definidos</li></ul><button class="btn" data-plan="Presença Digital">Conversar sobre este plano →</button></article><article class="plan featured reveal"><small>EVOLUIR / 02</small><h3>Site Profissional</h3><p class="muted">Mais conteúdo, personalidade e presença digital.</p><div class="price">R$ 690</div><span class="install">Criação · condições de parcelamento sob consulta</span><div class="recurring">Administração desde <b>R$ 49/mês</b></div><ul><li>Site responsivo com seções</li><li>Identidade visual aplicada</li><li>Contato e apresentação de serviços</li><li>Estrutura pensada para conversão</li></ul><button class="btn" data-plan="Site Profissional">Quero meu site →</button></article><article class="plan reveal"><small>TRANSFORMAR / 03</small><h3>Sistema Essencial</h3><p class="muted">Uma ferramenta enxuta para uma necessidade específica.</p><div class="price">R$ 1.190</div><span class="install">Criação · condições de parcelamento sob consulta</span><div class="recurring">Administração desde <b>R$ 79/mês</b></div><ul><li>Funcionalidade principal definida</li><li>Interface adequada ao uso</li><li>Recursos conforme viabilidade</li><li>Integrações orçadas à parte</li></ul><button class="btn" data-plan="Sistema Essencial">Planejar meu sistema →</button></article></div><p class="fine" style="margin-top:17px">Os preços acima são valores iniciais sugeridos para escopos reduzidos, sujeitos à aprovação comercial. A mensalidade não inclui alterações ilimitadas. Domínio, serviços de terceiros, taxas de pagamento e custos especiais poderão ser cobrados à parte se previstos em proposta. Projeto personalizado: orçamento individual.</p>
+<div class="calculator reveal"><div><span class="eyebrow">Experimente / Simule</span><h3 style="font-size:27px;margin:12px 0">Quanto fica para começar?</h3><p class="muted" style="font-size:13px">Altere o plano e as parcelas. A conta é ilustrativa, sem juros, e não constitui oferta de financiamento.</p><div class="calc-row"><div><label for="calcPlan">Projeto</label><select id="calcPlan"><option value="390">Presença Digital</option><option value="690" selected>Site Profissional</option><option value="1190">Sistema Essencial</option></select></div><div><label for="calcTimes">Simulação</label><select id="calcTimes"><option value="1">À vista</option><option value="3">3 vezes</option><option value="6">6 vezes</option></select></div></div></div><div class="result" aria-live="polite"><small class="eyebrow">Criação / Simulação</small><div class="big" id="calcBig">R$ 690,00</div><p id="calcTotal">Total do projeto: R$ 690,00</p><hr style="border:0;border-top:1px solid #ffffff24;margin:18px 0"><small class="eyebrow">Mensalidade separada</small><div style="font-size:25px;font-weight:850;color:#f5d394;margin-top:8px" id="calcMonthly">R$ 49,00/mês</div><p>Suporte, administração e manutenção conforme contrato.</p><button class="btn tiny" id="calcWhatsapp">Consultar condições ↗</button></div></div></div></section>
+<section class="block" id="conversar"><div class="wrap brief-wrap"><div class="reveal"><span class="eyebrow">05 / A próxima experiência pode ser sua</span><h2>Você imagina.<br><span class="grad">A gente planeja.</span></h2><p class="muted">Conte sua ideia em poucos cliques. Você não precisa saber termos técnicos. O objetivo é entender o que seu negócio precisa, para então definir uma proposta realista.</p><div class="pill">✦ Sem compromisso de contratação</div></div><div class="briefpanel reveal"><span class="brief-step" id="briefLabel">ETAPA 01 DE 04</span><div class="brief-progress"><i id="briefBar"></i></div><h3 id="briefQuestion">O que você gostaria de criar?</h3><div id="briefContent"></div><div class="brief-controls" id="briefControls"><button class="btn ghost tiny" id="briefBack">← Voltar</button><button class="btn tiny" id="briefNext">Continuar →</button></div></div></div></section>
+<section class="block" id="duvidas" style="padding-top:20px"><div class="wrap"><div class="faq"><span class="eyebrow">06 / Transparência</span><h2>Dúvidas que merecem <span class="grad">respostas claras.</span></h2><details><summary>Posso parcelar o desenvolvimento?</summary><p>O parcelamento pode ser negociado na proposta. Quantidade de parcelas, forma de pagamento, juros ou taxas eventuais devem ser informados antes da contratação.</p></details><details><summary>A mensalidade já está incluída na criação?</summary><p>Não. A criação é uma cobrança inicial. Administração, hospedagem, suporte e manutenção podem compor uma mensalidade separada, com início e serviços definidos por contrato.</p></details><details><summary>Posso pedir mudanças depois?</summary><p>Sim. Pequenas correções e manutenção seguem o escopo contratado. Novas páginas, módulos ou mudanças significativas são avaliados e orçados separadamente.</p></details><details><summary>Os projetos que explorei aqui são reais?</summary><p>MorottiGym e Pretão do Corte são projetos usados como base. As telas interativas deste portfólio são demonstrações ilustrativas, reconstruídas a partir de arquivos recebidos, com dados fictícios e sem conexão com produção.</p></details><details><summary>Preciso saber exatamente o que quero?</summary><p>Não. Você pode contar seu problema e o resultado desejado. A partir disso, avaliamos quais recursos fazem sentido e quais podem ficar para uma etapa futura.</p></details></div></div></section>
 </main>
-<!-- =====================================================
-       RODAPÉ
-  ====================================================== -->
-<footer class="footer">
-<div class="container footer-main">
-<div class="footer-brand">
-<img alt="Harri Novaes Digital" src="logo.png"/>
-<p>
-          Sites, sistemas e soluções digitais
-          personalizadas para negócios.
-        </p>
-</div>
-<div class="footer-links">
-<div>
-<strong>NAVEGAÇÃO</strong>
-<a href="#inicio">Início</a>
-<a href="#solucoes">Soluções</a>
-<a href="#portfolio">Projetos</a>
-<a href="#planos">Planos</a>
-</div>
-<div>
-<strong>CONTATO</strong>
-<a href="https://wa.me/5516988033045" rel="noopener noreferrer" target="_blank">
-            WhatsApp
-          </a>
-<span>
-            (16) 98803-3045
-          </span>
-</div>
-</div>
-</div>
-<div class="container footer-bottom">
-<span>
-        © 2026 Harri Novaes Digital
-      </span>
-<span>
-        Criado para mostrar que é possível.
-      </span>
-</div>
-</footer>
-<!-- =====================================================
-       BOTÃO FLUTUANTE
-  ====================================================== -->
-<a aria-label="Falar pelo WhatsApp" class="floating-whatsapp" href="https://wa.me/5516988033045?text=Ol%C3%A1%21%20Conheci%20a%20Harri%20Novaes%20Digital%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." rel="noopener noreferrer" target="_blank">
-<span>◉</span>
-<div>
-<small>FALE COMIGO</small>
-<strong>WhatsApp</strong>
-</div>
-</a>
-<!-- =====================================================
-       CURSOR DECORATIVO
-  ====================================================== -->
-<div aria-hidden="true" class="custom-cursor" id="customCursor"></div>
-<script src="script.js"></script>
+<footer><div class="wrap"><div class="footer-grid"><div><a class="brand" href="#inicio"><span class="mark">HN</span><span class="brandname"><strong>HARRI NOVAES</strong><small>DIGITAL STUDIO</small></span></a><p>Sites, sistemas e experiências digitais feitos para transformar ideias em ferramentas reais.</p></div><div class="footer-links"><a href="#laboratorio">Projetos</a><a href="#investimento">Investimento</a><a href="#conversar">Orçamento</a><a href="https://wa.me/5516988033045" target="_blank" rel="noopener noreferrer">WhatsApp</a></div></div><div class="footer-bottom"><span>© 2026 Harri Novaes Digital.</span><span>Cada clique pode ser o começo de algo novo.</span></div></div></footer>
+<a class="floatwa" href="https://wa.me/5516988033045?text=Ol%C3%A1%21%20Quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">◉ WhatsApp ↗</a><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="overlay" id="exerciseVideoModal" role="dialog" aria-modal="true" aria-labelledby="exerciseVideoTitle"><div class="video-demo-card"><button type="button" class="close" id="exerciseVideoClose" aria-label="Fechar vídeo" style="position:absolute;right:16px;top:14px;border:1px solid #ffffff40;background:#ffffff12;color:white;border-radius:9px;padding:8px 11px">✕</button><div class="video-demo-head"><small>▶ MOROTTIGYM · EXECUÇÃO DO EXERCÍCIO</small><h3 id="exerciseVideoTitle">Vídeo demonstrativo</h3></div><div class="video-demo-player" id="exerciseVideoPlayer"></div><p class="video-demo-hint">O vídeo abre sobre a tela de treino. Ao fechar, você continua exatamente de onde parou.</p></div></div>
+<div class="overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="close" id="modalClose" aria-label="Fechar">✕</button><span class="eyebrow">O segredo está na experiência</span><h3 id="modalTitle">Uma surpresa, uma possibilidade.</h3><p id="modalText">A próxima ideia pode ser sua.</p><a class="btn tiny" href="#conversar" id="modalAction">Transformar minha ideia ↗</a></div></div>
 <script>
-
-/* HND 3.0 — navegação e briefing interativo */
-(() => {
-  const progress = () => {const max=document.documentElement.scrollHeight-window.innerHeight;document.body.style.setProperty('--hnd-progress',max>0?`${Math.min(100,window.scrollY/max*100)}%`:'0%');};
-  document.addEventListener('scroll',progress,{passive:true});window.addEventListener('resize',progress);progress();
-  const screen=document.getElementById('hndWizardScreen');
-  if(!screen)return;
-  const steps=[
-   {q:'O que você gostaria de melhorar agora?',options:['Criar minha presença online','Receber pedidos ou agendamentos','Organizar clientes e processos','Tenho outra ideia']},
-   {q:'O que é mais importante para você?',options:['Começar com investimento menor','Ter algo visualmente impressionante','Automatizar uma tarefa do dia a dia','Criar uma solução para crescer']},
-   {q:'Em que momento está seu projeto?',options:['Quero começar em breve','Estou pesquisando possibilidades','Já tenho algo e quero melhorar','Ainda estou planejando']}
-  ];
-  let step=0;const answers=[];
-  const stepCount=document.getElementById('hndStepCount'),fill=document.getElementById('hndStepFill'),back=document.getElementById('hndBack');
-  function draw(){
-   stepCount.textContent=`ETAPA 0${step+1} / 03`;fill.style.width=`${(step+1)/3*100}%`;back.disabled=step===0;
-   screen.replaceChildren();
-   const heading=document.createElement('h3');heading.textContent=steps[step].q;screen.appendChild(heading);
-   const choices=document.createElement('div');choices.className='hnd-choice-list';
-   steps[step].options.forEach((option)=>{const button=document.createElement('button');button.className='hnd-choice';button.type='button';button.textContent=option;const arrow=document.createElement('span');arrow.textContent='↗';button.appendChild(arrow);button.addEventListener('click',()=>{answers[step]=option;if(step<2){step++;draw();}else{showResult();}});choices.appendChild(button);});screen.appendChild(choices);
+(()=>{'use strict';
+const $=(s,ctx=document)=>ctx.querySelector(s),$$=(s,ctx=document)=>[...ctx.querySelectorAll(s)];const money=n=>Number(n).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});const wa=t=>'https://wa.me/5516988033045?text='+encodeURIComponent(t);const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));let toastTimeout;
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove('show'),2700)}
+function scrollToId(id){document.getElementById(id)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}$('#hamb').onclick=()=>{const n=$('#mainnav');const on=n.classList.toggle('open');$('#hamb').setAttribute('aria-expanded',on);$('#hamb').textContent=on?'✕':'☰'};$$('#mainnav a').forEach(a=>a.addEventListener('click',()=>{$('#mainnav').classList.remove('open');$('#hamb').setAttribute('aria-expanded','false');$('#hamb').textContent='☰'}));$$('[data-scroll]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.pick){chooseApp(b.dataset.pick)}scrollToId(b.dataset.scroll)}));
+function updateProgress(){let d=document.documentElement;$('#progress').style.width=(100*scrollY/Math.max(1,d.scrollHeight-innerHeight))+'%'}addEventListener('scroll',updateProgress,{passive:true});updateProgress();if(matchMedia('(pointer:fine)').matches)addEventListener('pointermove',e=>{document.documentElement.style.setProperty('--px',e.clientX/innerWidth*100+'%');document.documentElement.style.setProperty('--py',e.clientY/innerHeight*100+'%')},{passive:true});const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('seen');obs.unobserve(e.target)}}),{threshold:.11});$$('.reveal').forEach(x=>obs.observe(x));
+const ideas={agenda:'✦ É possível desenvolver um fluxo em que o cliente escolhe o serviço, consulta disponibilidades e solicita um horário. Explore um exemplo demonstrativo no Pretão do Corte.',clientes:'✦ Uma área exclusiva pode permitir consultas, histórico, avisos e dados do cliente, respeitando os níveis de acesso.',controle:'✦ Uma solução pode reunir agenda, estoque, financeiro e indicadores num painel feito para sua rotina.',diferente:'✦ Projetos personalizados começam com perguntas certas: quem vai usar, qual problema resolver e qual o primeiro recurso essencial.'};$$('[data-idea]').forEach(b=>b.onclick=()=>{$$('[data-idea]').forEach(x=>x.classList.toggle('on',x===b));$('#ideaAnswer').textContent=ideas[b.dataset.idea];toast('Possibilidade descoberta ✦')});
+const cases={gym:{label:'MOROTTIGYM 2.0 / APLICATIVO',title:'Muito além de um treino.',description:'A experiência real inspira um app de academia com área do aluno, treinos, check-in, desafio e ferramentas para a equipe.',features:['Treino focado','Contador de séries','Descanso','Cronômetro','Vídeos','Ranking','Biblioteca','Gestão'],nav:[['home','Início'],['treinos','Treino focado'],['cronometro','Cronômetro'],['montador','Montador'],['biblioteca','Vídeos'],['ranking','Ranking'],['freq','Frequência'],['avisos','Avisos'],['atendimento','Atendimento'],['perfil','Perfil'],['gestao','Gestão']],real:'https://morottigym.github.io/morottigym/'},shop:{label:'PRETÃO DO CORTE / SITE',title:'Do primeiro olhar ao agendamento.',description:'Site público inspirado no Preto e Dourado, com serviços, catálogo, área do cliente e jornada guiada de agendamento.',features:['Agendamento','Produtos','Área do cliente','Galeria'],nav:[['home','Início'],['agenda','Agendar'],['produtos','Produtos'],['cliente','Minha conta']],real:''},admin:{label:'PRETÃO DO CORTE / GESTÃO',title:'Os bastidores também impressionam.',description:'Painel administrativo inspirado na interface original: organização de agenda, clientes, produtos, finanças e mensalistas.',features:['Agenda','Financeiro','Produtos','Clientes','Mensalistas'],nav:[['agenda','Agenda'],['clientes','Clientes'],['produtos','Produtos'],['financeiro','Financeiro'],['mensalistas','Mensalistas']],real:''}};
+let app='gym',view='home',gymTab='A',gymExercises=0,gymChecked=false,shopStep=0,shopService='',shopDate='',shopTime='',shopProduct='';const buttons=(arr,attr)=>arr.map(x=>`<button data-${attr}="${escapeHTML(x)}" class="${(attr==='service'&&shopService===x)||(attr==='date'&&shopDate===x)||(attr==='time'&&shopTime===x)?'on':''}">${escapeHTML(x)}</button>`).join('');
+// Insira aqui somente URLs PÚBLICAS dos vídeos autorizados da biblioteca MorottiGym.
+// Exemplo: 'Supino reto': 'https://.../video.mp4' ou URL pública do YouTube.
+// Sem um URL, a interface apresenta corretamente a funcionalidade, sem inventar mídia.
+const gymVideoUrls = {
+  'Supino reto': '', 'Hammer inclinado': '', 'Tríceps no crossover': '',
+  'Puxada frontal': '', 'Remada baixa': '', 'Rosca Scott': '',
+  'Leg press': '', 'Cadeira extensora': '', 'Mesa flexora': '',
+  'Elevação lateral': ''
+};
+function gymVideoButton(nome){return `<button type="button" class="gym-video-btn" data-gym-video="${encodeURIComponent(nome)}" aria-label="Ver demonstração de ${escapeHTML(nome)}">▶ Ver execução</button>`;}
+const exerciseVideoModal=$('#exerciseVideoModal');
+const exerciseVideoPlayer=$('#exerciseVideoPlayer');
+let videoReturnFocus=null;
+function videoSource(url){
+  if(!url)return null;
+  try{
+    const u=new URL(url,location.href);
+    if(!['https:','http:'].includes(u.protocol))return null;
+    const host=u.hostname.toLowerCase();
+    let yt='';
+    if(host==='youtu.be')yt=u.pathname.split('/').filter(Boolean)[0]||'';
+    if(['youtube.com','www.youtube.com','m.youtube.com'].includes(host)){
+      if(u.pathname==='/watch')yt=u.searchParams.get('v')||'';
+      else if(/^\/(shorts|embed)\//.test(u.pathname))yt=u.pathname.split('/')[2]||'';
+    }
+    if(yt && /^[a-zA-Z0-9_-]{11}$/.test(yt))return {kind:'youtube',url:'https://www.youtube-nocookie.com/embed/'+yt+'?autoplay=1&rel=0'};
+    if(/\.(mp4|webm|mov)(\?|$)/i.test(u.pathname)||/\.(mp4|webm)(\?|$)/i.test(u.href))return {kind:'video',url:u.href};
+  }catch(_error){}
+  return null;
+}
+function openGymVideo(nome,trigger){
+  videoReturnFocus=trigger;
+  $('#exerciseVideoTitle').textContent=nome;
+  exerciseVideoPlayer.replaceChildren();
+  const source=videoSource(gymVideoUrls[nome]);
+  if(source){
+    let media;
+    if(source.kind==='youtube'){
+      media=document.createElement('iframe');media.src=source.url;media.title='Execução de '+nome;media.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';media.allowFullscreen=true;media.referrerPolicy='strict-origin-when-cross-origin';
+    }else{
+      media=document.createElement('video');media.src=source.url;media.controls=true;media.playsInline=true;media.autoplay=true;media.preload='metadata';
+    }
+    exerciseVideoPlayer.appendChild(media);
+  }else{
+    let empty=document.createElement('div');empty.className='video-demo-empty';
+    empty.innerHTML='<div style="font-size:38px" aria-hidden="true">🎬</div><strong>Vídeo demonstrativo na MorottiGym</strong><p>O aplicativo original permite assistir à execução deste exercício aqui mesmo. O arquivo de vídeo não foi enviado com o HTML, pois os endereços das mídias ficam cadastrados na biblioteca do sistema.</p><p>Quando os links públicos autorizados forem adicionados à configuração desta página, o vídeo será reproduzido neste espaço.</p>';
+    exerciseVideoPlayer.appendChild(empty);
   }
-  function showResult(){stepCount.textContent='PRONTO PARA CONVERSAR';fill.style.width='100%';back.disabled=false;screen.replaceChildren();const wrap=document.createElement('div');wrap.className='hnd-wizard-result';const title=document.createElement('h3');title.textContent='Sua ideia já tem um começo.';const p=document.createElement('p');p.textContent='Preparamos uma mensagem com suas escolhas. Você pode revisá-la no WhatsApp antes de enviar.';const a=document.createElement('a');a.className='hnd-send';a.target='_blank';a.rel='noopener noreferrer';a.textContent='Conversar sobre minha ideia ↗';const msg=`Olá! Conheci a Harri Novaes Digital pelo site e gostaria de um orçamento sem compromisso.\n\nMeu objetivo: ${answers[0]}\nMinha prioridade: ${answers[1]}\nMeu momento: ${answers[2]}\n\nPodemos conversar?`;a.href='https://wa.me/5516988033045?text='+encodeURIComponent(msg);const again=document.createElement('button');again.type='button';again.className='hnd-again';again.textContent='↻ Refazer escolhas';again.addEventListener('click',()=>{step=0;answers.length=0;draw()});wrap.append(title,p,a,again);screen.append(wrap);}
-  back.addEventListener('click',()=>{if(step>0){step--;draw()}});draw();
-  // A intro permanece curta e não bloqueia o conteúdo caso JS externo falhe.
-  setTimeout(()=>{const intro=document.getElementById('introScreen');if(intro){intro.classList.add('hide');document.body.classList.remove('intro-active');}},1500);
-})();
+  exerciseVideoModal.classList.add('open');$('#exerciseVideoClose').focus();
+}
+function closeGymVideo(){exerciseVideoModal.classList.remove('open');exerciseVideoPlayer.replaceChildren();videoReturnFocus?.focus();videoReturnFocus=null;}
+$('#exerciseVideoClose').addEventListener('click',closeGymVideo);
+exerciseVideoModal.addEventListener('click',e=>{if(e.target===exerciseVideoModal)closeGymVideo();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&exerciseVideoModal.classList.contains('open')){e.stopImmediatePropagation();closeGymVideo();}});
+// Navegação e sessões ilustrativas recriam as funcionalidades sem acessar dados reais.
+const gymPlans={A:[['Supino reto','Peitoral',3,12],['Hammer inclinado','Peitoral',3,10],['Tríceps no crossover','Tríceps',3,12]],B:[['Puxada frontal','Costas',3,12],['Remada baixa','Costas',3,10],['Rosca Scott','Bíceps',3,12]],C:[['Leg press','Pernas',3,12],['Cadeira extensora','Quadríceps',3,12],['Mesa flexora','Posterior',3,12]]};
+const gymLibrary=['Supino reto','Hammer inclinado','Tríceps no crossover','Puxada frontal','Remada baixa','Rosca Scott','Leg press','Cadeira extensora','Mesa flexora','Elevação lateral'];
+const gymSession={active:false,tab:'A',index:0,sets:0,phase:'focus',restUntil:0,restLeft:60,paused:false};
+const gymChrono={running:false,elapsed:0,startedAt:0};
+function clockTime(s){s=Math.max(0,Math.floor(s));return [Math.floor(s/3600),Math.floor(s/60)%60,s%60].map(x=>String(x).padStart(2,'0')).join(':')}
+function restTime(s){s=Math.max(0,Math.ceil(s));return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function activeExercise(){return gymPlans[gymSession.tab][gymSession.index]||gymPlans.A[0]}
+function gymSessionHTML(){let ex=activeExercise(),total=ex[2],finished=gymSession.sets>=total,phase=gymSession.phase;
+return `<div class="gym-focus"><div class="gym-row"><span class="gym-heading">TREINO ${gymSession.tab} · EXERCÍCIO ${gymSession.index+1} DE ${gymPlans[gymSession.tab].length}</span><button class="gym-text-btn" data-gym-stop>✕ Sair</button></div><h4>${escapeHTML(ex[0])}</h4><p>${ex[1]} • ${total} séries × ${ex[3]} repetições • 60 s de descanso</p><div class="gym-set-chips">${Array.from({length:total},(_,i)=>`<span class="${i<gymSession.sets?'done':i===gymSession.sets?'now':''}">${i<gymSession.sets?'✓':i+1}</span>`).join('')}</div>${phase==='rest'?`<div class="gym-rest"><span>⏱ TEMPO DE RECUPERAÇÃO</span><strong id="gymRestClock">${restTime(gymSession.restLeft)}</strong><small>Próxima série: ${Math.min(total,gymSession.sets+1)} de ${total}</small></div><div class="gym-split"><button class="gym-btn alt" data-gym-pause>${gymSession.paused?'▶ Retomar':'Ⅱ Pausar'}</button><button class="gym-btn" data-gym-skip>⏭ Pular descanso</button></div>`:phase==='done'?`<div class="gym-success">✓ Exercício concluído!<small>Você completou ${total} séries.</small></div><button class="gym-btn" data-gym-next>${gymSession.index+1<gymPlans[gymSession.tab].length?'Próximo exercício →':'Finalizar treino ✓'}</button>`:`<div class="gym-sets"><strong>${Math.min(gymSession.sets+1,total)} / ${total}</strong><span>SÉRIE ATUAL</span></div><button class="gym-btn" data-gym-set>✓ CONCLUIR SÉRIE ${Math.min(gymSession.sets+1,total)}</button><div class="gym-video-actions">${gymVideoButton(ex[0])}</div>`}</div>`}
+function gymMarkup(){const head=`<div class="gym-head"><span class="gym-logo">M</span><div><b>MOROTTIGYM 2.0</b><small>FORÇA · DISCIPLINA · EVOLUÇÃO</small></div><span class="gym-demo-tag">DEMO</span></div>`;let body='';
+const chrono=`<div class="gym-chrono"><div class="gym-row"><span class="gym-heading">⏱ CRONÔMETRO LIVRE</span><span class="gym-sub">Independente do treino</span></div><strong id="gymChronoClock">${clockTime(gymChrono.elapsed+(gymChrono.running?(Date.now()-gymChrono.startedAt)/1000:0))}</strong><div class="gym-split"><button class="gym-btn" data-gym-chrono>${gymChrono.running?'Ⅱ Pausar':'▶ Iniciar'}</button><button class="gym-btn alt" data-gym-zero>↺ Zerar</button></div></div>`;
+const featureTiles=`<div class="gym-quick"><button class="gym-tile" data-view="treinos">🏋️<br>Meu treino<small>Séries e descanso</small></button><button class="gym-tile" data-view="montador">✚<br>Montar treino<small>Biblioteca de exercícios</small></button><button class="gym-tile" data-view="ranking">🏆<br>Morotti Champions<small>Ranking mensal</small></button><button class="gym-tile" data-view="freq">📅<br>Frequência<small>Calendário de presença</small></button><button class="gym-tile" data-view="biblioteca">🎬<br>Exercícios<small>Vídeos de execução</small></button><button class="gym-tile" data-view="avisos">📣<br>Avisos<small>Comunicados</small></button><button class="gym-tile" data-view="atendimento">✉<br>Atendimento<small>Mensagens privadas</small></button><button class="gym-tile" data-view="perfil">👤<br>Meu perfil<small>Dados e preferências</small></button><button class="gym-tile gold" data-view="gestao">⚙<br>Equipe<small>Área de gestão</small></button><button class="gym-tile" data-view="cronometro">⏱<br>Cronômetro<small>Iniciar, pausar e zerar</small></button></div>`;
+if(view==='home')body=`<div class="gym-hero"><small>ÁREA DO ALUNO · DEMONSTRAÇÃO</small><h4>Seu treino está a poucos toques.</h4><p>Disciplina, foco e constância. Escolha uma função para experimentar.</p></div><div class="gym-challenge"><div class="gym-row"><span class="gym-k">🏆 DESAFIO MOROTTIGYM</span><button class="gym-text-btn" data-view="ranking">Ver ranking →</button></div><div class="gym-stats"><div class="gym-stat"><b>#4</b><small>posição</small></div><div class="gym-stat"><b>12</b><small>visitas</small></div><div class="gym-stat"><b>3</b><small>semana</small></div></div><button class="gym-btn" data-checkin>${gymChecked?'✓ Check-in fictício registrado':'📍 Fazer check-in demonstrativo'}</button></div>${chrono}<div class="gym-heading" style="margin:18px 0 12px">EXPLORE TODAS AS FUNCIONALIDADES</div>${featureTiles}`;
+else if(view==='treinos')body=`<div class="gym-heading">MEUS TREINOS</div><h4>Treino do dia</h4><p class="gym-sub">Escolha A, B ou C e experimente o modo focado com contador de séries, descanso e vídeo de execução.</p><div class="gym-tabs">${['A','B','C'].map(x=>`<button data-gtab="${x}" class="${gymTab===x?'on':''}">Treino ${x}</button>`).join('')}</div>${gymSession.active&&gymSession.tab===gymTab?gymSessionHTML():`<button class="gym-btn gym-start" data-gym-start>▶ INICIAR TREINO ${gymTab}</button>${gymPlans[gymTab].map((x,i)=>`<div class="gym-list"><b>${String(i+1).padStart(2,'0')} · ${x[0]}</b><small>${x[1]} • ${x[2]} séries de ${x[3]} repetições • descanso 60 s</small><div class="gym-video-actions">${gymVideoButton(x[0])}<button class="gym-btn alt" style="width:auto" data-gym-start-at="${i}">▶ Treinar</button></div></div>`).join('')}`}<button class="gym-btn alt" data-view="montador" style="margin-top:12px">✚ Montar um treino →</button>`;
+else if(view==='cronometro')body=`<div class="gym-heading">FERRAMENTA INDEPENDENTE</div><h4>Cronômetro livre</h4><p class="gym-sub">O cronômetro continua contando enquanto você muda de telas do aplicativo.</p>${chrono}<button class="gym-btn alt" data-view="treinos">Abrir meus treinos →</button>`;
+else if(view==='montador')body=`<div class="gym-heading">MONTADOR DE TREINO</div><h4>Seu treino, do seu jeito.</h4><p class="gym-sub">Busque exercícios, visualize a execução e adicione à seleção demonstrativa. Séries, repetições, carga opcional e descanso fazem parte da prescrição.</p><input class="gym-search" id="gymSearch" placeholder="Buscar exercícios..." aria-label="Buscar exercícios">${gymLibrary.map(x=>`<div class="gym-list gym-exercise"><div class="gym-row"><span><b>${x}</b><small>3 séries • 10 repetições • carga opcional • 60 s</small></span></div><div class="gym-video-actions">${gymVideoButton(x)}<button class="gym-btn alt" style="width:auto" data-exercise="${x}">+ Adicionar</button></div></div>`).join('')}<div class="gym-list" id="gymAdded">Exercícios adicionados: <b>${gymExercises}</b></div>`;
+else if(view==='biblioteca')body=`<div class="gym-heading">BIBLIOTECA DE EXERCÍCIOS</div><h4>Aprenda a execução.</h4><p class="gym-sub">Os exercícios podem ter vídeo demonstrativo cadastrado pelo professor. A abertura é real; a mídia só aparece quando houver URL pública autorizada.</p><input class="gym-search" id="gymSearch" placeholder="Pesquisar na biblioteca..." aria-label="Pesquisar exercícios">${gymLibrary.map((x,i)=>`<div class="gym-list gym-exercise"><b>${x}</b><small>${i<3?'Peito e tríceps':i<6?'Costas e bíceps':i<9?'Pernas':'Ombros'} · Demonstração de execução</small><div class="gym-video-actions">${gymVideoButton(x)}</div></div>`).join('')}`;
+else if(view==='ranking')body=`<div class="gym-heading">🏆 MOROTTI CHAMPIONS</div><h4>Constância que aparece.</h4><p class="gym-sub">Competição mensal e acompanhamento de frequência, com nomes e números fictícios.</p><div class="gym-tabs"><button class="on">Mensal</button><button data-view="freq">Minha frequência</button></div>${[['🥇','Aluno A','18 visitas'],['🥈','Aluno B','16 visitas'],['🥉','Aluno C','14 visitas'],['04','Você (demo)','12 visitas']].map(x=>`<div class="gym-list gym-row"><b>${x[0]} ${x[1]}</b><small>${x[2]}</small></div>`).join('')}<button class="gym-btn alt" data-view="freq">Ver calendário →</button>`;
+else if(view==='freq')body=`<div class="gym-heading">HISTÓRICO DE PRESENÇAS</div><h4>Seu calendário</h4><p class="gym-sub">Dias destacados representam check-ins fictícios. O aplicativo real diferencia presenças, faltas e descanso.</p><div class="gym-calendar">${Array.from({length:28},(_,i)=>`<span class="${[1,3,5,8,10,12,15,17,19,22,24,26].includes(i)?'present':''}">${i+1}</span>`).join('')}</div><div class="gym-list">🔴 Presença · ⬛ Descanso ou sem registro<br><small>12 presenças de exemplo</small></div>`;
+else if(view==='avisos')body=`<div class="gym-heading">COMUNICAÇÃO</div><h4>Avisos da academia</h4><p class="gym-sub">Exemplos de avisos e comunicados que podem aparecer na área do aluno.</p><div class="gym-list"><b>📣 Comunicado ilustrativo</b><small>Horários, eventos e recados da equipe</small></div><div class="gym-list"><b>🏆 Desafio MorottiGym</b><small>Acompanhe seu desempenho no ranking mensal</small></div>`;
+else if(view==='atendimento')body=`<div class="gym-heading">CENTRAL PRIVADA</div><h4>Fale com a equipe</h4><p class="gym-sub">Reclamações, sugestões, elogios e problemas. Nenhum envio real será feito.</p><div class="gym-tabs"><button class="on">Sugestão</button><button>Problema</button><button>Elogio</button></div><textarea class="gym-search" id="gymMessage" rows="4" maxlength="350" placeholder="Descreva sua solicitação demonstrativa..."></textarea><button class="gym-btn" data-gym-message>Simular envio →</button><p class="gym-sub" id="gymMessageResult">As mensagens verdadeiras são privadas e ficam no atendimento da academia.</p>`;
+else if(view==='perfil')body=`<div class="gym-heading">MEU PERFIL</div><h4>Olá, visitante!</h4><p class="gym-sub">Uma conta demonstrativa sem informações pessoais.</p><div class="gym-list"><b>👤 Perfil do aluno</b><small>Nome e foto opcionais, privacidade e preferências</small></div><div class="gym-list"><b>📅 Meu histórico</b><small>Consulte frequência e treinos</small></div><button class="gym-btn alt" data-view="freq">Minha frequência →</button>`;
+else body=`<div class="gym-heading">ÁREA DA EQUIPE</div><h4>Gestão simplificada.</h4><p class="gym-sub">Visão representativa dos recursos administrativos — não há login nem dados reais.</p><div class="gym-quick"><div class="gym-tile">👥<br>Alunos<small>Consulta e cadastro</small></div><div class="gym-tile">🏋️<br>Treinos<small>Prescrição e revisão</small></div><div class="gym-tile">📚<br>Biblioteca<small>Aparelhos e vídeos</small></div><div class="gym-tile">📣<br>Avisos<small>Comunicados</small></div><div class="gym-tile">📩<br>Solicitações<small>Atendimento privado</small></div><div class="gym-tile">🏆<br>Ranking<small>Desafio mensal</small></div></div>`;
+return `<div class="gym">${head}<div class="gym-body">${body}</div><div class="gym-bottom">${[['home','Início'],['treinos','Treinos'],['cronometro','⏱ Tempo'],['ranking','Desafio'],['gestao','Equipe']].map(x=>`<button data-view="${x[0]}" class="${view===x[0]?'on':''}">${x[1]}</button>`).join('')}</div></div>`;}
+function refreshGymClocks(){const clk=$('#gymChronoClock');if(clk)clk.textContent=clockTime(gymChrono.elapsed+(gymChrono.running?(Date.now()-gymChrono.startedAt)/1000:0));if(gymSession.active&&gymSession.phase==='rest'&&!gymSession.paused){gymSession.restLeft=Math.max(0,Math.ceil((gymSession.restUntil-Date.now())/1000));if(gymSession.restLeft<=0){gymSession.phase='focus';if(app==='gym'&&view==='treinos')draw();toast('Descanso concluído! Próxima série.');}}const r=$('#gymRestClock');if(r)r.textContent=restTime(gymSession.restLeft)}
+setInterval(refreshGymClocks,250);
+function resetGymSession(){gymSession.active=false;gymSession.sets=0;gymSession.phase='focus';gymSession.index=0;gymSession.paused=false;gymSession.restLeft=60}
+function handleGymControl(b){if(!b)return false;
+if(b.hasAttribute('data-gym-chrono')){if(gymChrono.running){gymChrono.elapsed+=(Date.now()-gymChrono.startedAt)/1000;gymChrono.running=false}else{gymChrono.startedAt=Date.now();gymChrono.running=true}draw();return true}
+if(b.hasAttribute('data-gym-zero')){gymChrono.elapsed=0;gymChrono.startedAt=Date.now();draw();return true}
+if(b.hasAttribute('data-gym-stop')){resetGymSession();draw();return true}
+if(b.hasAttribute('data-gym-start')||b.hasAttribute('data-gym-start-at')){resetGymSession();gymSession.active=true;gymSession.tab=gymTab;gymSession.index=b.hasAttribute('data-gym-start-at')?Number(b.dataset.gymStartAt):0;draw();toast('Modo treino focado iniciado');return true}
+if(b.hasAttribute('data-gym-set')){gymSession.sets++;if(gymSession.sets>=activeExercise()[2]){gymSession.phase='done';toast('Todas as séries concluídas!')}else{gymSession.phase='rest';gymSession.paused=false;gymSession.restLeft=60;gymSession.restUntil=Date.now()+60000;toast('Descanso de 60 segundos iniciado')}draw();return true}
+if(b.hasAttribute('data-gym-pause')){if(gymSession.paused){gymSession.paused=false;gymSession.restUntil=Date.now()+gymSession.restLeft*1000}else{gymSession.restLeft=Math.max(0,Math.ceil((gymSession.restUntil-Date.now())/1000));gymSession.paused=true}draw();return true}
+if(b.hasAttribute('data-gym-skip')){gymSession.restLeft=0;gymSession.phase='focus';draw();toast('Próxima série liberada');return true}
+if(b.hasAttribute('data-gym-next')){if(gymSession.index+1<gymPlans[gymSession.tab].length){gymSession.index++;gymSession.sets=0;gymSession.phase='focus';draw()}else{resetGymSession();draw();toast('Treino demonstrativo concluído! 🏆')}return true}
+if(b.hasAttribute('data-gym-message')){const el=$('#gymMessageResult');if(el)el.textContent='✓ Simulação concluída. Nenhuma mensagem foi enviada à equipe.';return true}
+return false;}
 
-  </script>
-<script>
-(()=>{
- const studio=document.getElementById('studio6');if(!studio)return;
- const stage=studio.querySelector('.s6-stage'),device=document.getElementById('s6-device'),screen=document.getElementById('s6-screen');
- let app='gym',view='inicio',step=1,selected='Corte',exerciseCount=0;
- const defs={gym:{title:'MorottiGym <em>2.0</em>',desc:'Aplicativo real para alunos, professores e equipe, com treinos, biblioteca, frequência, check-in e campeonatos. Esta réplica utiliza a estrutura visual do arquivo enviado.',tag:'01 / ACADEMIA',chips:['Aplicativo PWA','Alunos e funcionários','Treinos'],nav:[['inicio','Início'],['treino','Meu treino'],['montador','Montador'],['ranking','Ranking'],['freq','Frequência']],real:'https://morottigym.github.io/morottigym/'},shop:{title:'Pretão <em>do Corte</em>',desc:'Site público com visual preto e dourado, serviços, agendamentos guiados, produtos e acesso do cliente. A demonstração mantém o fluxo e a linguagem do projeto enviado.',tag:'02 / SITE E AGENDAMENTO',chips:['Site PWA','Agendamento','Clientes e produtos'],nav:[['inicio','Início'],['agendar','Agendar'],['produtos','Produtos'],['conta','Minha conta']],real:null},admin:{title:'Gestão <em>Pretão</em>',desc:'Painel administrativo com a aparência clara e estrutura lateral do sistema real: agenda, clientes, catálogo, financeiro, mensalistas e configurações.',tag:'03 / ADMINISTRAÇÃO',chips:['Agenda','Controle financeiro','Mensalistas'],nav:[['agenda','Agenda'],['clientes','Clientes'],['produtos','Produtos'],['financeiro','Financeiro'],['mensalistas','Mensalistas']],real:null}};
- const button=(label,target,cls='')=>`<button type="button" class="${cls}" data-go="${target}">${label}</button>`;
- const gymTop=`<div class="mg6-top"><div class="mg6-logo">M</div><div><b>MOROTTI GYM</b><small>FORÇA • DISCIPLINA • EVOLUÇÃO</small></div></div>`;
- const gymNav=`<div class="mg6-bottom">${[['inicio','⌂','Início'],['treino','🏋','Treino'],['ranking','🏆','Ranking'],['freq','▦','Frequência']].map(x=>`<button data-go="${x[0]}" class="${view===x[0]?'on':''}"><span>${x[1]}</span>${x[2]}</button>`).join('')}</div>`;
- function gym(){let body='';if(view==='inicio')body=`<div class="mg6-kicker">ÁREA DO ALUNO · DEMONSTRAÇÃO</div><div class="mg6-title">Olá 👋</div><div class="mg6-muted">Seu espaço de evolução está pronto.</div><div class="mg6-hero"><small>SEU PRÓXIMO TREINO</small><strong>Disciplina transforma resultados.</strong><p class="mg6-muted">Consulte sua rotina e acompanhe seus registros.</p>${button('IR PARA MEU TREINO →','treino','mg6-cta')}</div><div class="mg6-card"><b>🏆 Seu ritmo no ranking</b><div class="mg6-stats"><div><b>4º</b><small>posição</small></div><div><b>12</b><small>visitas</small></div><div><b>3</b><small>semana</small></div></div>${button('📍 SIMULAR CHECK-IN','ranking','mg6-cta')}</div><div class="mg6-grid">${[['treino','🏋️','Meu treino','Ver ficha'],['montador','🧩','Montador','Criar treino'],['ranking','🏆','Ranking','Visitas'],['freq','📅','Frequência','Calendário']].map(x=>`<button data-go="${x[0]}" class="mg6-tile"><span>${x[1]}</span><b>${x[2]}</b><small>${x[3]}</small></button>`).join('')}</div>`;
- else if(view==='treino')body=`<div class="mg6-kicker">ÁREA DO ALUNO</div><div class="mg6-title">Meu treino</div><p class="mg6-muted">Ficha organizada por dia, com exercícios e repetições.</p><div class="mg6-card"><b>Treino A · Superiores</b><p>Exemplo demonstrativo</p></div><div class="mg6-list">${[['01','Hammer reto','Peito · 3 séries × 12'],['10','Remada curvada','Costas · 3 séries × 12'],['19','Elevação lateral','Ombros · 3 séries × 12']].map(x=>`<div class="mg6-row"><span class="mg6-pill">${x[0]}</span><div><strong>${x[1]}</strong><small>${x[2]}</small></div>✓</div>`).join('')}</div>${button('🧩 MONTAR MEU TREINO','montador','mg6-cta')}`;
- else if(view==='montador')body=`<div class="mg6-kicker">MONTE SUA ROTINA</div><div class="mg6-title">🧩 Montador de treinos</div><p class="mg6-muted">Escolha exercícios por grupo muscular e equipamento. Os itens abaixo são exemplos.</p><input class="mg6-search" placeholder="Buscar exercício..." aria-label="Buscar exercício na demonstração" id="s6-search"/><div class="mg6-list" id="s6-exercises">${[['01','Hammer reto','Peito'],['08','Peck Deck','Peito e costas'],['15','Puxada frontal','Costas'],['19','Elevação lateral máquina','Ombros']].map(x=>`<div class="mg6-row s6-exercise"><span class="mg6-pill">${x[0]}</span><div><strong>${x[1]}</strong><small>${x[2]}</small></div><button class="mg6-choice" data-add="${x[1]}">+</button></div>`).join('')}</div><div class="mg6-card"><b>Sua sequência</b><p id="s6-added">${exerciseCount?`${exerciseCount} exercício(s) adicionados neste exemplo.`:'Selecione + para adicionar um exercício.'}</p></div>`;
- else if(view==='ranking')body=`<div class="mg6-kicker">DESAFIO MOROTTI GYM</div><div class="mg6-title">🏆 Ranking de visitas</div><div class="mg6-hero"><small>CAMPEONATO MOROTTI</small><strong>Seu esforço aparece aqui.</strong><p class="mg6-muted">Acompanhe a frequência no campeonato mensal.</p></div><div class="mg6-list">${[['🥇','Participante A','18 visitas'],['🥈','Participante B','16 visitas'],['🥉','Participante C','14 visitas'],['4º','Você · exemplo','12 visitas']].map(x=>`<div class="mg6-row"><span>${x[0]}</span><div><strong>${x[1]}</strong><small>${x[2]}</small></div></div>`).join('')}</div><div class="mg6-card"><b>🎖️ Minhas conquistas</b><p>Histórico de disciplina e evolução. Dados fictícios.</p></div>`;
- else body=`<div class="mg6-kicker">ACOMPANHAMENTO</div><div class="mg6-title">📅 Minha frequência</div><p class="mg6-muted">Calendário de presença e histórico de visitas.</p><div class="mg6-card"><b>Novembro · exemplo</b><div style="display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:12px">${Array.from({length:28},(_,i)=>`<span style="text-align:center;padding:7px 0;border-radius:6px;background:${[1,3,5,8,10,12,15,17,19,22].includes(i)?'#81212a':'#2c2c31'};font-size:10px">${i+1}</span>`).join('')}</div></div><div class="mg6-card"><b>📍 Check-in presencial</b><p>Registros e histórico vinculados ao aplicativo real.</p></div>`;
- return `<div class="mg6">${gymTop}<div class="mg6-page">${body}</div>${gymNav}</div>`;}
- const shopTop=`<div class="pc6-head"><b>✂ PRETÃO DO CORTE</b>${button('AGENDAR','agendar')}</div>`;
- const shopNav=`<div class="pc6-bottom">${[['inicio','⌂','Início'],['agendar','▦','Agendar'],['produtos','▣','Produtos'],['conta','♙','Conta']].map(x=>`<button data-go="${x[0]}" class="${view===x[0]?'on':''}"><span>${x[1]}</span>${x[2]}</button>`).join('')}</div>`;
- function shop(){let body='';if(view==='inicio')body=`<div class="pc6-hero"><span class="pc6-kicker">BARBEARIA EM RIBEIRÃO PRETO</span><strong>Seu estilo.<br><em>Sua identidade.</em></strong><p>Renovando autoestima através do corte. Técnica, cuidado e atenção aos detalhes.</p>${button('AGENDAR HORÁRIO ↗','agendar','pc6-gold')}</div><div class="pc6-section">Escolha seu atendimento</div><div class="pc6-card"><strong>✂ Serviços profissionais</strong><small>Conheça os serviços e reserve diretamente pelo celular.</small>${button('Quero agendar','agendar')}</div><div class="pc6-card"><strong>◈ Cuidados além do corte</strong><small>Produtos e reservas no próprio site.</small>${button('Explorar produtos','produtos')}</div><div class="pc6-section">Feito no Pretão</div><p class="pc6-muted">Galeria, serviços, localização e área do cliente.</p>`;
- else if(view==='agendar'){body=`<div class="pc6-section">Reserve seu horário</div><p class="pc6-muted">Escolha seu atendimento e avance nas etapas.</p><div class="pc6-step">${['Serviço','Data','Horário','Dados'].map((x,i)=>`<span class="${step===i+1?'on':''}">${i+1}. ${x}</span>`).join('')}</div>`;if(step===1)body+=`<div class="pc6-section">Escolha o serviço</div><div class="pc6-options">${['Corte','Barba','Corte + barba','Outro serviço'].map(x=>`<button class="${selected===x?'sel':''}" data-service="${x}">${x}</button>`).join('')}</div>`;if(step===2)body+=`<div class="pc6-section">Escolha a data</div><div class="pc6-options">${['Terça','Quarta','Quinta','Sexta'].map(x=>`<button data-date="${x}" class="${selected===x?'sel':''}">${x}</button>`).join('')}</div><p class="pc6-muted">Datas ilustrativas, sem consultar disponibilidade real.</p>`;if(step===3)body+=`<div class="pc6-section">Selecione um horário</div><div class="pc6-options">${['09:00','10:00','11:00','14:00'].map(x=>`<button data-time="${x}" class="${selected===x?'sel':''}">${x}</button>`).join('')}</div><p class="pc6-muted">Horários fictícios para a demonstração.</p>`;if(step===4)body+=`<div class="pc6-section">Resumo da demonstração</div><div class="pc6-card"><strong>Etapas concluídas</strong><small>Seu horário não foi reservado. O formulário real fica no site do Pretão.</small></div>`;body+=`<div style="display:flex;gap:8px;margin-top:10px">${step>1?'<button class="pc6-options" style="background:#28211b;color:white;border:1px solid #745638;border-radius:9px;padding:10px" data-back="1">Voltar</button>':''}<button class="pc6-gold" data-next="1" style="margin:0">${step===4?'Recomeçar':'Continuar'} →</button></div>`;}
- else if(view==='produtos')body=`<div class="pc6-hero"><span class="pc6-kicker">CUIDADOS ALÉM DO CORTE</span><strong>Produtos e <em>reservas.</em></strong><p>Catálogo de produtos integrado ao painel administrativo.</p></div><div class="pc6-section">Catálogo demonstrativo</div>${[['Pomada modeladora','Produto ilustrativo'],['Óleo para barba','Produto ilustrativo'],['Cuidados capilares','Produto ilustrativo']].map(x=>`<div class="pc6-card"><strong>◈ ${x[0]}</strong><small>${x[1]} — sem vínculo com estoque real.</small>${button('Como funciona a reserva?','conta')}</div>`).join('')}`;
- else body=`<div class="pc6-hero"><span class="pc6-kicker">EXPERIÊNCIA DO CLIENTE</span><strong>Minha <em>conta.</em></strong><p>O sistema real permite acessar dados e acompanhar agendamentos.</p></div><div class="pc6-card"><strong>📅 Meus agendamentos</strong><small>Histórico, situação e organização dos atendimentos.</small></div><div class="pc6-card"><strong>✂ Mensalistas</strong><small>Acompanhamento de planos e cortes quando disponível.</small></div><div class="pc6-card"><strong>🛍 Reservas de produtos</strong><small>Consulta de solicitações e pedidos.</small></div><p class="pc6-muted">Sem autenticação real ou dados pessoais nesta demonstração.</p>`;
- return `<div class="pc6">${shopTop}<div class="pc6-page">${body}</div>${shopNav}</div>`;}
- const adminItems=[['agenda','▦ Agenda'],['clientes','♙ Clientes'],['produtos','▣ Produtos'],['financeiro','◉ Financeiro'],['mensalistas','✂ Mensalistas']];
- function admin(){let body='';if(view==='agenda')body=`<div class="ad6-label">BEM-VINDO AO PAINEL</div><div class="ad6-title">Olá, Kaique.</div><div class="ad6-cards">${[['Agendamentos','06'],['Próximo horário','10:00'],['Previsão','R$ 180']].map(x=>`<div class="ad6-stat"><small>${x[0]}</small><b>${x[1]}</b></div>`).join('')}</div><div class="ad6-panel"><h5>Agenda do dia</h5>${[['09:00','Cliente de exemplo','Concluído'],['10:00','Cliente de exemplo','Confirmado'],['11:00','Horário disponível','Livre']].map(x=>`<div class="ad6-row"><div><strong>${x[0]} — ${x[1]}</strong><small>Atendimento fictício</small></div><span class="ad6-flag">${x[2]}</span></div>`).join('')}</div><button class="ad6-btn" data-go="financeiro">Ver financeiro →</button>`;
- else if(view==='clientes')body=`<div class="ad6-label">RELACIONAMENTO</div><div class="ad6-title">Clientes</div><div class="ad6-cards"><div class="ad6-stat"><small>Cadastros</small><b>24</b></div><div class="ad6-stat"><small>Novos</small><b>03</b></div><div class="ad6-stat"><small>Retornos</small><b>08</b></div></div><div class="ad6-panel"><h5>Lista de clientes</h5>${['Cliente demonstrativo A','Cliente demonstrativo B','Cliente demonstrativo C'].map(x=>`<div class="ad6-row"><span>${x}</span><span class="ad6-flag">Cadastro</span></div>`).join('')}</div>`;
- else if(view==='produtos')body=`<div class="ad6-label">CATÁLOGO E ESTOQUE</div><div class="ad6-title">Produtos</div><div class="ad6-cards"><div class="ad6-stat"><small>Ativos</small><b>12</b></div><div class="ad6-stat"><small>Estoque baixo</small><b>02</b></div><div class="ad6-stat"><small>Reservas</small><b>03</b></div></div><div class="ad6-panel"><h5>Catálogo da barbearia</h5>${['Pomada de exemplo','Produto de barba','Produto capilar'].map(x=>`<div class="ad6-row"><span>${x}</span><span class="ad6-flag">Em estoque</span></div>`).join('')}</div><button class="ad6-btn" data-go="agenda">Voltar à agenda</button>`;
- else if(view==='financeiro')body=`<div class="ad6-label">CONTROLE DO NEGÓCIO</div><div class="ad6-title">Seu financeiro, sob controle.</div><div class="ad6-cards"><div class="ad6-stat"><small>Entradas</small><b>R$ 640</b></div><div class="ad6-stat"><small>Saídas</small><b>R$ 120</b></div><div class="ad6-stat"><small>Saldo</small><b>R$ 520</b></div></div><div class="ad6-panel"><h5>Movimentações · demonstração</h5><div class="ad6-graph">${[44,61,39,78,49,90,66,83].map(x=>`<i style="height:${x}%"></i>`).join('')}</div>${[['Atendimento A','+ R$ 60'],['Atendimento B','+ R$ 80'],['Despesa ilustrativa','- R$ 30']].map(x=>`<div class="ad6-row"><span>${x[0]}</span><b>${x[1]}</b></div>`).join('')}</div>`;
- else body=`<div class="ad6-label">CLIENTES RECORRENTES</div><div class="ad6-title">Mensalistas</div><div class="ad6-panel"><h5>1. Criar um plano</h5><div class="ad6-row">Nome · Valor · Quantidade de cortes <span class="ad6-flag">Plano</span></div></div><div class="ad6-panel"><h5>2. Adicionar um mensalista</h5><div class="ad6-row">Vincular cliente e período <span class="ad6-flag">Cliente</span></div></div><div class="ad6-panel"><h5>3. Acompanhar mensalistas</h5><div class="ad6-row">Saldo e utilização de cortes <span class="ad6-flag">Gestão</span></div></div>`;
- return `<div class="ad6"><aside class="ad6-side"><h4>✂ PRETÃO<br>DO CORTE</h4><small>ADMINISTRAÇÃO</small>${adminItems.map(x=>`<button data-go="${x[0]}" class="${x[0]===view?'on':''}">${x[1]}</button>`).join('')}<small>DEMONSTRAÇÃO</small></aside><main class="ad6-main">${body}<div class="ad6-notice">Números e clientes fictícios. Nenhuma ação altera o sistema real.</div></main></div>`;}
- function draw(){const d=defs[app];stage.dataset.app=app;device.classList.toggle('is-desktop',app==='admin');document.getElementById('s6-stage-tag').textContent=d.tag;document.getElementById('s6-story-title').innerHTML=d.title;document.getElementById('s6-story-desc').textContent=d.desc;document.getElementById('s6-story-chips').innerHTML=d.chips.map(x=>`<span>${x}</span>`).join('');document.getElementById('s6-device-label').textContent=app==='gym'?'MOROTTI GYM':app==='shop'?'PRETÃO DO CORTE':'PAINEL ADMINISTRATIVO';document.getElementById('s6-tour-number').textContent=String(d.nav.findIndex(x=>x[0]===view)+1).padStart(2,'0');document.getElementById('s6-tour-name').textContent=d.nav.find(x=>x[0]===view)?.[1]||'Início';document.getElementById('s6-tour-desc').textContent='Use a navegação da interface e os botões abaixo.';let real=document.getElementById('s6-real');real.style.display=d.real?'':'none';if(d.real)real.href=d.real;document.getElementById('s6-nav').innerHTML=d.nav.map(x=>`<button type="button" class="${x[0]===view?'active':''}" data-go="${x[0]}">${x[1]}</button>`).join('');screen.innerHTML=app==='gym'?gym():app==='shop'?shop():admin();screen.scrollTop=0;studio.querySelectorAll('.s6-choice').forEach(b=>{const on=b.dataset.app===app;b.classList.toggle('active',on);b.setAttribute('aria-pressed',on?'true':'false')});}
- studio.addEventListener('click',e=>{const appBtn=e.target.closest('[data-app]');if(appBtn&&appBtn.classList.contains('s6-choice')){app=appBtn.dataset.app;view=defs[app].nav[0][0];step=1;selected='Corte';draw();return;}const nav=e.target.closest('[data-go]');if(nav){view=nav.dataset.go;step=1;draw();return;}const next=e.target.closest('[data-next]');if(next){step=step===4?1:step+1;selected='';draw();return;}if(e.target.closest('[data-back]')){step=Math.max(1,step-1);draw();return;}for(const attr of ['service','date','time']){const b=e.target.closest(`[data-${attr}]`);if(b){selected=b.dataset[attr];draw();return;}}const add=e.target.closest('[data-add]');if(add){exerciseCount++;const el=document.getElementById('s6-added');if(el)el.textContent=`${exerciseCount} exercício(s) adicionados na demonstração.`;add.textContent='✓';add.disabled=true;}});
- document.getElementById('s6-next').addEventListener('click',()=>{let nav=defs[app].nav;view=nav[(nav.findIndex(x=>x[0]===view)+1)%nav.length][0];step=1;draw()});
- studio.addEventListener('input',e=>{if(e.target.id==='s6-search'){const q=e.target.value.toLowerCase();studio.querySelectorAll('.s6-exercise').forEach(el=>el.hidden=!el.textContent.toLowerCase().includes(q));}});
- draw();
+function shopMarkup(){let b='';if(view==='home')b=`<div class="shop-hero"><small>BARBEARIA EM RIBEIRÃO PRETO</small><h4>Seu estilo.<br><em>Sua identidade.</em></h4><p>Técnica, cuidado e personalidade em cada atendimento.</p><button class="shop-btn" data-view="agenda">AGENDAR HORÁRIO ↗</button></div><div class="shop-h">UM ESPAÇO PARA O SEU ESTILO</div><div class="shop-panel"><b>✂ Serviços e agendamento</b><p>Escolha um atendimento e conheça a jornada de reserva.</p><button class="shop-btn secondary" data-view="agenda">Experimentar →</button></div><div class="shop-panel"><b>◈ Produtos e reservas</b><p>Cuidados que acompanham o cliente além da cadeira.</p><button class="shop-btn secondary" data-view="produtos">Explorar catálogo →</button></div>`;
+else if(view==='agenda'){const steps=['Serviço','Data','Horário','Resumo'];b=`<div class="shop-h">SEU PRÓXIMO HORÁRIO</div><h4 style="font-size:24px;margin:5px 0">Agendamento inteligente.</h4><p style="font-size:11px;color:#bdb1a5">Jornada de demonstração; sem horários disponíveis reais.</p><div class="shop-steps">${steps.map((x,i)=>`<span class="${i===shopStep?'on':''}">${i+1} ${x}</span>`).join('')}</div>`;if(shopStep===0)b+=`<div class="shop-h">ESCOLHA O SERVIÇO</div><div class="shop-options">${buttons(['Corte','Barba','Corte + barba','Outro'],'service')}</div>`;else if(shopStep===1)b+=`<div class="shop-h">ESCOLHA UM DIA FICTÍCIO</div><div class="shop-options">${buttons(['Terça','Quarta','Quinta','Sexta'],'date')}</div>`;else if(shopStep===2)b+=`<div class="shop-h">ESCOLHA UM HORÁRIO FICTÍCIO</div><div class="shop-options">${buttons(['09:00','10:00','14:00','16:00'],'time')}</div>`;else b+=`<div class="shop-panel"><b>✓ Etapas concluídas</b><p>Serviço: ${escapeHTML(shopService)}<br>Dia: ${escapeHTML(shopDate)}<br>Horário: ${escapeHTML(shopTime)}<br>Nada foi reservado: este é um ambiente fictício.</p></div>`;b+=`<div style="display:flex;gap:8px;margin-top:17px">${shopStep>0?'<button class="shop-btn secondary" data-shopback>← Voltar</button>':''}<button class="shop-btn" data-shopnext>${shopStep===3?'Recomeçar':'Continuar →'}</button></div>`}
+else if(view==='produtos')b=`<div class="shop-hero"><small>CATÁLOGO E RESERVAS</small><h4>Estilo também é <em>cuidado.</em></h4><p>Exemplo da área de produtos integrada à experiência da barbearia.</p></div><div class="shop-grid">${[['◈','Pomada modeladora'],['✦','Óleo de barba'],['✂','Produto capilar'],['◉','Kit de cuidados']].map(x=>`<div class="product-demo"><div class="pic">${x[0]}</div><div class="descr"><b>${x[1]}</b><small>Item ilustrativo</small><button class="shop-btn secondary" style="margin-top:8px" data-reserve="${x[1]}">Simular reserva</button></div></div>`).join('')}</div>${shopProduct?`<div class="shop-panel">✓ Interesse demonstrativo: <b>${escapeHTML(shopProduct)}</b><p>Uma reserva real dependeria de estoque e confirmação da barbearia.</p></div>`:''}`;
+else b=`<div class="shop-hero"><small>EXPERIÊNCIA DO CLIENTE</small><h4>Sua conta.<br><em>Seu histórico.</em></h4><p>Uma área organizada para acompanhar o relacionamento com a barbearia.</p></div>${[['📅','Meus agendamentos','Consultar pedidos e situações'],['✂','Mensalistas','Acompanhar benefícios conforme plano'],['◈','Minhas reservas','Consultar solicitações de produtos']].map(x=>`<div class="shop-panel"><b>${x[0]} ${x[1]}</b><p>${x[2]}</p></div>`).join('')}`;
+return `<div class="shop"><div class="shop-head"><span class="shop-logo">PRETÃO<br>DO CORTE</span><button data-view="agenda">AGENDAR ↗</button></div><div class="shop-body">${b}</div><div class="shop-mini-nav">${[['home','Início'],['agenda','Agendar'],['produtos','Produtos'],['cliente','Conta']].map(x=>`<button data-view="${x[0]}">${x[1]}</button>`).join('')}</div></div>`;}
+function adminMarkup(){let b='',stats=[],rows=[],title='';if(view==='agenda'){title='Agenda';stats=[['Agendamentos','06'],['Próximo','10:00'],['Previsão','R$ 180']];rows=[['09:00 · Cliente A','Concluído'],['10:00 · Cliente B','Confirmado'],['11:00 · Horário livre','Disponível']]}else if(view==='clientes'){title='Clientes';stats=[['Cadastros','24'],['Novos','03'],['Retornos','08']];rows=[['Cliente demonstrativo A','Ativo'],['Cliente demonstrativo B','Ativo'],['Cliente demonstrativo C','Ativo']]}else if(view==='produtos'){title='Produtos e reservas';stats=[['Produtos','12'],['Estoque baixo','02'],['Reservas','03']];rows=[['Pomada demonstrativa','Em estoque'],['Óleo demonstrativo','Em estoque'],['Kit de exemplo','Reservado']]}else if(view==='financeiro'){title='Financeiro';stats=[['Entradas','R$ 640'],['Saídas','R$ 120'],['Saldo','R$ 520']];rows=[['Atendimento demonstrativo','+ R$ 60'],['Atendimento demonstrativo','+ R$ 80'],['Despesa demonstrativa','− R$ 30']]}else{title='Mensalistas';stats=[['Planos','03'],['Ativos','08'],['Cortes usados','19']];rows=[['Plano demonstrativo A','Ativo'],['Cliente demonstrativo','3 de 4 cortes'],['Plano demonstrativo B','Ativo']]}
+b=`<div class="ak">PAINEL ADMINISTRATIVO · DEMONSTRAÇÃO</div><h4>${title}</h4><div class="adm-stats">${stats.map(x=>`<div class="adm-stat"><small>${x[0]}</small><b>${x[1]}</b></div>`).join('')}</div>${view==='financeiro'?`<div class="adm-panel"><h5>Movimentação ilustrativa</h5><div class="adm-bars">${[45,64,38,79,56,92,61,83].map(x=>`<i style="height:${x}%"></i>`).join('')}</div></div>`:''}<div class="adm-panel"><h5>${view==='agenda'?'Agenda do dia':view==='financeiro'?'Últimos lançamentos':view==='mensalistas'?'Planos e utilização':'Registros'}</h5>${rows.map(x=>`<div class="adm-row"><span>${x[0]}<small>Registro fictício</small></span><span class="adm-tag">${x[1]}</span></div>`).join('')}</div><button class="adm-action" data-view="${view==='agenda'?'financeiro':'agenda'}">${view==='agenda'?'Ver financeiro →':'Voltar à agenda →'}</button>`;
+return `<div class="adm"><aside class="adm-side"><b>✂ PRETÃO<br>DO CORTE</b><small>ADMINISTRAÇÃO</small>${cases.admin.nav.map(x=>`<button data-view="${x[0]}" class="${view===x[0]?'on':''}">${x[1]}</button>`).join('')}<small>AMBIENTE SEGURO</small></aside><div class="adm-main">${b}</div></div>`;}
+function draw(){let c=cases[app];$('#stage').style.setProperty('--accent-glow',app==='gym'?'#a22d3828':app==='shop'?'#e4b66a24':'#98735429');$('#device').classList.toggle('wide',app==='admin');$('#deviceTitle').textContent=app==='gym'?'MOROTTIGYM 2.0':app==='shop'?'PRETÃO DO CORTE':'PRETÃO / ADMIN';$('#caseLabel').textContent=c.label;$('#caseTitle').textContent=c.title;$('#caseDescription').textContent=c.description;$('#caseFeatures').innerHTML=c.features.map(x=>`<span>${x}</span>`).join('');$('#caseNote').textContent='Demonstração baseada nos arquivos recebidos, com navegação e dados ilustrativos. Nenhuma ação modifica clientes, reservas ou treinos reais.';$('#realLink').hidden=!c.real;if(c.real)$('#realLink').href=c.real;$('#screenNav').innerHTML=c.nav.map(x=>`<button data-view="${x[0]}" class="${view===x[0]?'on':''}">${x[1]}</button>`).join('');$('#screen').innerHTML=app==='gym'?gymMarkup():app==='shop'?shopMarkup():adminMarkup();$('#screen').scrollTop=0;$$('.studio-tab').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.app===app)));}
+function chooseApp(a){app=a;view=cases[app].nav[0][0];gymTab='A';gymExercises=0;gymChecked=false;resetGymSession();shopStep=0;shopService=shopDate=shopTime=shopProduct='';draw();toast('Novo ambiente desbloqueado ✦')};$$('.studio-tab').forEach(b=>b.onclick=()=>chooseApp(b.dataset.app));$('#restartDemo').onclick=()=>chooseApp(app);$('#nextScreen').onclick=()=>{let n=cases[app].nav;view=n[(n.findIndex(x=>x[0]===view)+1)%n.length][0];draw();toast('Mais uma tela descoberta ✦')};$('#stage').addEventListener('click',e=>{let b=e.target.closest('button');if(!b)return;if(b.hasAttribute('data-gym-video')){openGymVideo(decodeURIComponent(b.dataset.gymVideo),b);return}if(app==='gym'&&handleGymControl(b))return;if(b.dataset.view){view=b.dataset.view;draw();return}if(b.dataset.gtab){gymTab=b.dataset.gtab;resetGymSession();draw();return}if(b.hasAttribute('data-checkin')){gymChecked=!gymChecked;draw();toast(gymChecked?'Check-in fictício realizado ✓':'Demonstração reiniciada');return}if(b.dataset.exercise){gymExercises++;$('#gymAdded').innerHTML='Exercícios adicionados: <b>'+gymExercises+'</b>';b.textContent='✓';b.disabled=true;toast('Exercício adicionado à demonstração');return}for(let k of ['service','date','time'])if(b.dataset[k]){window['_unused']='';if(k==='service')shopService=b.dataset.service;if(k==='date')shopDate=b.dataset.date;if(k==='time')shopTime=b.dataset.time;draw();return}if(b.hasAttribute('data-shopnext')){if(shopStep===0&&!shopService||shopStep===1&&!shopDate||shopStep===2&&!shopTime){toast('Escolha uma opção para continuar');return}shopStep=shopStep===3?0:shopStep+1;if(shopStep===0)shopService=shopDate=shopTime='';draw();return}if(b.hasAttribute('data-shopback')){shopStep=Math.max(0,shopStep-1);draw();return}if(b.dataset.reserve){shopProduct=b.dataset.reserve;draw();toast('Reserva apenas simulada, sem alterar estoque');return}});$('#stage').addEventListener('input',e=>{if(e.target.id==='gymSearch'){let q=e.target.value.toLocaleLowerCase('pt-BR');$$('.gym-exercise').forEach(x=>x.hidden=!x.textContent.toLocaleLowerCase('pt-BR').includes(q))}});draw();
+const surpriseMessages=[['O verdadeiro luxo é a simplicidade.','Uma rotina complexa pode virar um painel com poucos cliques. É isso que buscamos em cada projeto.'],['Uma tela pode contar uma história.','Quando design e funcionalidade trabalham juntos, o visitante deixa de apenas olhar e começa a explorar.'],['Um detalhe muda a experiência.','Feedback no clique, navegação consistente e caminhos claros fazem um sistema parecer simples mesmo quando ele é poderoso.'],['Sua ideia pode ser a próxima.','Um produto digital nasce de uma necessidade real. A primeira etapa é descobrir qual problema vale resolver.']];let surpriseNo=0;const modal=$('#modal');function openModal(){let x=surpriseMessages[surpriseNo++%surpriseMessages.length];$('#modalTitle').textContent=x[0];$('#modalText').textContent=x[1];modal.classList.add('open');$('#modalClose').focus()}function closeModal(){modal.classList.remove('open')}$('#surprise').onclick=openModal;$('#modalClose').onclick=closeModal;$('#modalAction').onclick=closeModal;modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();openModal()}});
+const monthly={390:29,690:49,1190:79};function calc(){let n=Number($('#calcPlan').value),times=Number($('#calcTimes').value);$('#calcBig').textContent=money(n/times)+(times>1?' × '+times:'');$('#calcTotal').textContent='Total de criação: '+money(n)+' · simulação sem juros';$('#calcMonthly').textContent=money(monthly[n])+'/mês';return {n,times}}$('#calcPlan').onchange=calc;$('#calcTimes').onchange=calc;$('#calcWhatsapp').onclick=()=>{let {n,times}=calc(),name=$('#calcPlan').selectedOptions[0].text;window.open(wa(`Olá! Vi a simulação do plano ${name}, criação ${money(n)} em ${times} vez(es), com administração desde ${money(monthly[n])}/mês. Pode me informar as condições reais e o escopo?`),'_blank','noopener,noreferrer')};calc();
+let briefStep=0;const brief={type:'',purpose:'',timeline:'',description:''};const questions=[['O que você gostaria de criar?',['Um site para meu negócio','Um sistema de agendamento','Um sistema de gestão','Tenho uma ideia diferente']],['O que mais importa para você?',['Atrair novos clientes','Facilitar o atendimento','Organizar o trabalho','Criar algo inovador']],['Quando gostaria de começar?',['Assim que possível','Nas próximas semanas','Ainda estou pesquisando','Quero entender primeiro']],['Conte sua ideia em poucas palavras',[]]];function renderBrief(){let [q,opts]=questions[briefStep];$('#briefLabel').textContent='ETAPA '+String(briefStep+1).padStart(2,'0')+' DE 04';$('#briefBar').style.width=25*(briefStep+1)+'%';$('#briefQuestion').textContent=q;const key=['type','purpose','timeline'][briefStep];$('#briefContent').innerHTML=briefStep===3?`<label for="briefText">Sua ideia (opcional)</label><textarea id="briefText" maxlength="1200" placeholder="Ex.: Tenho uma loja e quero que meus clientes consigam reservar produtos pelo celular..."></textarea><p class="fine">Não inclua senhas, documentos ou informações pessoais de clientes.</p>`:`<div class="brief-options">${opts.map(x=>`<button data-value="${escapeHTML(x)}" class="${brief[key]===x?'on':''}">${x}</button>`).join('')}</div>`;if(briefStep===3)$('#briefText').value=brief.description;$('#briefBack').disabled=briefStep===0;$('#briefNext').textContent=briefStep===3?'Enviar pelo WhatsApp ↗':'Continuar →'}$('#briefContent').addEventListener('click',e=>{let b=e.target.closest('[data-value]');if(!b)return;brief[['type','purpose','timeline'][briefStep]]=b.dataset.value;renderBrief();toast('Ótimo! Vamos ao próximo detalhe.')});$('#briefNext').onclick=()=>{if(briefStep<3){if(!brief[['type','purpose','timeline'][briefStep]]){toast('Escolha uma opção para avançar');return}briefStep++;renderBrief()}else{brief.description=$('#briefText').value.trim();let msg=`Olá! Conheci a Harri Novaes Digital e gostaria de conversar sobre um projeto.\n\nTipo: ${brief.type}\nObjetivo: ${brief.purpose}\nQuando: ${brief.timeline}\nIdeia: ${brief.description||'Prefiro explicar na conversa.'}\n\nGostaria de receber um orçamento e entender as opções de parcelamento e manutenção.`;window.open(wa(msg),'_blank','noopener,noreferrer')}};$('#briefBack').onclick=()=>{if(briefStep===3)brief.description=$('#briefText').value.trim();briefStep=Math.max(0,briefStep-1);renderBrief()};$$('[data-plan]').forEach(b=>b.onclick=()=>{brief.type=b.dataset.plan;briefStep=1;renderBrief();scrollToId('conversar');toast('Plano selecionado: '+b.dataset.plan)});renderBrief();
 })();
-</script></body>
-</html>
+</script>
+</body></html>
